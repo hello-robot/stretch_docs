@@ -24,7 +24,7 @@ The provided battery charger can be plugged and unplugged at any time during ope
 
 
 
-<img src="./images/trunk.png" alt="image" height="300" />
+<img src="./images/trunk.png" alt="image" height="300" align="center" />
 
 ### Runstop
 
@@ -32,7 +32,7 @@ The illuminated button on the head is its Runstop. Just tap it, you'll hear a be
 
 To allow motion once again, hold the button down for two seconds. After the beep, motion can resume.
 
-<img src="./images/runstop.png" alt="image" style="zoom:50%;" />
+<img src="./images/runstop.png" alt="image" height="300" align="center" />
 
 ### Safe Handling
 
@@ -60,7 +60,7 @@ Like any robot, it is possible to break Stretch if you're not careful. Use commo
 
 Stretch comes ready to run out of the box. The Xbox Teleoperation demo will let you quickly test out the robot capabilities by teleoperating it with an Xbox Controller. 
 
-![image](./images/xbox.png)
+<img src="./images/xbox.png" alt="image" height="500" align="center" />
 
 To start the demo after unboxing:
 
@@ -100,7 +100,7 @@ While you're at it, disable this autoboot feature. You can always turn it back o
 
 Search for 'Startup' from Ubuntu Activities. Uncheck the box for 'hello_robot_xbox_teleop' 
 
-![image](./images/xbox_off.png)
+<img src="./images/xbox_off.png" alt="image" height="200" align="center" />
 
 
 
