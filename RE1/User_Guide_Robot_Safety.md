@@ -1,102 +1,210 @@
-![](./images/HelloRobotLogoBar.png)
+![image](./images/HelloRobotLogoBar.png)
 
-## Overview
+# User Guide - Robot Safety
 
-In this tutorial you will gain a familiarity with the low level hardware of Stretch. See the <Stretch Hardware User Manual> for additional details on the hardware use.
+#### **Revision 001 - January 2020**
 
-## USB Devices
+You may not use or facilitate the use of this document in connection with any infringement or other legal analysis concerning Hello Robot products described herein. All information provided here is subject to change without notice. 
 
-The robot hardware is almost entirely USB based. From a shell on your Stretch, check the available USB devices:
+## Revision History
 
-```bash
-lsusb ...
-```
+<table>
+  <tr>
+    <td>Revision 001</td>
+    <td>May 2020</td>
+    <td>Initial documentation release.</td>
+  </tr>
+</table>
 
-## System Check
+# Introduction
 
-It is useful to periodically check that all robot hardware is present and operating correctly.  From the console, run:
+## Before You Start
 
-```
-robot_system_check.py
-```
+This manual is intended to help users become familiar with safe operating practices and use of the Hello Robot Stretch RE1
 
-When everything is present and within normal operating conditions you should see an output similar to:
+All users should read and become familiar with the safe operating procedures before operating the robot. 
 
-X
+## Disclaimer
 
-## Hardware Architecture
+The Hello Robot Stretch Robot is intended for use in the research of mobile manipulation applications by users experienced in the use and programming of research robots. This product is not intended for general use in the home by consumers, and lacks the required certifications for such use. Please see the section  [Regulatory Compliance](#heading=h.d66d1zc26q9m) for further details.
 
-The organization of the primary hardware devices are shown below. Blue indicates a USB connection. 
+# Safety
 
-![](./images/stretch_hardware_architecture.png)
+It is important for users to keep safety in mind at all times while operating a Hello Robot. When improperly used it is possible for users, bystanders, and property to become harmed. All new users of Hello Robot products should be trained by experienced personnel on best practices for safe operation and interaction with the robot. 
 
-The Stretch_Body package deals primarily with the robot actuators and interfaces to the robot's custom firmware. As shown below, the USB devices on the right-hand-side are handled through the Stretch_Body API. The other devices are handles through either ROS or Ubuntu. 
+Because Stretch is a mobile manipulator with autonomous capabilities, it may move in unpredictable ways. It may carry potentially dangerous objects that can contact people in unexpected ways. While it is relatively lightweight and able to only exert moderate forces on the environment, dangerous conditions can still occur. 
 
- ![](./images/stretch_usb_architecture.png)
+The moving components of the robot pose dangers of pinching and crushing of body parts. People should always be aware and attentive to the motion and of Stretch robots.
 
-## Actuators
+The intended use of the Stretch RE1 is for research and development of mobile manipulation applications within laboratory settings. No robot is ever inherently safe and common sense safety measures should be applied when using Stretch, 
 
-There are two types of actuators in the robot:
+## Safety Features
 
-* A Nema-23 stepper actuator that includes current feedback and a hall-effect based encoder
-* A Dynamixel X-Series servo that includes current feedback and a hall-effect based encoder
+We have considered safety from the outset in the design of Stretch. 
 
-[Image dynamixel]
+* **Lightweight design: **The overall mass of Stretch is 22Kg, and the majority of the mass is in the base. The carbon fiber arm and aluminum mast make for a remarkably lightweight upper body. While this reduces the risk of crushing, crushing injury can still occur and should be carefully monitored.
+* **Gravity friendly**: The arrangement of Stretch’s manipulator means that it doesn’t have to counteract gravity on a larger lever arm. As a result, the motors and gearboxes are much lower torque and lower weight than a traditional robot manipulator, allowing us to avoid the often dangerous strong shoulder joints of robot arms.
+* **Low gear ratio**: The primary joints of Stretch (base, lift, and arm) have low, gear-ratios (approx 5:1), allowing for backdriving of joints when powered off. A low gear-ratio also reduces the effective inertia of each joint, limiting the impacted force during undesired contacts with people and the environment.
+* **Contact Sensitivity**: The four primary joints of Stretch (base, lift, and, arm) have contact sensitivity. We measure motor currents to estimate contact forces. Because Stretch is a low gear-ratio robot, current sensing provides a fairly sensitive measure of contact forces.
+* **Firmware limits**: Motor torques are limited at the lowest level of the firmware to configured bounds.
+* **Runstop**: The illuminated runstop button on Stretch’s head can be used to pause operation of the four primary joints (base, lift, and arm) of the robot when it is in motion. 
+* **Velocity limits**: Fast motions of the base are restricted when the arm is up high and tool is outside the base footprint. This limits the likelihood of toppling or snagging the tool during base motion.
+* **Tilt detection**: The robot can detect when its body is tilted beyond a safe threshold. An over-tilt condition will trigger a runstop event, causing motion to stop.
 
-[Image Mechaduino]
+## Use Common Sense
 
-The actuators include in most cases include a custom transmission on the output side of the closed loop servo controller. These transmission are of a low gear ratio (on the order of 4:1), allowing for excellent force sensitivity based on the actuator current feedback.
+The most important aspect of safety with Stretch is to use common sense, including
 
-#### Steppers
+* Do not operate unattended by an experienced operator
 
-First, take a minute to review the [Stepper Class](../python/stretch_body/stepper.py). This class directly interacts with the stepper motor and allows placing the actuator in a variety of control modes. Generally you would not use this class directly in your code, but instead would use the [Arm Class](../stretch_body/arm.py) , for example, when controlling the arm. The Arm Class incoporates joint limits, calibrates to joint units, and manages contact forces, etc. The Stepper Class, in contrast, provides raw access to the Stepper motor controller. 
+* Exhibit caution when operating around young children who may interact with it in unexpected ways
+
+* Keep an eye on cords, rugs, and any other floor hazards as it drives
+
+* Keep it at least 5 meters from ledges, curbs, stairs, and any other toppling hazard
+
+* Keep long hair and clothes away from the moving components of the robot.
+
+* Do not operate out doors
+
+* Keep the robot dry and do not operate around liquids
+
+* Do not attempt to ride the robot
+
+* If the robot appears to be damaged, stop operation immediately
+
+* Do not have the robot hold any sharp objects.
+
+* Use two people to lift and carry the robot when needed
+
+## Safety Markings
+
+Stretch has the following safety markings:
+
+Top of shoulder, indicating potential pinch point between rollers and mast:
+
+<img src="./images/hand_crush.png" alt="image" height="200" align="center" />
+
+Top of base, indicating potential pinch point between arm and base.
+
+<img src="./images/hand_crush2.png" alt="image" height="200" align="center" />
+
+## Runstop
+
+<img src="./images/runstop.png" alt="image" height="250" align="center" />
+
+The runstop allows the user to pause the motion of the four primary actuators (base, lift, and arm) by tapping the illuminated button on the head. An experienced operator should always keep the runstop within reach, allowing them to stop the motion of the robot if it is deemed unsafe.
+
+**NOTE: The runstop is not equivalent to an Emergency Stop found on industrial equipment and no safety guarantees are made by its function**.
+
+When the runstop is enabled, these actuators are in a ‘Safety Mode’ that inhibits the motion controller at the firmware level. Disabling the runstop allows normal operation to resume.
+
+The runstop logic is:
+
+<table>
+  <tr>
+    <td>Action</td>
+    <td>Runstop Initial state</td>
+    <td>Runstop final state</td>
+    <td>Button Illumination</td>
+  </tr>
+  <tr>
+    <td>Robot startup</td>
+    <td>N/A</td>
+    <td>Disabled</td>
+    <td>Solid</td>
+  </tr>
+  <tr>
+    <td>Tap runstop button</td>
+    <td>Disabled</td>
+    <td>Enabled</td>
+    <td>Flashing at 1Hz</td>
+  </tr>
+  <tr>
+    <td>Hold down runstop button for >2s</td>
+    <td>Enabled</td>
+    <td>Disabled</td>
+    <td>Solid</td>
+  </tr>
+</table>
 
 
 
-Check the available stepper devices
+The default behavior of the Safety Mode for each DOF is:
 
-```
-ls /dev/hello-motor*
-...
-```
+<table>
+  <tr>
+    <td>DOF</td>
+    <td>Safety Mode Behavior</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>
+Left wheel</td>
+    <td>Freewheel</td>
+    <td>Motor drive is powered off. Base can be backdriven manually by user. </td>
+  </tr>
+  <tr>
+    <td>Right wheel</td>
+    <td>Freewheel</td>
+    <td>Motor drive is powered off. Base can be backdriven manually by user. </td>
+  </tr>
+  <tr>
+    <td>Lift</td>
+    <td>Float</td>
+    <td>Motor drive is powered on and commanding current to motor that compensates for gravity (eg, float). Lift can be backdriven by the user.</td>
+  </tr>
+  <tr>
+    <td>Arm</td>
+    <td>Float</td>
+    <td>Motor drive is powered off. Arm can be backdriven manually by user. </td>
+  </tr>
+</table>
 
-Let's directly jog the arm stepper.
 
-```
-stretch_arm_jog.py
-```
+## Safety Hazards
 
-Hit enter a few times and view the actuator state. Notice the position reported at the Arm level is in meters, while the position reported at the Stepper level is in radians. Also notice that the arm force being exterted, in Newtons, which is estimated based on the level of motor current.
+Like all robots, Stretch has some areas that require extra attention for safe operation. 
 
-```
-x
-```
+### Sharp Edges
 
-Now jog the arm using the keyboard 'i' and 'o' comands to extend and retract.  Experiment with setting the joint speeds. Take a look at the code for [stretch_arm_jog.py](../bin/stretch_arm_jog.py). You can see that it is passing in velocity settings from the YAML.
+Stretch RE1 is a piece of laboratory equipment. As such, its structure has moderately sharp corners edges and corners that can be unsafe. These edges can get snagged during motion, or they may cause lacerations when sufficient force is applied to a person. Care should be taken when grasping or otherwise making contact with Stretch that a sharp corner or edge is not contacted.
 
-Looking at the YAML for the arm you can see the motion parameters, as well as other parameters that handle the calibration for the joint.
+### Toppling
 
-```
-arm:
-  chain_pitch: 0.0167
-  chain_sprocket_teeth: 10
-  contact_thresh_N: [-50, 50]
-  contact_thresh_max_N: [-80, 80]
-  force_adj_Newtons: 1.35
-  gr_spur: 3.875
-  i_feedforward: 0
-  motion:
-    fast: {accel_m: 0.2, vel_m: 0.2}
-    default: {accel_m: 0.14, vel_m: 0.14}
-    max: {accel_m: 1.0, vel_m: 1.0}
-    slow: {accel_m: 0.07, vel_m: 0.06}
-  range_m: [0.0, 0.52]
-```
+Stretch is a relatively lightweight robot. In some kinematic configurations a high center of gravity can make it prone to toppling. Toppling can occur when:
 
-You can also use [base_jog.py](../stretch_body/base_jog.py) and [lift_jog.py](../stretch_body/lift_jog.py) to move the other joints directly. Use care to avoid self collisions and collisions with the world when using these tools.
+*  The mobile base is moving at moderate or fast speed and it hits a bump, threshold, or other change in floor property
+* If the arm is raised up high and it pushes or pulls on the environment with sufficient force.
+* It drives over a drop-off such as a stair or curb
 
-## Sensors
+**NOTE: While the Stretch RE1 has cliff sensors, they do not currently inhibit motion of the base. As such, it is possible for the robot to fall down stairs and hurt itself or a person.**
 
-#### Pimu Board
+### Pinch Points
 
-#### Wacc Board
+Pinch points around the robot's head, gripper, and wrist can cause discomfort and care should be taken when handling these joints as they move.
+
+The shoulder, which travels up and down on the lift, has a series of rollers that ride along the mast. While the shoulder shells can prevent large objects from getting pinched by the rollers, small and thin objects can be pulled into and crushed. C
+
+Extra care should be taken with long hair, clothing, and small fingers around the shoulder rollers.
+
+### Crush Points
+
+The lift degree of freedom is the strongest joint on the robot and as such can apply potentially unsafe forces to a person.
+
+<img src="./images/lift.png" alt="image" height="450" align="center" />
+
+### 
+
+The lift, while in motion, may trap or crush objects between the ‘shoulder’ and another surface. As such, best practices for lift safety should always be used when using the lift degree of freedom.  
+
+The lift has a max theoretical strength of nearly 200N of linear force. In practice, this force is limited by the lift’s Guarded Move function, which places the lift in Safety Mode when the actuator forces exceed a threshold. Nominally, this threshold is around 70N but it can be configured in software. When enabled an operating as expected, the Guarded Move controller should keep contact forces within comfortable and safe levels. 
+
+The diagrams below show the potential crush points at the top and bottom of the lift range of motion.
+
+<img src="./images/lift_down.png" alt="image" height="350" align="center" />
+
+
+
+<img src="./images/lift_up.png" alt="image" height="350" align="center" />
+

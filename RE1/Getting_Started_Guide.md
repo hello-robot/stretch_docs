@@ -92,8 +92,8 @@ Log in to the robot computer. The default user credentials came in the box with 
 
 Before you can start coding you'll want to first kill off the XBox controller process which runs by default at boot:
 
-```
-Foo.
+```bash
+>> pkill -f stretch_xbox*
 ```
 
 While you're at it, disable this autoboot feature. You can always turn it back on later. 
@@ -124,28 +124,54 @@ Once the robot has homed, let's write some quick test code:
 >>ipython
 ```
 
-Now interactively move the robot around using the Robot API. Try:
+Now let's move the robot around using the Robot API. Try typing in these interactive commands at the iPython prompt:
 
 ```python
 Python 2.7.17 (default, Apr 15 2020, 17:20:14) 
 ...
 
-import stretch_robot.robot
-robot=stretch_robot.robot.Robot()
+import stretch_body.robot
+robot=stretch_body.robot.Robot()
 robot.startup()
-robot.stow( )
-robot.arm.move_to(0)
-robot.arm.move_to(0.5)
-robot.lift.move_to(0.5)
-robot.stop()
 
+robot.stow()
+
+robot.arm.move_to(0.25)
+robot.push_command()
+
+robot.arm.move_to(0.0)
+robot.push_command()
+
+robot.lift.move_to(0.4)
+robot.push_command()
+
+robot.pretty_print()
+
+robot.lift.pretty_print()
+
+robot.head.pose('tool')
+robot.head.pose('ahead')
+
+robot.end_of_arm.move_to('wrist_yaw',0)
+
+robot.end_of_arm.move_to('stretch_gripper',50)
+robot.end_of_arm.move_to('gripper',-50)
+
+robot.stow()
+robot.stop()
 ```
 
 ## Visualize Robot URDF
 
 Finally, let's look at the factory calibrated URDF for your robot. From the console run:
 
+```bash
+>> stretch_urdf_show.py --motion
 ```
->>
-```
+
+<img src="./images/urdf_view.png" alt="image" height="400" align="center" />
+
+
+
+That's it, happy coding!
 
