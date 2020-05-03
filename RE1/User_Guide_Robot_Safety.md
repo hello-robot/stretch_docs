@@ -2,7 +2,7 @@
 
 # User Guide - Robot Safety
 
-#### **Revision 001 - January 2020**
+#### **Revision 001 - May 2020**
 
 You may not use or facilitate the use of this document in connection with any infringement or other legal analysis concerning Hello Robot products described herein. All information provided here is subject to change without notice. 
 
@@ -42,7 +42,7 @@ The intended use of the Stretch RE1 is for research and development of mobile ma
 
 We have considered safety from the outset in the design of Stretch. 
 
-* **Lightweight design: **The overall mass of Stretch is 22Kg, and the majority of the mass is in the base. The carbon fiber arm and aluminum mast make for a remarkably lightweight upper body. While this reduces the risk of crushing, crushing injury can still occur and should be carefully monitored.
+* **Lightweight design: ** The overall mass of Stretch is 22Kg, and the majority of the mass is in the base. The carbon fiber arm and aluminum mast make for a remarkably lightweight upper body. While this reduces the risk of crushing, crushing injury can still occur and should be carefully monitored.
 * **Gravity friendly**: The arrangement of Stretch’s manipulator means that it doesn’t have to counteract gravity on a larger lever arm. As a result, the motors and gearboxes are much lower torque and lower weight than a traditional robot manipulator, allowing us to avoid the often dangerous strong shoulder joints of robot arms.
 * **Low gear ratio**: The primary joints of Stretch (base, lift, and arm) have low, gear-ratios (approx 5:1), allowing for backdriving of joints when powered off. A low gear-ratio also reduces the effective inertia of each joint, limiting the impacted force during undesired contacts with people and the environment.
 * **Contact Sensitivity**: The four primary joints of Stretch (base, lift, and, arm) have contact sensitivity. We measure motor currents to estimate contact forces. Because Stretch is a low gear-ratio robot, current sensing provides a fairly sensitive measure of contact forces.
@@ -104,37 +104,34 @@ The runstop logic is:
 <table>
   <tr>
     <td>Action</td>
-    <td>Runstop Initial state</td>
-    <td>Runstop final state</td>
+    <td>Runstop State</td>
     <td>Button Illumination</td>
   </tr>
   <tr>
     <td>Robot startup</td>
-    <td>N/A</td>
-    <td>Disabled</td>
+    <td>Motion enabled</td>
     <td>Solid</td>
   </tr>
   <tr>
     <td>Tap runstop button</td>
-    <td>Disabled</td>
-    <td>Enabled</td>
+    <td>Motion disabled</td>
     <td>Flashing at 1Hz</td>
   </tr>
   <tr>
     <td>Hold down runstop button for >2s</td>
-    <td>Enabled</td>
-    <td>Disabled</td>
+    <td>Motion enabled</td>
     <td>Solid</td>
   </tr>
 </table>
 
 
 
-The default behavior of the Safety Mode for each DOF is:
+
+The default behavior of the Safety Mode for each actuator is:
 
 <table>
   <tr>
-    <td>DOF</td>
+    <td>Actuator</td>
     <td>Safety Mode Behavior</td>
     <td>Notes</td>
   </tr>
@@ -160,6 +157,7 @@ Left wheel</td>
     <td>Motor drive is powered off. Arm can be backdriven manually by user. </td>
   </tr>
 </table>
+
 
 
 ## Safety Hazards
@@ -202,7 +200,11 @@ The lift has a max theoretical strength of nearly 200N of linear force. In pract
 
 The diagrams below show the potential crush points at the top and bottom of the lift range of motion.
 
+
+
 <img src="./images/lift_down.png" alt="image" height="350" align="center" />
+
+
 
 
 

@@ -14,6 +14,8 @@
 
 [User Guide: Robot Safety](./RE1/User_Guide_Robot_Safety.md)
 
+Release Notes
+
 
 
 
