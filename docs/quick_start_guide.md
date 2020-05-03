@@ -1,6 +1,4 @@
-![image](./images/HelloRobotLogoBar.png)
-
-## Stretch RE1: Getting Started
+# Stretch RE1: Quick Start Guide
 
 Welcome to your Stretch RE1! This guide will get you started with your new robot.
 
@@ -12,7 +10,7 @@ To start, we highly recommend you first go through the [User Guide: Robot Safety
 
 Please watch our unboxing video (Coming soon)
 
-## Quick Robot Tour
+## Robot Tour
 
 A few items you'll want to know about before getting started.
 
@@ -22,19 +20,19 @@ The entire robot powers up and down with the On/Off switch. When powering down, 
 
 The provided battery charger can be plugged and unplugged at any time during operation. We recommend keeping the charger plugged in whenever it isn't running untethered.
 
+![](./images/trunk.png)
 
+<img src="images/trunk.png" width="200"/>
 
-<img src="./images/trunk.png" alt="image" height="300" align="center" />
-
-### Runstop
+#### Runstop
 
 The illuminated button on the head is its Runstop. Just tap it, you'll hear a beep and it will start flashing. This will pause motion of the primary robot joints during operation. This can be useful if the robot makes an unsafe motion, or if you just want to free up the robot motors while you roll it around.
 
 To allow motion once again, hold the button down for two seconds. After the beep, motion can resume.
 
-<img src="./images/runstop.png" alt="image" height="300" align="center" />
+![](images/runstop.png)
 
-### Safe Handling
+#### Safe Handling
 
 Like any robot, it is possible to break Stretch if you're not careful. Use common sense when applying forces to its joints, transporting it, etc. 
 
@@ -56,11 +54,11 @@ Like any robot, it is possible to break Stretch if you're not careful. Use commo
 * Laying the robot down with it weight on its camera.
 * Trying to ride on the robot, getting it wet, etc. (eg, common sense)
 
-## Hello World: XBox Teleoperation 
+## Hello World Demo
 
 Stretch comes ready to run out of the box. The Xbox Teleoperation demo will let you quickly test out the robot capabilities by teleoperating it with an Xbox Controller. 
 
-<img src="./images/xbox.png" alt="image" height="500" align="center" />
+![](images/xbox.png)
 
 To start the demo after unboxing:
 
@@ -100,11 +98,11 @@ While you're at it, disable this autoboot feature. You can always turn it back o
 
 Search for 'Startup' from Ubuntu Activities. Uncheck the box for 'hello_robot_xbox_teleop' 
 
-<img src="./images/xbox_off.png" alt="image" height="200" align="center" />
+![](images/xbox_off.png)
 
 
 
-## Start Coding...
+## Start Coding
 
 Open up a Terminal. From the command line, first verify that that all of the hardware is present and happy
 
@@ -161,7 +159,7 @@ robot.stow()
 robot.stop()
 ```
 
-## Visualize Robot URDF
+#### URDF Visualization
 
 Finally, let's look at the factory calibrated URDF for your robot. From the console run:
 
@@ -169,9 +167,7 @@ Finally, let's look at the factory calibrated URDF for your robot. From the cons
 >> stretch_urdf_show.py --motion
 ```
 
-<img src="./images/urdf_view.png" alt="image" height="400" align="center" />
-
-
+![](images/urdf_view.png)
 
 That's it, happy coding!
 

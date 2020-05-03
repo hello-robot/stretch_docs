@@ -1,0 +1,18 @@
+site_name: Stretch User Docs
+nav:
+ - Home: README.md
+ - Quick Start: quick_start_guide.md
+ - Software:
+    - Stretch Body package: stretch_body_guide.md
+    - Stretch ROS package: stretch_ROS_guide.md
+ - Hardware:
+    - Robot Safety: robot_safety_guide.md
+    - Robot Care: robot_care_guide.md
+    - User Guide: hardware_user_guide.md
+ - Forum: forum.md
+theme:
+ name: sandstone
+ nav_style: light
+extra_css:
+ - docs/extra.css
+

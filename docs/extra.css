@@ -1,0 +1,11 @@
+h1 {
+color: red;
+}
+
+li.toctree-l2 > a:link,
+li.toctree-l2 > a:visited {
+  font-weight: bold;
+  color: #FF69B4;
+  margin-left: -6px;
+}
+

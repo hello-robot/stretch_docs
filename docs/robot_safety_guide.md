@@ -1,20 +1,3 @@
-![image](./images/HelloRobotLogoBar.png)
-
-# User Guide - Robot Safety
-
-#### **Revision 001 - May 2020**
-
-You may not use or facilitate the use of this document in connection with any infringement or other legal analysis concerning Hello Robot products described herein. All information provided here is subject to change without notice. 
-
-## Revision History
-
-<table>
-  <tr>
-    <td>Revision 001</td>
-    <td>May 2020</td>
-    <td>Initial documentation release.</td>
-  </tr>
-</table>
 
 # Introduction
 
@@ -83,15 +66,17 @@ Stretch has the following safety markings:
 
 Top of shoulder, indicating potential pinch point between rollers and mast:
 
-<img src="./images/hand_crush.png" alt="image" height="200" align="center" />
+![](images/hand_crush.png)
+
+
 
 Top of base, indicating potential pinch point between arm and base.
 
-<img src="./images/hand_crush2.png" alt="image" height="200" align="center" />
+![](images/hand_crush2.png)
 
 ## Runstop
 
-<img src="./images/runstop.png" alt="image" height="250" align="center" />
+![](images/runstop.png)
 
 The runstop allows the user to pause the motion of the four primary actuators (base, lift, and arm) by tapping the illuminated button on the head. An experienced operator should always keep the runstop within reach, allowing them to stop the motion of the robot if it is deemed unsafe.
 
@@ -190,9 +175,7 @@ Extra care should be taken with long hair, clothing, and small fingers around th
 
 The lift degree of freedom is the strongest joint on the robot and as such can apply potentially unsafe forces to a person.
 
-<img src="./images/lift.png" alt="image" height="450" align="center" />
-
-### 
+![](images/lift.png)
 
 The lift, while in motion, may trap or crush objects between the ‘shoulder’ and another surface. As such, best practices for lift safety should always be used when using the lift degree of freedom.  
 
@@ -200,13 +183,13 @@ The lift has a max theoretical strength of nearly 200N of linear force. In pract
 
 The diagrams below show the potential crush points at the top and bottom of the lift range of motion.
 
+![](images/lift_down.png)
+
+![](images/lift_up.png)
 
 
-<img src="./images/lift_down.png" alt="image" height="350" align="center" />
 
 
 
 
-
-<img src="./images/lift_up.png" alt="image" height="350" align="center" />
 
