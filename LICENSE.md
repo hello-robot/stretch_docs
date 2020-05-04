@@ -2,7 +2,7 @@ The following license applies to the entire contents of this directory (the "Dir
 
 Copyright 2020 Hello Robot Inc.
 
-Licensed under the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) license (the "License"); you may not use the contents of this directory except in compliance with the License. You may obtain a copy of the License at
+The contents of the Directory are licensed under the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) license (the "License"); you may not use the contents of this directory except in compliance with the License. You may obtain a copy of the License at
 
 https://creativecommons.org/licenses/by-nd/4.0
 
