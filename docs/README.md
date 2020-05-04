@@ -25,9 +25,11 @@ Welcome to the Stretch RE1 User Documentation
 
 ## Release Notes
 Version 0.0.1 (2020/05/4)
-
-* Initial public release for Guthrie robot
+* Initial public release of documentation for Guthrie robot
 
 ## License
 
 All Hello Robot Stretch Body materials are released under the x license, as found in the LICENSE file.
+
+------
+.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div>

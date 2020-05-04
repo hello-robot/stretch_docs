@@ -1,10 +1,10 @@
 # Stretch RE1: Quick Start Guide
 
-Welcome to your Stretch RE1! This guide will get you started with your new robot.
+Congratulations on your Stretch RE1! This guide will get you started with your new robot.
 
 We'd welcome your feedback as you get to know your robot. Please let us know of any issues, questions, or points of confusion. Just email us at support@hello-robot.com.
 
-To start, we highly recommend you first go through the [Robot Safety Guide](robot_safety_guide.md) and watch our Robot Safety Video (link).
+To start, we highly recommend you first go through the [Robot Safety Guide](robot_safety_guide.md) and watch our Robot Safety Video (coming soon).
 
 ## Unboxing
 
@@ -62,18 +62,25 @@ Stretch comes ready to run out of the box. The Xbox Teleoperation demo will let 
 To start the demo after unboxing:
 
 * Remove the 'trunk' cover and power on the robot
+
 * Wait for about 45 seconds. You will hear the Ubuntu startup sound, followed by two beeps (indicating the demo is running). 
+
 * Hit the Connect button on the controller. The upper two LEDs of the ring will illuminate.
+
 * Hit the Home Robot button. Stretch will go through its homing calibration routine.
-* You're ready to go! A few things to try:
-  * Hit the Stow Robot button. The robot will assume the stow pose.
-  * Practice driving the robot around. 
-  * Pull the Fast Base trigger while driving. When stowed, it will make Stretch drive faster
-  * Manually stop the arm or lift from moving to make it stop upon contact.
-  * Try picking up your cellphone from the floor 
-  * Try grasping cup from a counter top
-  * Try delivering an object to a person
-* If you're done, hold down the Shutdown PC button for 2 seconds. This will cause the PC to turn off. You can then power down the robot. Or proceed to the next step...
+
+
+ You're ready to go! A few things to try:
+
+* Hit the Stow Robot button. The robot will assume the stow pose.
+* Practice driving the robot around. 
+* Pull the Fast Base trigger while driving. When stowed, it will make Stretch drive faster
+* Manually stop the arm or lift from moving to make it stop upon contact.
+* Try picking up your cellphone from the floor 
+* Try grasping cup from a counter top
+* Try delivering an object to a person
+
+If you're done, hold down the Shutdown PC button for 2 seconds. This will cause the PC to turn off. You can then power down the robot. Or proceed to the next step...
 
 
 
@@ -97,7 +104,11 @@ While you're at it, disable this autoboot feature. You can always turn it back o
 
 Search for 'Startup' from Ubuntu Activities. Uncheck the box for 'hello_robot_xbox_teleop' 
 
+
+
 ![](./images/xbox_off_rs.png)
+
+
 
 
 
@@ -168,5 +179,9 @@ Finally, let's look at the factory calibrated URDF for your robot. From the cons
 
 ![](./images/urdf_view_rs.png)
 
-That's it, happy coding!
 
+
+That's it. Happy coding!
+
+------
+.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div>
