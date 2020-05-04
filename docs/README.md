@@ -29,7 +29,12 @@ Version 0.0.1 (2020/05/4)
 
 ## License
 
-All Hello Robot Stretch Body materials are released under the x license, as found in the LICENSE file.
+All Hello Robot stretch_docs related materials are released under the
+
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+
+https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
 
 ------
 .<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div>
