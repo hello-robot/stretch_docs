@@ -66,17 +66,19 @@ Stretch has the following safety markings:
 
 Top of shoulder, indicating potential pinch point between rollers and mast:
 
-<img src="images/hand_crush.png" height="200"/>
+![](./images/hand_crush_rs.png)
+
+
 
 
 
 Top of base, indicating potential pinch point between arm and base.
 
-<img src="images/hand_crush2.png" height="200"/>
+![](./images/hand_crush2_rs.png)
 
 ## Runstop
 
-<img src="images/runstop.png" height="300"/>
+![](./images/runstop_rs.png)
 
 The runstop allows the user to pause the motion of the four primary actuators (base, lift, and arm) by tapping the illuminated button on the head. An experienced operator should always keep the runstop within reach, allowing them to stop the motion of the robot if it is deemed unsafe.
 
@@ -175,7 +177,7 @@ Extra care should be taken with long hair, clothing, and small fingers around th
 
 The lift degree of freedom is the strongest joint on the robot and as such can apply potentially unsafe forces to a person.
 
-<img src="images/lift.png" height="400"/>
+![](./images/lift_rs.png)
 
 The lift, while in motion, may trap or crush objects between the ‘shoulder’ and another surface. As such, best practices for lift safety should always be used when using the lift degree of freedom.  
 
@@ -183,9 +185,9 @@ The lift has a max theoretical strength of nearly 200N of linear force. In pract
 
 The diagrams below show the potential crush points at the top and bottom of the lift range of motion.
 
-<img src="images/lift_down.png" height="300"/>
+![](./images/lift_down_rs.png)
 
-<img src="images/lift_up.png" height="300"/>
+![](./images/lift_up_rs.png)
 
 
 

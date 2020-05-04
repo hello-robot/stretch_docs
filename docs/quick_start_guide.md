@@ -20,16 +20,16 @@ The entire robot powers up and down with the On/Off switch. When powering down, 
 
 The provided battery charger can be plugged and unplugged at any time during operation. We recommend keeping the charger plugged in whenever it isn't running untethered.
 
-<img src="../images/trunk.png" height="400"/>
+![](./images/trunk_rs.png)
 
- 
+
 #### Runstop
 
 The illuminated button on the head is its Runstop. Just tap it, you'll hear a beep and it will start flashing. This will pause motion of the primary robot joints during operation. This can be useful if the robot makes an unsafe motion, or if you just want to free up the robot motors while you roll it around.
 
 To allow motion once again, hold the button down for two seconds. After the beep, motion can resume.
 
-<img src="images/runstop.png" height="300"/>
+![](./images/runstop_rs.png)
 
 #### Safe Handling
 
@@ -57,7 +57,7 @@ Like any robot, it is possible to break Stretch if you're not careful. Use commo
 
 Stretch comes ready to run out of the box. The Xbox Teleoperation demo will let you quickly test out the robot capabilities by teleoperating it with an Xbox Controller. 
 
-<img src="images/xbox.png" height="500" />
+![](./images/xbox.png)
 
 To start the demo after unboxing:
 
@@ -97,7 +97,7 @@ While you're at it, disable this autoboot feature. You can always turn it back o
 
 Search for 'Startup' from Ubuntu Activities. Uncheck the box for 'hello_robot_xbox_teleop' 
 
-<img src="images/xbox_off.png" height="300"/>
+![](./images/xbox_off_rs.png)
 
 
 
@@ -166,7 +166,7 @@ Finally, let's look at the factory calibrated URDF for your robot. From the cons
 >> stretch_urdf_show.py --motion
 ```
 
-<img src="images/urdf_view.png" height="400"/>
+![](./images/urdf_view_rs.png)
 
 That's it, happy coding!
 
