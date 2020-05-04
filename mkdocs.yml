@@ -3,6 +3,7 @@
 #cd ../hello-robot.github.io/
 #mkdocs gh-deploy --config-file ../stretch_docs/mkdocs.yml --remote-branch master
 #Sizing images: convert foo.png -resize x100 foo_rs.png
+#Local site: 127.0.0.1:8000
 site_name: Stretch User Docs
 repo_url: https://github.com/hello-robot/stretch_docs
 site_description: "Hello Robot User Documentation"
