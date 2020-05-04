@@ -25,15 +25,13 @@ Welcome to the Stretch RE1 User Documentation
 
 ## Release Notes
 Version 0.0.1 (2020/05/4)
-* Initial public release of documentation for Guthrie robot
 
-## License
+ * Initial public release of documentation for Guthrie robot
 
-All Hello Robot stretch_docs related materials are released under the
+## Use
 
-Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+This documentation is only to be used for an authentic Stretch RE1 robot produced and sold by Hello Robot Inc. All Hello Robot stretch_docs related materials are released under the [Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0) license.
 
-https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 
 
 ------
