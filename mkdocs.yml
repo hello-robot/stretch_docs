@@ -1,7 +1,12 @@
+#To host local: mkdocs serve
+#To publish: 
+#cd ../hello-robot.github.io/
+#mkdocs gh-deploy --config-file ../stretch_docs/mkdocs.yml --remote-branch master
+
 site_name: Stretch User Docs
 repo_url: https://github.com/hello-robot/stretch_docs
 site_description: "Hello Robot User Documentation"
-use_directory_urls: False
+use_directory_urls: True
 nav:
  - Home: README.md
  - Quick Start: quick_start_guide.md
