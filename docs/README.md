@@ -1,3 +1,4 @@
+![](images/hello_robot_large_rs.png)
 
 # Overview
 Welcome to the Stretch RE1 User Documentation
