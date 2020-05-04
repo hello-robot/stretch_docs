@@ -1,5 +1,5 @@
 
-# Stretch Body Python Interface
+# Stretch Body Guide
 The Stretch_Body package provides a low level Python API to the Stretch RE1 hardware. The primary interface is the [Robot class](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot.py). It encapsulates
 
 * Mobile base 

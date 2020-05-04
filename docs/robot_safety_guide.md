@@ -1,5 +1,5 @@
 
-# Introduction
+# Robot Safety Guide
 
 ## Before You Start
 
@@ -183,9 +183,9 @@ The lift has a max theoretical strength of nearly 200N of linear force. In pract
 
 The diagrams below show the potential crush points at the top and bottom of the lift range of motion.
 
-<img src="images/lift_down.png" height="400"/>
+<img src="images/lift_down.png" height="300"/>
 
-<img src="images/lift_up.png" height="400"/>
+<img src="images/lift_up.png" height="300"/>
 
 
 

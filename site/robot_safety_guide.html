@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Robot Safety - Stretch User Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-light.min.css">
+        <link href="extra.css" rel="stylesheet">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Stretch User Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="README.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="quick_start_guide.html" class="nav-link">Quick Start</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="stretch_body_guide.html" class="dropdown-item">Stretch Body package</a>
+</li>
+                                    
+<li>
+    <a href="stretch_ROS_guide.md" class="dropdown-item">Stretch ROS package</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hardware <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="robot_safety_guide.html" class="dropdown-item active">Robot Safety</a>
+</li>
+                                    
+<li>
+    <a href="robot_care_guide.html" class="dropdown-item">Robot Care</a>
+</li>
+                                    
+<li>
+    <a href="hardware_user_guide.html" class="dropdown-item">User Guide</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://forum.hello-robot.com/" class="nav-link">Forum</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="stretch_body_guide.html" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="robot_care_guide.html" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/hello-robot/stretch_docs/edit/master/docs/robot_safety_guide.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#robot-safety-guide" class="nav-link">Robot Safety Guide</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#before-you-start" class="nav-link">Before You Start</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#disclaimer" class="nav-link">Disclaimer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#safety" class="nav-link">Safety</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#safety-features" class="nav-link">Safety Features</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#use-common-sense" class="nav-link">Use Common Sense</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#safety-markings" class="nav-link">Safety Markings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#runstop" class="nav-link">Runstop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#safety-hazards" class="nav-link">Safety Hazards</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="robot-safety-guide">Robot Safety Guide</h1>
+<h2 id="before-you-start">Before You Start</h2>
+<p>This manual is intended to help users become familiar with safe operating practices and use of the Hello Robot Stretch RE1</p>
+<p>All users should read and become familiar with the safe operating procedures before operating the robot. </p>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>The Hello Robot Stretch Robot is intended for use in the research of mobile manipulation applications by users experienced in the use and programming of research robots. This product is not intended for general use in the home by consumers, and lacks the required certifications for such use. Please see the section  <a href="#heading=h.d66d1zc26q9m">Regulatory Compliance</a> for further details.</p>
+<h1 id="safety">Safety</h1>
+<p>It is important for users to keep safety in mind at all times while operating a Hello Robot. When improperly used it is possible for users, bystanders, and property to become harmed. All new users of Hello Robot products should be trained by experienced personnel on best practices for safe operation and interaction with the robot. </p>
+<p>Because Stretch is a mobile manipulator with autonomous capabilities, it may move in unpredictable ways. It may carry potentially dangerous objects that can contact people in unexpected ways. While it is relatively lightweight and able to only exert moderate forces on the environment, dangerous conditions can still occur. </p>
+<p>The moving components of the robot pose dangers of pinching and crushing of body parts. People should always be aware and attentive to the motion and of Stretch robots.</p>
+<p>The intended use of the Stretch RE1 is for research and development of mobile manipulation applications within laboratory settings. No robot is ever inherently safe and common sense safety measures should be applied when using Stretch, </p>
+<h2 id="safety-features">Safety Features</h2>
+<p>We have considered safety from the outset in the design of Stretch. </p>
+<ul>
+<li><strong>Lightweight design: </strong> The overall mass of Stretch is 22Kg, and the majority of the mass is in the base. The carbon fiber arm and aluminum mast make for a remarkably lightweight upper body. While this reduces the risk of crushing, crushing injury can still occur and should be carefully monitored.</li>
+<li><strong>Gravity friendly</strong>: The arrangement of Stretch’s manipulator means that it doesn’t have to counteract gravity on a larger lever arm. As a result, the motors and gearboxes are much lower torque and lower weight than a traditional robot manipulator, allowing us to avoid the often dangerous strong shoulder joints of robot arms.</li>
+<li><strong>Low gear ratio</strong>: The primary joints of Stretch (base, lift, and arm) have low, gear-ratios (approx 5:1), allowing for backdriving of joints when powered off. A low gear-ratio also reduces the effective inertia of each joint, limiting the impacted force during undesired contacts with people and the environment.</li>
+<li><strong>Contact Sensitivity</strong>: The four primary joints of Stretch (base, lift, and, arm) have contact sensitivity. We measure motor currents to estimate contact forces. Because Stretch is a low gear-ratio robot, current sensing provides a fairly sensitive measure of contact forces.</li>
+<li><strong>Firmware limits</strong>: Motor torques are limited at the lowest level of the firmware to configured bounds.</li>
+<li><strong>Runstop</strong>: The illuminated runstop button on Stretch’s head can be used to pause operation of the four primary joints (base, lift, and arm) of the robot when it is in motion. </li>
+<li><strong>Velocity limits</strong>: Fast motions of the base are restricted when the arm is up high and tool is outside the base footprint. This limits the likelihood of toppling or snagging the tool during base motion.</li>
+<li><strong>Tilt detection</strong>: The robot can detect when its body is tilted beyond a safe threshold. An over-tilt condition will trigger a runstop event, causing motion to stop.</li>
+</ul>
+<h2 id="use-common-sense">Use Common Sense</h2>
+<p>The most important aspect of safety with Stretch is to use common sense, including</p>
+<ul>
+<li>
+<p>Do not operate unattended by an experienced operator</p>
+</li>
+<li>
+<p>Exhibit caution when operating around young children who may interact with it in unexpected ways</p>
+</li>
+<li>
+<p>Keep an eye on cords, rugs, and any other floor hazards as it drives</p>
+</li>
+<li>
+<p>Keep it at least 5 meters from ledges, curbs, stairs, and any other toppling hazard</p>
+</li>
+<li>
+<p>Keep long hair and clothes away from the moving components of the robot.</p>
+</li>
+<li>
+<p>Do not operate out doors</p>
+</li>
+<li>
+<p>Keep the robot dry and do not operate around liquids</p>
+</li>
+<li>
+<p>Do not attempt to ride the robot</p>
+</li>
+<li>
+<p>If the robot appears to be damaged, stop operation immediately</p>
+</li>
+<li>
+<p>Do not have the robot hold any sharp objects.</p>
+</li>
+<li>
+<p>Use two people to lift and carry the robot when needed</p>
+</li>
+</ul>
+<h2 id="safety-markings">Safety Markings</h2>
+<p>Stretch has the following safety markings:</p>
+<p>Top of shoulder, indicating potential pinch point between rollers and mast:</p>
+<p><img src="images/hand_crush.png" height="200"/></p>
+<p>Top of base, indicating potential pinch point between arm and base.</p>
+<p><img src="images/hand_crush2.png" height="200"/></p>
+<h2 id="runstop">Runstop</h2>
+<p><img src="images/runstop.png" height="300"/></p>
+<p>The runstop allows the user to pause the motion of the four primary actuators (base, lift, and arm) by tapping the illuminated button on the head. An experienced operator should always keep the runstop within reach, allowing them to stop the motion of the robot if it is deemed unsafe.</p>
+<p><strong>NOTE: The runstop is not equivalent to an Emergency Stop found on industrial equipment and no safety guarantees are made by its function</strong>.</p>
+<p>When the runstop is enabled, these actuators are in a ‘Safety Mode’ that inhibits the motion controller at the firmware level. Disabling the runstop allows normal operation to resume.</p>
+<p>The runstop logic is:</p>
+<table>
+  <tr>
+    <td>Action</td>
+    <td>Runstop State</td>
+    <td>Button Illumination</td>
+  </tr>
+  <tr>
+    <td>Robot startup</td>
+    <td>Motion enabled</td>
+    <td>Solid</td>
+  </tr>
+  <tr>
+    <td>Tap runstop button</td>
+    <td>Motion disabled</td>
+    <td>Flashing at 1Hz</td>
+  </tr>
+  <tr>
+    <td>Hold down runstop button for >2s</td>
+    <td>Motion enabled</td>
+    <td>Solid</td>
+  </tr>
+</table>
+
+<p>The default behavior of the Safety Mode for each actuator is:</p>
+<table>
+  <tr>
+    <td>Actuator</td>
+    <td>Safety Mode Behavior</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>
+Left wheel</td>
+    <td>Freewheel</td>
+    <td>Motor drive is powered off. Base can be backdriven manually by user. </td>
+  </tr>
+  <tr>
+    <td>Right wheel</td>
+    <td>Freewheel</td>
+    <td>Motor drive is powered off. Base can be backdriven manually by user. </td>
+  </tr>
+  <tr>
+    <td>Lift</td>
+    <td>Float</td>
+    <td>Motor drive is powered on and commanding current to motor that compensates for gravity (eg, float). Lift can be backdriven by the user.</td>
+  </tr>
+  <tr>
+    <td>Arm</td>
+    <td>Float</td>
+    <td>Motor drive is powered off. Arm can be backdriven manually by user. </td>
+  </tr>
+</table>
+
+<h2 id="safety-hazards">Safety Hazards</h2>
+<p>Like all robots, Stretch has some areas that require extra attention for safe operation. </p>
+<h3 id="sharp-edges">Sharp Edges</h3>
+<p>Stretch RE1 is a piece of laboratory equipment. As such, its structure has moderately sharp corners edges and corners that can be unsafe. These edges can get snagged during motion, or they may cause lacerations when sufficient force is applied to a person. Care should be taken when grasping or otherwise making contact with Stretch that a sharp corner or edge is not contacted.</p>
+<h3 id="toppling">Toppling</h3>
+<p>Stretch is a relatively lightweight robot. In some kinematic configurations a high center of gravity can make it prone to toppling. Toppling can occur when:</p>
+<ul>
+<li>The mobile base is moving at moderate or fast speed and it hits a bump, threshold, or other change in floor property</li>
+<li>If the arm is raised up high and it pushes or pulls on the environment with sufficient force.</li>
+<li>It drives over a drop-off such as a stair or curb</li>
+</ul>
+<p><strong>NOTE: While the Stretch RE1 has cliff sensors, they do not currently inhibit motion of the base. As such, it is possible for the robot to fall down stairs and hurt itself or a person.</strong></p>
+<h3 id="pinch-points">Pinch Points</h3>
+<p>Pinch points around the robot's head, gripper, and wrist can cause discomfort and care should be taken when handling these joints as they move.</p>
+<p>The shoulder, which travels up and down on the lift, has a series of rollers that ride along the mast. While the shoulder shells can prevent large objects from getting pinched by the rollers, small and thin objects can be pulled into and crushed. C</p>
+<p>Extra care should be taken with long hair, clothing, and small fingers around the shoulder rollers.</p>
+<h3 id="crush-points">Crush Points</h3>
+<p>The lift degree of freedom is the strongest joint on the robot and as such can apply potentially unsafe forces to a person.</p>
+<p><img src="images/lift.png" height="400"/></p>
+<p>The lift, while in motion, may trap or crush objects between the ‘shoulder’ and another surface. As such, best practices for lift safety should always be used when using the lift degree of freedom.  </p>
+<p>The lift has a max theoretical strength of nearly 200N of linear force. In practice, this force is limited by the lift’s Guarded Move function, which places the lift in Safety Mode when the actuator forces exceed a threshold. Nominally, this threshold is around 70N but it can be configured in software. When enabled an operating as expected, the Guarded Move controller should keep contact forces within comfortable and safe levels. </p>
+<p>The diagrams below show the potential crush points at the top and bottom of the lift range of motion.</p>
+<p><img src="images/lift_down.png" height="300"/></p>
+<p><img src="images/lift_up.png" height="300"/></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

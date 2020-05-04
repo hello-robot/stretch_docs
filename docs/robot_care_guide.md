@@ -1,6 +1,4 @@
-![](./images/HelloRobotLogoBar.png)
-
-## Overview
+# Robot Care Guide
 
 In this tutorial you will gain a familiarity with the low level hardware of Stretch. See the <Stretch Hardware User Manual> for additional details on the hardware use.
 

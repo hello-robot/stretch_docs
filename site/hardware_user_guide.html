@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>User Guide - Stretch User Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-light.min.css">
+        <link href="extra.css" rel="stylesheet">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Stretch User Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="README.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="quick_start_guide.html" class="nav-link">Quick Start</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="stretch_body_guide.html" class="dropdown-item">Stretch Body package</a>
+</li>
+                                    
+<li>
+    <a href="stretch_ROS_guide.md" class="dropdown-item">Stretch ROS package</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hardware <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="robot_safety_guide.html" class="dropdown-item">Robot Safety</a>
+</li>
+                                    
+<li>
+    <a href="robot_care_guide.html" class="dropdown-item">Robot Care</a>
+</li>
+                                    
+<li>
+    <a href="hardware_user_guide.html" class="dropdown-item active">User Guide</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://forum.hello-robot.com/" class="nav-link">Forum</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="robot_care_guide.html" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/hello-robot/stretch_docs/edit/master/docs/hardware_user_guide.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#hardware-user-guide" class="nav-link">Hardware User Guide</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#usb-devices" class="nav-link">USB Devices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#system-check" class="nav-link">System Check</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hardware-architecture" class="nav-link">Hardware Architecture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#actuators" class="nav-link">Actuators</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sensors" class="nav-link">Sensors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="hardware-user-guide">Hardware User Guide</h1>
+<p>In this guide you will gain a familiarity with the low level hardware of Stretch. </p>
+<h2 id="usb-devices">USB Devices</h2>
+<p>The robot hardware is almost entirely USB based. From a shell on your Stretch, check the available USB devices:</p>
+<pre><code class="bash">lsusb ...
+</code></pre>
+
+<h2 id="system-check">System Check</h2>
+<p>It is useful to periodically check that all robot hardware is present and operating correctly.  From the console, run:</p>
+<pre><code>robot_system_check.py
+</code></pre>
+
+<p>When everything is present and within normal operating conditions you should see an output similar to:</p>
+<p>X</p>
+<h2 id="hardware-architecture">Hardware Architecture</h2>
+<p>The organization of the primary hardware devices are shown below. Blue indicates a USB connection. </p>
+<p><img alt="" src="images/stretch_hardware_architecture.png" /></p>
+<p>The Stretch_Body package deals primarily with the robot actuators and interfaces to the robot's custom firmware. As shown below, the USB devices on the right-hand-side are handled through the Stretch_Body API. The other devices are handles through either ROS or Ubuntu. </p>
+<p><img alt="" src="images/stretch_usb_architecture.png" /></p>
+<h2 id="actuators">Actuators</h2>
+<p>There are two types of actuators in the robot:</p>
+<ul>
+<li>A Nema-23 stepper actuator that includes current feedback and a hall-effect based encoder</li>
+<li>A Dynamixel X-Series servo that includes current feedback and a hall-effect based encoder</li>
+</ul>
+<p>[Image dynamixel]</p>
+<p>[Image Mechaduino]</p>
+<p>The actuators include in most cases include a custom transmission on the output side of the closed loop servo controller. These transmission are of a low gear ratio (on the order of 4:1), allowing for excellent force sensitivity based on the actuator current feedback.</p>
+<h4 id="steppers">Steppers</h4>
+<p>First, take a minute to review the <a href="../python/stretch_body/stepper.py">Stepper Class</a>. This class directly interacts with the stepper motor and allows placing the actuator in a variety of control modes. Generally you would not use this class directly in your code, but instead would use the <a href="../stretch_body/arm.py">Arm Class</a> , for example, when controlling the arm. The Arm Class incoporates joint limits, calibrates to joint units, and manages contact forces, etc. The Stepper Class, in contrast, provides raw access to the Stepper motor controller. </p>
+<p>Check the available stepper devices</p>
+<pre><code>ls /dev/hello-motor*
+...
+</code></pre>
+
+<p>Let's directly jog the arm stepper.</p>
+<pre><code>stretch_arm_jog.py
+</code></pre>
+
+<p>Hit enter a few times and view the actuator state. Notice the position reported at the Arm level is in meters, while the position reported at the Stepper level is in radians. Also notice that the arm force being exterted, in Newtons, which is estimated based on the level of motor current.</p>
+<pre><code>x
+</code></pre>
+
+<p>Now jog the arm using the keyboard 'i' and 'o' comands to extend and retract.  Experiment with setting the joint speeds. Take a look at the code for <a href="../bin/stretch_arm_jog.py">stretch_arm_jog.py</a>. You can see that it is passing in velocity settings from the YAML.</p>
+<p>Looking at the YAML for the arm you can see the motion parameters, as well as other parameters that handle the calibration for the joint.</p>
+<pre><code>arm:
+  chain_pitch: 0.0167
+  chain_sprocket_teeth: 10
+  contact_thresh_N: [-50, 50]
+  contact_thresh_max_N: [-80, 80]
+  force_adj_Newtons: 1.35
+  gr_spur: 3.875
+  i_feedforward: 0
+  motion:
+    fast: {accel_m: 0.2, vel_m: 0.2}
+    default: {accel_m: 0.14, vel_m: 0.14}
+    max: {accel_m: 1.0, vel_m: 1.0}
+    slow: {accel_m: 0.07, vel_m: 0.06}
+  range_m: [0.0, 0.52]
+</code></pre>
+
+<p>You can also use <a href="../stretch_body/base_jog.py">base_jog.py</a> and <a href="../stretch_body/lift_jog.py">lift_jog.py</a> to move the other joints directly. Use care to avoid self collisions and collisions with the world when using these tools.</p>
+<h2 id="sensors">Sensors</h2>
+<h4 id="pimu-board">Pimu Board</h4>
+<h4 id="wacc-board">Wacc Board</h4></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

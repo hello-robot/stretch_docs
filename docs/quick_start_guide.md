@@ -4,7 +4,7 @@ Welcome to your Stretch RE1! This guide will get you started with your new robot
 
 We'd welcome your feedback as you get to know your robot. Please let us know of any issues, questions, or points of confusion. Just email us at support@hello-robot.com.
 
-To start, we highly recommend you first go through the [User Guide: Robot Safety](./RE1/User_Guide_Robot_Safety.md) and watch our Robot Safety Video (link).
+To start, we highly recommend you first go through the [Robot Safety Guide](robot_safety_guide.md) and watch our Robot Safety Video (link).
 
 ## Unboxing
 
@@ -20,8 +20,9 @@ The entire robot powers up and down with the On/Off switch. When powering down, 
 
 The provided battery charger can be plugged and unplugged at any time during operation. We recommend keeping the charger plugged in whenever it isn't running untethered.
 
-<img src="images/trunk.png" height="400"/>
+<img src="../images/trunk.png" height="400"/>
 
+ 
 #### Runstop
 
 The illuminated button on the head is its Runstop. Just tap it, you'll hear a beep and it will start flashing. This will pause motion of the primary robot joints during operation. This can be useful if the robot makes an unsafe motion, or if you just want to free up the robot motors while you roll it around.
@@ -56,7 +57,7 @@ Like any robot, it is possible to break Stretch if you're not careful. Use commo
 
 Stretch comes ready to run out of the box. The Xbox Teleoperation demo will let you quickly test out the robot capabilities by teleoperating it with an Xbox Controller. 
 
-<img src="images/xbox.png" />
+<img src="images/xbox.png" height="500" />
 
 To start the demo after unboxing:
 

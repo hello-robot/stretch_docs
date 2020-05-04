@@ -1,4 +1,7 @@
 site_name: Stretch User Docs
+repo_url: https://github.com/hello-robot/stretch_docs
+site_description: "Hello Robot User Documentation"
+use_directory_urls: False
 nav:
  - Home: README.md
  - Quick Start: quick_start_guide.md
@@ -9,10 +12,9 @@ nav:
     - Robot Safety: robot_safety_guide.md
     - Robot Care: robot_care_guide.md
     - User Guide: hardware_user_guide.md
- - Forum: forum.md
+ - Forum: "https://forum.hello-robot.com/"
 theme:
  name: sandstone
- nav_style: light
-extra_css:
- - docs/extra.css
+ logo: images/hello_robot_logo.png
+extra_css: [extra.css]
 

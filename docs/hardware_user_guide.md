@@ -1,8 +1,7 @@
-![](./images/HelloRobotLogoBar.png)
 
-## Overview
+# Hardware User Guide
 
-In this tutorial you will gain a familiarity with the low level hardware of Stretch. See the <Stretch Hardware User Manual> for additional details on the hardware use.
+In this guide you will gain a familiarity with the low level hardware of Stretch. 
 
 ## USB Devices
 
