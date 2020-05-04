@@ -6,7 +6,7 @@ The Contents are licensed under the Creative Commons Attribution-NoDerivatives 4
 
 https://creativecommons.org/licenses/by-nd/4.0
 
-Unless required by applicable law or agreed to in writing, the Contents distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Unless required by applicable law or agreed to in writing, the Contents distributed under the License are distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
 Patents pending and trademark rights cover the Contents. As stated by the detailed License, "Patent and trademark rights are not licensed under this Public License."
 
