@@ -30,7 +30,9 @@ Version 0.0.1 (2020/05/4)
 
 ## Use
 
-This documentation is only to be used for an authentic Stretch RE1 robot produced and sold by Hello Robot Inc. All Hello Robot stretch_docs related materials are released under the [Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0) license.
+This documentation is only to be used for an authentic Stretch RE1 robot produced and sold by Hello Robot Inc. 
+
+All Hello Robot stretch_docs related materials are released under the [Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0) license.
 
 
 
