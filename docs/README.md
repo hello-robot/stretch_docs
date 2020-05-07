@@ -40,7 +40,7 @@ Version 0.0.1 (5/4/2020)
 
  * Initial public release of documentation for Guthrie robot
 
-## Use
+## License
 
 This documentation is only to be used for an authentic Stretch RE1 robot produced and sold by Hello Robot Inc. 
 
