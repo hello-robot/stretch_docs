@@ -21,10 +21,21 @@ Welcome to the Stretch RE1 User Documentation
 
 [Stretch ROS Guide](stretch_ros_guide.md)
 
-[Stretch Firmware Guide](https://github.com/hello-robot/stretch_firmware)
+[Stretch Firmware](https://github.com/hello-robot/stretch_firmware)
+
+[Stretch Install Scripts](https://github.com/hello-robot/stretch_install)
 
 ## Release Notes
-Version 0.0.1 (2020/05/4)
+[Batch Errata](batch_errata.md)
+
+Version 0.0.2 (5/6/2002)
+
+* Added Batch Errata document
+* Added stretch_audio_test.py
+* Added export_urdf section
+* Added lift clip-clamp
+
+Version 0.0.1 (5/4/2020)
 
  * Initial public release of documentation for Guthrie robot
 

@@ -1,3 +1,5 @@
+#Themes:
+# pip install mkdocs-bootswatch
 #To host local: mkdocs serve
 #To publish: 
 #cd ../hello-robot.github.io/

@@ -25,7 +25,7 @@ The Stretch_Body package is intended for advanced users who prefer to not use RO
 
 # Robot Interface
 
-The primary developer interface to  Stretch_Body is the [Robot class](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot.py).  
+The primary developer interface to  Stretch_Body is the [Robot class](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py).  
 
 As an example, the Python script below prints all Robot sensor and state data to the console every 250ms. 
 
@@ -91,15 +91,15 @@ Parameters may be named with a suffix to help describe the unit type. For exampl
 
 #### The Robot Status
 
-The Robot derives from the [Device class](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/device.py). It also encapsulates a number of other Devices:
+The Robot derives from the [Device class](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/device.py). It also encapsulates a number of other Devices:
 
-* [robot.head](.https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/head.py)
-* [robot.arm](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/arm.py)
-* [robot.lift](.https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/lift.py)
-* [robot.base](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/base.py)
-* [robot.wacc](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/wacc.py)
-* [robot.pimu](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/pimu.py)
-* [robot.end_of_arm](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/end_of_arm.py)
+* [robot.head](.https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/head.py)
+* [robot.arm](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/arm.py)
+* [robot.lift](.https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/lift.py)
+* [robot.base](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/base.py)
+* [robot.wacc](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/wacc.py)
+* [robot.pimu](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/pimu.py)
+* [robot.end_of_arm](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/end_of_arm.py)
 
 All devices contain a Status dictionary. The Status contains the most recent sensor and state data of that device. For example, looking at the Arm class we see:
 
@@ -291,6 +291,7 @@ stretch_wacc_scope.py
 stretch_urdf_show.py
 stretch_rp_lidar_jog.py
 stretch_hardware_echo.py
+stretch_audio_test.py
 ```
 
 All tools accept '--help' as a command line argument to learn its function. For example:
@@ -547,7 +548,8 @@ calibration_base_imu
 calibration_guarded_contact  
 calibration_steppers    
 calibration_D435i     
-calibration_ros      
+calibration_ros
+export_urdf
 udev
 stretch_re1_factory_params.yaml  
 stretch_re1_user_params.yaml
@@ -559,6 +561,10 @@ A factory image of this data (as shipped), is stored read-only under /etc/hello-
 #### Calibration Data
 
 The raw calibration data that was used in production for the robot is also stored for reference within the stretch_user directory. It isn't generally required for development.
+
+#### URDF Data
+
+A calibrated URDF, and associated mesh files, are provided in the 'export_urdf' directory. This is provided for users who don't wish to use ROS yet still want an accurate model of the robot. The stretch_urdf_view.py tool demonstrates how to visualize the URDF from Python.
 
 #### YAML Data
 

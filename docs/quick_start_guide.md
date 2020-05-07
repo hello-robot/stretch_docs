@@ -39,12 +39,13 @@ Like any robot, it is possible to break Stretch if you're not careful. Use commo
 
 * Manually push and pull the arm (when the motor isn't holding a position).
 * Manually raise and lower the lift (when the motor isn't holding a position).
-* Manually roll the base around (when the motors aren't holding a position).
+* Manually tilt and roll the base around (when the motors aren't holding a position).
 * Pick up and carry Stretch (while holding it by the mast, two people for safety).
 
 **Things to be mindful of**:
 
 * Backdriving the head and wrist. They will backdrive but they want to go at their own speed.
+* The arm will slowly descend when the robot is powered off. If the arm is retracted it may rest the tool on the base. If desired to hold the arm up when un-powered, the provided 'clip-clamp' can be clipped onto the mast below the shoulder to support it. 
 
 **Things that can hurt the robot**: 
 
