@@ -7,6 +7,8 @@ Welcome to the Stretch RE1 User Documentation
 
 [Quick Start Guide](quick_start_guide.md) 
 
+[Batch Errata](batch_errata.md)
+
 ### Hardware
 
 [Robot Safety Guide](robot_safety_guide.md)
@@ -26,7 +28,6 @@ Welcome to the Stretch RE1 User Documentation
 [Stretch Install Scripts](https://github.com/hello-robot/stretch_install)
 
 ## Release Notes
-[Batch Errata](batch_errata.md)
 
 Version 0.0.2 (5/6/2002)
 

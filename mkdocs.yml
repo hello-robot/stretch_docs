@@ -22,7 +22,7 @@ nav:
     - User Guide: hardware_user_guide.md
  - Forum: "https://forum.hello-robot.com/"
 theme:
- name: sandstone
+ name: flatly
  logo: images/hello_robot_logo.png
 extra_css: [extra.css]
 
