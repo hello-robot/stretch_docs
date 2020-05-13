@@ -7,8 +7,6 @@ Welcome to the Stretch RE1 User Documentation
 
 [Quick Start Guide](quick_start_guide.md) 
 
-[Batch Errata](batch_errata.md)
-
 ### Hardware
 
 [Robot Safety Guide](robot_safety_guide.md)
@@ -29,16 +27,7 @@ Welcome to the Stretch RE1 User Documentation
 
 ## Release Notes
 
-Version 0.0.2 (5/6/2002)
-
-* Added Batch Errata document
-* Added stretch_audio_test.py
-* Added export_urdf section
-* Added lift clip-clamp
-
-Version 0.0.1 (5/4/2020)
-
- * Initial public release of documentation for Guthrie robot
+[Batch Errata](batch_errata.md)
 
 ## License
 

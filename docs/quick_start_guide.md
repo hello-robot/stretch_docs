@@ -182,6 +182,14 @@ Finally, let's look at the factory calibrated URDF for your robot. From the cons
 
 
 
+## Change Credentials
+
+Finally, we recommend that you change the login credentials for the default user, hello-robot. 
+
+```bash
+>>$ sudo passwd
+```
+
 That's it. Happy coding!
 
 ------
