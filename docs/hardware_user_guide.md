@@ -246,18 +246,18 @@ The wrist includes an expansion DIO header that provides access to pins of the w
 
 ![image alt text](./images/wrist_expansion_port.png)
 
-The header is wired to a Atmel SAMD21G18A-AUT microcontroller (same as Arduino Zero). The expansion header pins are configured at the factory to allow:
+The header is wired to a Atmel SAMD21G18A-AUT ([datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/SAM_D21_DA1_Family_DataSheet_DS40001882F.pdf)) microcontroller (same as Arduino Zero). The expansion header pins are configured at the factory to allow:
 
 * General purpose digital I/O
 * Analog input
 
-In addition, the firmware can be modified to expose other pin functions, including:
+In addition, the firmware can be configured for other pin functions, including:
 
 * Serial SPI
 * Serial I2C
 * Serial UART
 
-The [Stretch Firmware Manual](https://github.com/hello-robot/stretch_firmware) covers this modification in detail.
+The [Stretch Firmware Manual](https://github.com/hello-robot/stretch_firmware) covers this modification.
 
 **The DIO header pins utilize 3V3 TTL logic. They do not have interface protection (eg, ESD, over-voltage, shorts). It is possible to damage your robot if pin specifications are exceeded **
 
