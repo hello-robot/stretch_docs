@@ -244,7 +244,7 @@ The wrist includes a USB 2.0 A interface. This port is fused to 500mA@5V.
 
 The wrist includes an expansion DIO header that provides access to pins of the wrist Arduino board.  The DIO connector can be accessed by removing the cap at the end of the arm.
 
-![image alt text](./images/wrist_expansion_port.png)
+![image alt text](./images/wrist_expansion_port_rs.png)
 
 The header is wired to a Atmel SAMD21G18A-AUT ([datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/SAM_D21_DA1_Family_DataSheet_DS40001882F.pdf)) microcontroller (same as Arduino Zero). The expansion header pins are configured at the factory to allow:
 
@@ -337,11 +337,11 @@ The expansion DIO uses a 10 pin JST header [B10B-PHDSS(LF)(SN)](https://www.digi
 
 Pin 1 & 10 are indicated below.
 
-![image alt text](./images/wrist_expansion_pin_no.png)
+![image alt text](./images/wrist_expansion_pin_no_rs.png)
 
 The expansion DIO schematic shown below.
 
-![image alt text](./images/wrist_expansion_schematic.png)
+![image alt text](./images/wrist_expansion_schematic_rs.png)
 
 ## Gripper
 
