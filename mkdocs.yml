@@ -1,6 +1,6 @@
 #Themes:
 # pip install mkdocs-bootswatch
-#To host local: mkdocs serve
+#To host local:python -m mkdocs serve
 #To publish: 
 #cd ../hello-robot.github.io/
 #mkdocs gh-deploy --config-file ../stretch_docs/mkdocs.yml --remote-branch master
