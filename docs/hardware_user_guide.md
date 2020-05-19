@@ -232,11 +232,116 @@ Coming soon.
 
 ## Wrist
 
-Coming soon.
-
 ### Wrist Accelerometer
 
 Coming soon.
+
+### Expansion USB
+
+The wrist includes a USB 2.0 A interface. This port is fused to 500mA@5V.
+
+### Expansion DIO
+
+The wrist includes an expansion DIO header that provides access to pins of the wrist Arduino board.  The DIO connector can be accessed by removing the cap at the end of the arm.
+
+![image alt text](./images/wrist_expansion_port.png)
+
+The header is wired to a Atmel SAMD21G18A-AUT microcontroller (same as Arduino Zero). The expansion header pins are configured at the factory to allow:
+
+* General purpose digital I/O
+* Analog input
+
+In addition, the firmware can be modified to expose other pin functions, including:
+
+* Serial SPI
+* Serial I2C
+* Serial UART
+
+The [Stretch Firmware Manual](https://github.com/hello-robot/stretch_firmware) covers this modification in detail.
+
+**The DIO header pins utilize 3V3 TTL logic. They do not have interface protection (eg, ESD, over-voltage, shorts). It is possible to damage your robot if pin specifications are exceeded **
+
+The pin mapping is:
+
+<table>
+  <tr>
+    <td>Pin</td>
+    <td>Name</td>
+    <td>Function</td>
+      <td>Factory Firmware</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>DGND</td>
+    <td>Digital ground</td>
+      <td></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>3V3</td>
+    <td>3.3V supply fused at 250mA.</td>
+      <td></td>
+  </tr>
+    <tr>
+    <td>3</td>
+    <td>E12V</td>
+    <td>12VDC fused at 500mA</td>
+        <td></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>SS</td>
+    <td>DIO | SPI SS </td>
+      <td>Digital out (D3)</td>
+  </tr>
+    <tr>
+    <td>5</td>
+    <td>SCK</td>
+    <td>DIO | SPI SCK</td>
+        <td>Digital out (D2)</td>
+  </tr>
+    <tr>
+    <td>6</td>
+    <td>MISO</td>
+    <td>DIO | SPI MISO |UART TX</td>
+        <td>Digital in (D0)</td>
+  </tr>
+    <tr>
+    <td>7</td>
+    <td>MOSI</td>
+    <td>DIO | SPI MOSI</td>
+        <td>Digital in (D1)</td>
+  </tr>
+    <tr>
+    <td>8</td>
+    <td>SCL</td>
+    <td>DIO | I2C SCL</td>
+        <td>Not used</td>
+  </tr>
+    <tr>
+    <td>9</td>
+    <td>SS</td>
+    <td>DIO | I2C SDA</td>
+        <td>Not used</td>
+  </tr>
+    <tr>
+    <td>10</td>
+    <td>ANA0</td>
+    <td>Analog input | UART RX</td>
+        <td>Analog in (A0)</td>
+</table>
+
+
+
+The expansion DIO uses a 10 pin JST header [B10B-PHDSS(LF)(SN)](https://www.digikey.com/product-detail/en/jst-sales-america-inc/B10B-PHDSS-LF-SN/455-1762-ND/926668).  It is compatible with a [JST PHDR-10VS](https://www.digikey.com/product-detail/en/jst-sales-america-inc/PHDR-10VS/455-1158-ND/608600) housing. JST provides pre-crimped wire compatible with this housing ( part [APAPA22K305](https://www.digikey.com/product-detail/en/jst-sales-america-inc/APAPA22K305/455-3086-ND/6009462)).
+
+Pin 1 & 10 are indicated below.
+
+![image alt text](./images/wrist_expansion_pin_no.png)
+
+The expansion DIO schematic shown below.
+
+![image alt text](./images/wrist_expansion_schematic.png)
 
 ## Gripper
 
