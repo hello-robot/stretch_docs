@@ -9,7 +9,8 @@ Welcome to the home for all Stretch RE1 User Documentation.
 | ------------------------------------------------- | ----------------------------------------------------- |
 | Stretch Unboxing Video                            | (Coming soon) How to unpack your new Stretch          |
 | Stretch Best Practices Video                      | (Coming soon) How to safely work with Stretch         |
-| [Stretch Quick Start Guide](quick_start_guide.md) | Getting started  - XBox Teleoperation Demo and beyond |
+| [Stretch Quick Start Guide](quick_start_guide.md) | Getting started  - Xbox Teleoperation Demo and beyond |
+| [Stretch Untethered Operation](untethered_operation.md)   | Guide to working with Stretch untethered      |
 
 # Hardware
 
@@ -41,7 +42,6 @@ Welcome to the home for all Stretch RE1 User Documentation.
 | [Stretch FUNMAP Demo](https://github.com/hello-robot/stretch_ros/blob/master/stretch_funmap/README.md) | Demonstration of Fast Unified Navigation, Manipulation And Planning (FUNMAP) |
 | [Stretch URDF Calibration Tutorial](https://github.com/hello-robot/stretch_ros/blob/master/stretch_calibration/README.md) | Tutorial on URDF (re)calibration                             |
 | [Stretch Description Guide](https://github.com/hello-robot/stretch_ros/blob/master/stretch_description/README.md) | Guide to working with the Stretch URDF and using 3rd party tools. |
-| ROS Remote Desktop Guide                                     | (Coming soon) Guide to working with Stretch untethered via a remote desktop |
 
 ## Release Notes
 
