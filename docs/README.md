@@ -28,6 +28,7 @@ Welcome to the home for all Stretch RE1 User Documentation.
 | Resource                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Stretch Body Guide](stretch_body_guide.md)                  | Guide to the low level Python interface to the Stretch hardware |
+| [Stretch Body API Reference](/api/stable/stretch_body/robot) | API Reference to stretch_body python library                 |
 | [Stretch Firmware Guide](https://github.com/hello-robot/stretch_firmware/blob/master/README.md) | Guide to updating the Stretch Firmware                       |
 | [Stretch Installation Guide](ttps://github.com/hello-robot/stretch_install/blob/master/README.md) | Guide to installing a new user and managing the Stretch installation |
 | [Stretch Factory Tools](https://github.com/hello-robot/stretch_factory/blob/master/README.md) | Guide to factory tools for hardware calibration and introspection |

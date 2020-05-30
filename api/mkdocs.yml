@@ -1,0 +1,29 @@
+site_name: API Reference
+site_url: https://docs.hello-robot.com
+repo_name: hello-robot/stretch_body
+repo_url: https://github.com/hello-robot/stretch_body
+edit_uri: ""
+site_description: "API Reference for stretch packages"
+use_directory_urls: True
+theme:
+  name: material
+  palette:
+    primary: white
+  logo: hello_robot_logo.png
+  favicon: hello_robot_logo.png
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/hello-robot
+plugins:
+  - search
+  - mktheapidocs:
+      modules:
+        stretch_body:
+          section: stable
+          source_repo: https://github.com/hello-robot/stretch_body/tree/master/body
+markdown_extensions:
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
