@@ -1,0 +1,1255 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="API Reference for stretch packages">
+      
+      
+        <link rel="canonical" href="https://docs.hello-robot.com/stable/stretch_body/base/">
+      
+      
+      <link rel="shortcut icon" href="../../../hello_robot_logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+    
+    
+      
+        <title>base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a2408e81.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stretch_bodybase" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://docs.hello-robot.com" title="API Reference" class="md-header-nav__button md-logo" aria-label="API Reference">
+      
+  <img src="../../../hello_robot_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            API Reference
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              base
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/hello-robot/stretch_body" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hello-robot/stretch_body
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docs.hello-robot.com" title="API Reference" class="md-nav__button md-logo" aria-label="API Reference">
+      
+  <img src="../../../hello_robot_logo.png" alt="logo">
+
+    </a>
+    API Reference
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/hello-robot/stretch_body" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hello-robot/stretch_body
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Stable
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Stable" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Stable
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-1-1">
+      Stretch body
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Stretch body" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Stretch body
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../arm/" title="arm" class="md-nav__link">
+      arm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        base
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="base" class="md-nav__link md-nav__link--active">
+      base
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-base" class="md-nav__link">
+    Class Base
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable_freewheel_mode" class="md-nav__link">
+    enable_freewheel_mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_pos_incr_mode" class="md-nav__link">
+    enable_pos_incr_mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_current_to_rotation_torque" class="md-nav__link">
+    motor_current_to_rotation_torque
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_current_to_translation_force" class="md-nav__link">
+    motor_current_to_translation_force
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_rad_to_rotate" class="md-nav__link">
+    motor_rad_to_rotate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_rad_to_translate" class="md-nav__link">
+    motor_rad_to_translate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pretty_print" class="md-nav__link">
+    pretty_print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull_status" class="md-nav__link">
+    pull_status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push_command" class="md-nav__link">
+    push_command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate_by" class="md-nav__link">
+    rotate_by
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate_to_motor_rad" class="md-nav__link">
+    rotate_to_motor_rad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation_to_translation" class="md-nav__link">
+    rotation_to_translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation_torque_to_motor_current" class="md-nav__link">
+    rotation_torque_to_motor_current
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_rotational_velocity" class="md-nav__link">
+    set_rotational_velocity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_translate_velocity" class="md-nav__link">
+    set_translate_velocity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_velocity" class="md-nav__link">
+    set_velocity
+  </a>
+  
+    <nav class="md-nav" aria-label="set_velocity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startup" class="md-nav__link">
+    startup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_sentry" class="md-nav__link">
+    step_sentry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translate_by" class="md-nav__link">
+    translate_by
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translate_to_motor_rad" class="md-nav__link">
+    translate_to_motor_rad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation_force_to_motor_current" class="md-nav__link">
+    translation_force_to_motor_current
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation_to_rotation" class="md-nav__link">
+    translation_to_rotation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cobbs_framing/" title="cobbs_framing" class="md-nav__link">
+      cobbs_framing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../device/" title="device" class="md-nav__link">
+      device
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamixel_XL430/" title="dynamixel_XL430" class="md-nav__link">
+      dynamixel_XL430
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamixel_X_chain/" title="dynamixel_X_chain" class="md-nav__link">
+      dynamixel_X_chain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamixel_hello_XL430/" title="dynamixel_hello_XL430" class="md-nav__link">
+      dynamixel_hello_XL430
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../end_of_arm/" title="end_of_arm" class="md-nav__link">
+      end_of_arm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../head/" title="head" class="md-nav__link">
+      head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hello_utils/" title="hello_utils" class="md-nav__link">
+      hello_utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lift/" title="lift" class="md-nav__link">
+      lift
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pimu/" title="pimu" class="md-nav__link">
+      pimu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../robot/" title="robot" class="md-nav__link">
+      robot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../robot_monitor/" title="robot_monitor" class="md-nav__link">
+      robot_monitor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../robot_sentry/" title="robot_sentry" class="md-nav__link">
+      robot_sentry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scope/" title="scope" class="md-nav__link">
+      scope
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stepper/" title="stepper" class="md-nav__link">
+      stepper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stretch_gripper/" title="stretch_gripper" class="md-nav__link">
+      stretch_gripper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../transport/" title="transport" class="md-nav__link">
+      transport
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../version/" title="version" class="md-nav__link">
+      version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wacc/" title="wacc" class="md-nav__link">
+      wacc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wrist_yaw/" title="wrist_yaw" class="md-nav__link">
+      wrist_yaw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../xbox_controller/" title="xbox_controller" class="md-nav__link">
+      xbox_controller
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-base" class="md-nav__link">
+    Class Base
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable_freewheel_mode" class="md-nav__link">
+    enable_freewheel_mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable_pos_incr_mode" class="md-nav__link">
+    enable_pos_incr_mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_current_to_rotation_torque" class="md-nav__link">
+    motor_current_to_rotation_torque
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_current_to_translation_force" class="md-nav__link">
+    motor_current_to_translation_force
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_rad_to_rotate" class="md-nav__link">
+    motor_rad_to_rotate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor_rad_to_translate" class="md-nav__link">
+    motor_rad_to_translate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pretty_print" class="md-nav__link">
+    pretty_print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull_status" class="md-nav__link">
+    pull_status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push_command" class="md-nav__link">
+    push_command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate_by" class="md-nav__link">
+    rotate_by
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate_to_motor_rad" class="md-nav__link">
+    rotate_to_motor_rad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation_to_translation" class="md-nav__link">
+    rotation_to_translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation_torque_to_motor_current" class="md-nav__link">
+    rotation_torque_to_motor_current
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_rotational_velocity" class="md-nav__link">
+    set_rotational_velocity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_translate_velocity" class="md-nav__link">
+    set_translate_velocity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_velocity" class="md-nav__link">
+    set_velocity
+  </a>
+  
+    <nav class="md-nav" aria-label="set_velocity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startup" class="md-nav__link">
+    startup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_sentry" class="md-nav__link">
+    step_sentry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translate_by" class="md-nav__link">
+    translate_by
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translate_to_motor_rad" class="md-nav__link">
+    translate_to_motor_rad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation_force_to_motor_current" class="md-nav__link">
+    translation_force_to_motor_current
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation_to_rotation" class="md-nav__link">
+    translation_to_rotation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="stretch_bodybase">stretch_body.base<a class="headerlink" href="#stretch_bodybase" title="Permanent link">&para;</a></h1>
+<h2 id="class-base">Class <strong>Base</strong><a class="headerlink" href="#class-base" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">Base</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L9">stretch_body/base.py</a></p>
+<p>API to the Stretch RE1 Mobile Base</p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h4 id="enable_freewheel_mode">enable_freewheel_mode<a class="headerlink" href="#enable_freewheel_mode" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">enable_freewheel_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L60">stretch_body/base.py</a></p>
+<p>Force motors into freewheel</p>
+<h4 id="enable_pos_incr_mode">enable_pos_incr_mode<a class="headerlink" href="#enable_pos_incr_mode" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">enable_pos_incr_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L67">stretch_body/base.py</a></p>
+<p>Force motors into incremental position mode</p>
+<h4 id="motor_current_to_rotation_torque">motor_current_to_rotation_torque<a class="headerlink" href="#motor_current_to_rotation_torque" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">motor_current_to_rotation_torque</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">il</span><span class="p">,</span> <span class="n">ir</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L427">stretch_body/base.py</a></p>
+<h4 id="motor_current_to_translation_force">motor_current_to_translation_force<a class="headerlink" href="#motor_current_to_translation_force" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">motor_current_to_translation_force</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">il</span><span class="p">,</span> <span class="n">ir</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L424">stretch_body/base.py</a></p>
+<h4 id="motor_rad_to_rotate">motor_rad_to_rotate<a class="headerlink" href="#motor_rad_to_rotate" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">motor_rad_to_rotate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_r</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L456">stretch_body/base.py</a></p>
+<h4 id="motor_rad_to_translate">motor_rad_to_translate<a class="headerlink" href="#motor_rad_to_translate" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">motor_rad_to_translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_r</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L447">stretch_body/base.py</a></p>
+<h4 id="pretty_print">pretty_print<a class="headerlink" href="#pretty_print" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">pretty_print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L42">stretch_body/base.py</a></p>
+<h4 id="pull_status">pull_status<a class="headerlink" href="#pull_status" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">pull_status</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L284">stretch_body/base.py</a></p>
+<p>Computes base odometery based on stepper positions / velocities</p>
+<h4 id="push_command">push_command<a class="headerlink" href="#push_command" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">push_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L280">stretch_body/base.py</a></p>
+<h4 id="rotate_by">rotate_by<a class="headerlink" href="#rotate_by" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">rotate_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_r</span><span class="p">,</span> <span class="n">v_r</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">a_r</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stiffness</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">contact_thresh_N</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L130">stretch_body/base.py</a></p>
+<p>Incremental rotation of the base x_r: desired motion (radians) v_r: velocity for trapezoidal motion profile (rad/s) a_r: acceleration for trapezoidal motion profile (rad/s^2) stiffness: stiffness of motion. Range 0.0 (min) to 1.0 (max) contact_thresh_N: force threshold to stop motion (Not yet implemented)</p>
+<h4 id="rotate_to_motor_rad">rotate_to_motor_rad<a class="headerlink" href="#rotate_to_motor_rad" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">rotate_to_motor_rad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_r</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L451">stretch_body/base.py</a></p>
+<h4 id="rotation_to_translation">rotation_to_translation<a class="headerlink" href="#rotation_to_translation" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">rotation_to_translation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_r</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L467">stretch_body/base.py</a></p>
+<h4 id="rotation_torque_to_motor_current">rotation_torque_to_motor_current<a class="headerlink" href="#rotation_torque_to_motor_current" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">rotation_torque_to_motor_current</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tq_Nm</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L437">stretch_body/base.py</a></p>
+<h4 id="set_rotational_velocity">set_rotational_velocity<a class="headerlink" href="#set_rotational_velocity" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">set_rotational_velocity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_r</span><span class="p">,</span> <span class="n">a_r</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L204">stretch_body/base.py</a></p>
+<p>Command the bases rotational velocity. Use care to prevent collisions / avoid runaways v_r: desired rotational velocity (rad/s) a_r: acceleration of motion profile (rad/s^2)</p>
+<h4 id="set_translate_velocity">set_translate_velocity<a class="headerlink" href="#set_translate_velocity" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">set_translate_velocity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_m</span><span class="p">,</span> <span class="n">a_m</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L186">stretch_body/base.py</a></p>
+<p>Command the bases translational velocity. Use care to prevent collisions / avoid runaways v_m: desired velocity (m/s) a_m: acceleration of motion profile (m/s^2)</p>
+<h4 id="set_velocity">set_velocity<a class="headerlink" href="#set_velocity" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">set_velocity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_m</span><span class="p">,</span> <span class="n">w_r</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L225">stretch_body/base.py</a></p>
+<p>Command the bases translational and rotational velocities simultaneously.
+Use care to prevent collisions / avoid runaways</p>
+<h5 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><code>v_m</code>: <code>desired velocity (m/s)</code></p>
+</li>
+<li>
+<p><code>w_r</code>: <code>desired rotational velocity (rad/s)</code></p>
+</li>
+<li>
+<p><code>a</code>: <code>acceleration</code> of <code>motion profile (m/s^2 and rad/s^2)</code></p>
+</li>
+</ul>
+<h4 id="startup">startup<a class="headerlink" href="#startup" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">startup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L33">stretch_body/base.py</a></p>
+<h4 id="step_sentry">step_sentry<a class="headerlink" href="#step_sentry" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">step_sentry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_lift</span><span class="p">,</span> <span class="n">x_arm</span><span class="p">,</span> <span class="n">x_wrist</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L260">stretch_body/base.py</a></p>
+<p>Only allow fast mobile base motion if the lift is low, the arm is retracted, and the wrist is stowed. This is intended to keep the center of mass low for increased stability and avoid catching the arm or tool on something.</p>
+<h4 id="stop">stop<a class="headerlink" href="#stop" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L38">stretch_body/base.py</a></p>
+<h4 id="translate_by">translate_by<a class="headerlink" href="#translate_by" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">translate_by</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">x_m</span><span class="p">,</span> <span class="n">v_m</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">a_m</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stiffness</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">contact_thresh_N</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L76">stretch_body/base.py</a></p>
+<p>Incremental translation of the base x_m: desired motion (m) v_m: velocity for trapezoidal motion profile (m/s) a_m: acceleration for trapezoidal motion profile (m/s^2) stiffness: stiffness of motion. Range 0.0 (min) to 1.0 (max) contact_thresh_N: force threshold to stop motion (TODO: Not yet implemented)</p>
+<h4 id="translate_to_motor_rad">translate_to_motor_rad<a class="headerlink" href="#translate_to_motor_rad" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">translate_to_motor_rad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_m</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L443">stretch_body/base.py</a></p>
+<h4 id="translation_force_to_motor_current">translation_force_to_motor_current<a class="headerlink" href="#translation_force_to_motor_current" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">translation_force_to_motor_current</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f_N</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L432">stretch_body/base.py</a></p>
+<h4 id="translation_to_rotation">translation_to_rotation<a class="headerlink" href="#translation_to_rotation" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">translation_to_rotation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_m</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/base.py#L462">stretch_body/base.py</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../arm/" title="arm" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                arm
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../cobbs_framing/" title="cobbs_framing" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                cobbs_framing
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/hello-robot" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

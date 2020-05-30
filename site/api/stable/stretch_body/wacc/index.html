@@ -1,0 +1,1067 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="API Reference for stretch packages">
+      
+      
+        <link rel="canonical" href="https://docs.hello-robot.com/stable/stretch_body/wacc/">
+      
+      
+      <link rel="shortcut icon" href="../../../hello_robot_logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+    
+    
+      
+        <title>wacc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a2408e81.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stretch_bodywacc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://docs.hello-robot.com" title="API Reference" class="md-header-nav__button md-logo" aria-label="API Reference">
+      
+  <img src="../../../hello_robot_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            API Reference
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              wacc
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/hello-robot/stretch_body" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hello-robot/stretch_body
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docs.hello-robot.com" title="API Reference" class="md-nav__button md-logo" aria-label="API Reference">
+      
+  <img src="../../../hello_robot_logo.png" alt="logo">
+
+    </a>
+    API Reference
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/hello-robot/stretch_body" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hello-robot/stretch_body
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Stable
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Stable" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Stable
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-1-1">
+      Stretch body
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Stretch body" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Stretch body
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../arm/" title="arm" class="md-nav__link">
+      arm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../base/" title="base" class="md-nav__link">
+      base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cobbs_framing/" title="cobbs_framing" class="md-nav__link">
+      cobbs_framing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../device/" title="device" class="md-nav__link">
+      device
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamixel_XL430/" title="dynamixel_XL430" class="md-nav__link">
+      dynamixel_XL430
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamixel_X_chain/" title="dynamixel_X_chain" class="md-nav__link">
+      dynamixel_X_chain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamixel_hello_XL430/" title="dynamixel_hello_XL430" class="md-nav__link">
+      dynamixel_hello_XL430
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../end_of_arm/" title="end_of_arm" class="md-nav__link">
+      end_of_arm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../head/" title="head" class="md-nav__link">
+      head
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hello_utils/" title="hello_utils" class="md-nav__link">
+      hello_utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lift/" title="lift" class="md-nav__link">
+      lift
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pimu/" title="pimu" class="md-nav__link">
+      pimu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../robot/" title="robot" class="md-nav__link">
+      robot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../robot_monitor/" title="robot_monitor" class="md-nav__link">
+      robot_monitor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../robot_sentry/" title="robot_sentry" class="md-nav__link">
+      robot_sentry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scope/" title="scope" class="md-nav__link">
+      scope
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stepper/" title="stepper" class="md-nav__link">
+      stepper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stretch_gripper/" title="stretch_gripper" class="md-nav__link">
+      stretch_gripper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../transport/" title="transport" class="md-nav__link">
+      transport
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../version/" title="version" class="md-nav__link">
+      version
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        wacc
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="wacc" class="md-nav__link md-nav__link--active">
+      wacc
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-wacc" class="md-nav__link">
+    Class Wacc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#board_reset" class="md-nav__link">
+    board_reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack_command" class="md-nav__link">
+    pack_command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack_config" class="md-nav__link">
+    pack_config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pretty_print" class="md-nav__link">
+    pretty_print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull_status" class="md-nav__link">
+    pull_status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push_command" class="md-nav__link">
+    push_command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc_board_info_reply" class="md-nav__link">
+    rpc_board_info_reply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc_command_reply" class="md-nav__link">
+    rpc_command_reply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc_config_reply" class="md-nav__link">
+    rpc_config_reply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc_status_reply" class="md-nav__link">
+    rpc_status_reply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_d2" class="md-nav__link">
+    set_D2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_d3" class="md-nav__link">
+    set_D3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startup" class="md-nav__link">
+    startup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpack_board_info" class="md-nav__link">
+    unpack_board_info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpack_status" class="md-nav__link">
+    unpack_status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wrist_yaw/" title="wrist_yaw" class="md-nav__link">
+      wrist_yaw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../xbox_controller/" title="xbox_controller" class="md-nav__link">
+      xbox_controller
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-wacc" class="md-nav__link">
+    Class Wacc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#board_reset" class="md-nav__link">
+    board_reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack_command" class="md-nav__link">
+    pack_command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack_config" class="md-nav__link">
+    pack_config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pretty_print" class="md-nav__link">
+    pretty_print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull_status" class="md-nav__link">
+    pull_status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push_command" class="md-nav__link">
+    push_command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc_board_info_reply" class="md-nav__link">
+    rpc_board_info_reply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc_command_reply" class="md-nav__link">
+    rpc_command_reply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc_config_reply" class="md-nav__link">
+    rpc_config_reply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc_status_reply" class="md-nav__link">
+    rpc_status_reply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_d2" class="md-nav__link">
+    set_D2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_d3" class="md-nav__link">
+    set_D3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startup" class="md-nav__link">
+    startup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpack_board_info" class="md-nav__link">
+    unpack_board_info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpack_status" class="md-nav__link">
+    unpack_status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="stretch_bodywacc">stretch_body.wacc<a class="headerlink" href="#stretch_bodywacc" title="Permanent link">&para;</a></h1>
+<h2 id="class-wacc">Class <strong>Wacc</strong><a class="headerlink" href="#class-wacc" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">Wacc</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L20">stretch_body/wacc.py</a></p>
+<p>API to the Stretch RE1 wrist+accelerometer (Wacc) board The Wacc has: -- 3-axis accelerometer reported as Ax,Ay,and Az -- Two digital inputs D0, D1 -- Two digital outputs D2, D3 -- One analog input: A0 -- A single tap count based on the accelerometer</p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h4 id="board_reset">board_reset<a class="headerlink" href="#board_reset" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">board_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L123">stretch_body/wacc.py</a></p>
+<h4 id="pack_command">pack_command<a class="headerlink" href="#pack_command" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">pack_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">sidx</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L156">stretch_body/wacc.py</a></p>
+<h4 id="pack_config">pack_config<a class="headerlink" href="#pack_config" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">pack_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">sidx</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L165">stretch_body/wacc.py</a></p>
+<h4 id="pretty_print">pretty_print<a class="headerlink" href="#pretty_print" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">pretty_print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L105">stretch_body/wacc.py</a></p>
+<h4 id="pull_status">pull_status<a class="headerlink" href="#pull_status" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">pull_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exiting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L76">stretch_body/wacc.py</a></p>
+<h4 id="push_command">push_command<a class="headerlink" href="#push_command" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">push_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exiting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L89">stretch_body/wacc.py</a></p>
+<h4 id="rpc_board_info_reply">rpc_board_info_reply<a class="headerlink" href="#rpc_board_info_reply" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">rpc_board_info_reply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reply</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L182">stretch_body/wacc.py</a></p>
+<h4 id="rpc_command_reply">rpc_command_reply<a class="headerlink" href="#rpc_command_reply" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">rpc_command_reply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reply</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L188">stretch_body/wacc.py</a></p>
+<h4 id="rpc_config_reply">rpc_config_reply<a class="headerlink" href="#rpc_config_reply" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">rpc_config_reply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reply</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L192">stretch_body/wacc.py</a></p>
+<h4 id="rpc_status_reply">rpc_status_reply<a class="headerlink" href="#rpc_status_reply" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">rpc_status_reply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reply</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L196">stretch_body/wacc.py</a></p>
+<h4 id="set_d2">set_D2<a class="headerlink" href="#set_d2" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">set_D2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L61">stretch_body/wacc.py</a></p>
+<p>Set the Digital Out 2 on the Wacc expansion header</p>
+<h4 id="set_d3">set_D3<a class="headerlink" href="#set_d3" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">set_D3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L68">stretch_body/wacc.py</a></p>
+<p>Set the Digital Out 3 on the Wacc expansion header</p>
+<h4 id="startup">startup<a class="headerlink" href="#startup" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">startup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L50">stretch_body/wacc.py</a></p>
+<h4 id="stop">stop<a class="headerlink" href="#stop" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L56">stretch_body/wacc.py</a></p>
+<h4 id="unpack_board_info">unpack_board_info<a class="headerlink" href="#unpack_board_info" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">unpack_board_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L130">stretch_body/wacc.py</a></p>
+<h4 id="unpack_status">unpack_status<a class="headerlink" href="#unpack_status" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">unpack_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Source: <a href="https://github.com/hello-robot/stretch_body/tree/master/body/stretch_body/wacc.py#L139">stretch_body/wacc.py</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../version/" title="version" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                version
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../wrist_yaw/" title="wrist_yaw" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                wrist_yaw
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/hello-robot" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

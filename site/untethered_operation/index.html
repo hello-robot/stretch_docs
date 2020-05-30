@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Untethered Operation - Stretch RE1</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <link href="../extra.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Stretch RE1</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://forum.hello-robot.com/" class="nav-link">Forum</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/hello-robot/stretch_docs/edit/master/docs/untethered_operation.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#untethered-operation" class="nav-link">Untethered Operation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#remote-desktop" class="nav-link">Remote Desktop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ssh-x-server" class="nav-link">SSH &amp; X Server</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ros-remote-master" class="nav-link">ROS Remote Master</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#additional-ideas" class="nav-link">Additional Ideas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="untethered-operation">Untethered Operation</h1>
+<p>As a mobile manipulator, the Stretch RE1 can only go so far when tethered to the monitor, keyboard, and mouse setup. This guide will explain three methods of setting up the Stretch RE1 for untethered usage.</p>
+<p>Both methods typically requires a wireless network, but it is possible to setup either of these methods without a wireless network by <a href="#hotspot">setting up a hotspot</a>.</p>
+<h2 id="remote-desktop">Remote Desktop</h2>
+<h4 id="requirements">Requirements</h4>
+<p>This is the recommended approach if you are running Windows or MacOS. This method requires a Virtual Network Computing (VNC) package. Using any of the free or paid options available for Windows, MacOS, and Chrome will be fine since they all use the Remote Frame Buffer (RFB) protocol to communicate with the robot. If you're using Ubuntu, Remmina Remote Desktop Client will be installed by default.</p>
+<h4 id="how-to">How To</h4>
+<p>While the Stretch RE1 is tethered to the monitor, keyboard, and mouse setup, go to System Setting first verify that the robot is connected to the wireless network. Then, select the Sharing tab and turn it on. Then, turn on Screen Sharing and choose a password. If you plan to connect to the robot from a Windows or MacOS machine, then open a terminal and run the following command.</p>
+<pre><code class="bash">sudo gsettings set org.gnome.Vino require-encryption false
+</code></pre>
+
+<p>Finally, we need the robot's IP address, username, and password. Open a terminal and run <code>ifconfig</code>, which will print out the network information of the machine. In the wireless section (typically named wlp2s0), look for something that looks like "inet 10.0.0.15". The four numbers represent the IP address of the robot on the local network. The robot's default username and password is printed on papers that came in the tools box alongside the robot.</p>
+<p>Next, on your computer, connect to the same wireless network as the robot and open the VNC package being used. Using the robot's IP address and username, initialize a new connection to the robot. The robot's desktop will open in a new window.</p>
+<h2 id="ssh-x-server">SSH &amp; X Server</h2>
+<h4 id="requirements_1">Requirements</h4>
+<p>This is the recommended approach if you are running an Unix-based operating system, like Ubuntu or Arch Linux. This method requires both SSH and X Server to be installed. While most Unix-based operating systems have both installed by default, MacOS will only have SSH installed and Windows has neither installed by default. It is possible to install these tools for MacOS or Windows.</p>
+<h4 id="how-to_1">How To</h4>
+<p>While the Remote Desktop approach requires only a VNC, the approach is often slow. In this method, we will use SSH and X Server to accomplish the same a bit faster. SSH stands for Secure Shell, enabling one to remotely use the terminal (shell) of another machine. X Server is used on many Unix variants to render the Windowed GUI of applications and it makes possible to render on your machine's screen the Windowed GUI of an application running on another machine.</p>
+<p>The first step is to identify the robot's IP address on the local network. While the Stretch RE1 is tethered to the monitor, keyboard, and mouse, verify that the robot is connected to a wireless network. Then, open a terminal and run <code>ifconfig</code>, which will print out the network information of the machine. In the wireless section (typically named wlp2s0), look for something that looks like "inet 10.0.0.15". The four numbers represent the IP address of the robot on the local network. Using any other machine on the same local network, I can SSH into the robot using this IP address. Take note of the username and password of the robot. The default combo is printed on papers that came in the tools box alongside the robot.</p>
+<p>To SSH into the robot, run the following. It will require the password and may ask you to add the robot to the known hosts.</p>
+<pre><code class="bash">ssh -X username@ip-address
+</code></pre>
+
+<p>Now that you're SSH-ed into the robot, you can disconnect any wires from the robot. You can accomplish any of the same tasks through the terminal. For example, you can type in <code>ipython</code> and try out all of the same python commands from stretch_body that were explained in the <a href="../quick_start_guide/#start-coding">Getting Started Guide</a>.</p>
+<p>Furthermore, Windowed GUI applications that would have displayed on the monitor will now display on your SSH-ed machine. For example, we can open Rviz to visualize what the robot is seeing. Open two terminals and SSH into the robot as explained above. In the first, run <code>roslaunch stretch_core stretch_driver.launch</code>. You should see the robot's Lidar begin to spin and some information print out in the terminal. In the second, run <code>rviz</code>. A window will pop up and information about the robot can be visualized by clicking on <code>Add -&gt; RobotModel</code> and <code>Add -&gt; By Topic -&gt; /Scan</code>. Additional information on how to use ROS tools can be found in <a href="http://wiki.ros.org/ROS/Tutorials">ROS's tutorials</a> or in our <a href="..#ros-interface">guides on using stretch_ros</a>.</p>
+<h4 id="moving-files-tofrom-the-robot-wirelessly">Moving files to/from the robot wirelessly</h4>
+<p>It's common to need to move files to/from the robot wirelessly and a tool similar to SSH can help with this: Secure Copy (SCP). This tool will not copy directories, so you may need to zip your files up prior to copying them over.</p>
+<p>To send the files from your computer to the robot, run:</p>
+<pre><code class="bash">scp ./filename username@ip-address:~/path/to/put/it/
+</code></pre>
+
+<p>The copy files from the robot to your computer, run the reverse:</p>
+<pre><code class="bash">scp username@ip-address:/path/to/filename ~/path/to/put/it/
+</code></pre>
+
+<h2 id="ros-remote-master">ROS Remote Master</h2>
+<h4 id="requirements_2">Requirements</h4>
+<p>This is the recommended approach if you are running Ubuntu 16.04/18.04 with ROS kinetic/melodic installed. This method will utilize the local installation of ROS tools, such as Rviz, rostopic, and rosservice, while retreiving data from the robot.</p>
+<h4 id="how-to_2">How To</h4>
+<p>If you are developing ROS code to test on the Stretch RE1 and you already have ROS installed on your local Ubuntu machine, then there is an easier way of using Rviz than the method described in <a href="#ssh-x-server">SSH &amp; X Server</a>. In the ROS world, this concept is known as "remote master".</p>
+<p>First, start the ROS launch files on the robot as you normally would. On you local machine, run:</p>
+<pre><code class="bash">export ROS_MASTER_URI=http://username@ip-address:11311
+</code></pre>
+
+<p>Then you may use tools like Rviz, rostopic, or rosservice on your local machine as you would have on the robot. Additional information can be found in the ROS <a href="http://wiki.ros.org/ROS/Tutorials/MultipleMachines">Multiple Machines Tutorial</a>.</p>
+<h2 id="additional-ideas">Additional Ideas</h2>
+<p>Although the methods described above will enable you to wirelessly control the robot, there are a number of way to improve usability and security of your wireless connection. These ideas are listed here.</p>
+<h3 id="hotspot">Hotspot</h3>
+<p>Often the trouble with wirelessly controlling the robot is the network. If your network is using industrial security like 2-factor authentication, there may be trouble connecting the robot to the network. If the network is servicing a large number of users, the connection may feel sluggish. The alternative is to skip the network by connecting directly to the robot through a hotspot. Connected through the hotspot, you can follow instructions for either method described above to control the robot. The trade-off is that while connected to the robot's hotspot, you will be unable to connect to the internet.</p>
+<p>To setup the robot's hotspot, visit the Wifi Settings page in the robot. Click on the hamburger menu in the top right and select "Enable hotspot". From your local machine, connect to the robot's hotspot and save the credentials. To change the hotspot's password or enable the hotspot automatically whenever the robot boots, see the following <a href="https://askubuntu.com/questions/500370/setting-up-wireless-hotspot-to-be-on-at-boot">Stackoverflow post</a>.</p>
+<h3 id="vs-code-remote-development">VS Code Remote Development</h3>
+<p>It is possible to simultaneously develop code on the robot while running wireless experiments using the Remote Development Extension provided by the VS Code IDE. If you're already using the <a href="https://code.visualstudio.com/">VS Code IDE</a>, navigate to the Extensions tab and search for <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">Remote Development Extension by Microsoft</a>. After installing, click on a green button in the bottom left of the screen and then select "Remote-SSH: Connect to Host". Setting this up for the first time will require you to know the robot's IP address and username. Add a new host with the information. While connecting, VS Code will ask you for the password of the robot. Once you are connected, you can open any folder and edit the code remotely. Combined with the method explained in <a href="#ssh-x-server">SSH &amp; X Server</a>, this is a powerful method of iteratively developing code while testing it.</p>
+<h3 id="static-ip-address">Static IP Address</h3>
+<p>Routers that serve wireless networks often dynamically assign IP address to machines that connect to the network. This means that your robot's IP address may have changed since the last time you turned it on. Since it becomes a pain to connect to the monitor, keyboard, and mouse setup every time to run <code>ifconfig</code>, many users prefer to assign the robot a static IP address. If you control the router, visit the router's setting page to setup the robot's static IP address. It is common at universities and companies to have staff dedicated to the management of the network. This staff will often be able to setup a static IP address for the robot.</p>
+<h3 id="public-key-authentication">Public Key Authentication</h3>
+<p>The method of SSH described in <a href="#ssh-x-server">SSH &amp; X Server</a> is the most basic method of SSH-ing. There is better and more-secure method of SSH-ing into the robot called Public Key Authentication. This method will allow multiple developers to SSH into the robot without having to share the robot's admin password.</p>
+<p>The first step is to generating a public and private keys on your computer. Linux and MacOS machines can simply open the terminal and run:</p>
+<pre><code class="bash">ssh-keygen
+</code></pre>
+
+<p>It will prompt you to enter a password. If you do, you'll need it to use the private key when you SSH into the robot. Next, we give the robot the public key. Linux and MacOS machines can run:</p>
+<pre><code class="bash">ssh-copy-id username@ip-address
+</code></pre>
+
+<p>This requires you to know the username and ip-address of the robot. Instructions on how to find this information is found in the <a href="#ssh-x-server">SSH &amp; X Server</a> section. You may now SSH into the robot as normal.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

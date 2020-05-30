@@ -8,11 +8,11 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Stretch Body package - Stretch User Docs</title>
+        <title>Stretch Body Package - Stretch RE1</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-light.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
         <link href="../extra.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">Stretch User Docs</a>
+                <a class="navbar-brand" href="..">Stretch RE1</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -38,39 +38,6 @@
                                 <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="navitem">
-                                <a href="../quick_start_guide/" class="nav-link">Quick Start</a>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="./" class="dropdown-item active">Stretch Body package</a>
-</li>
-                                    
-<li>
-    <a href="../stretch_ROS_guide.md" class="dropdown-item">Stretch ROS package</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hardware <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../robot_safety_guide/" class="dropdown-item">Robot Safety</a>
-</li>
-                                    
-<li>
-    <a href="../robot_care_guide/" class="dropdown-item">Robot Care</a>
-</li>
-                                    
-<li>
-    <a href="../hardware_user_guide/" class="dropdown-item">User Guide</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="navitem">
                                 <a href="https://forum.hello-robot.com/" class="nav-link">Forum</a>
                             </li>
                         </ul>
@@ -81,16 +48,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../quick_start_guide/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../robot_safety_guide/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                             <li class="nav-item">
                                 <a href="https://github.com/hello-robot/stretch_docs/edit/master/docs/stretch_body_guide.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
@@ -112,7 +69,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#stretch-body-guide" class="nav-link">Stretch Body Guide</a>
+            <li class="nav-item" data-level="1"><a href="#stretch-body-package" class="nav-link">Stretch Body Package</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -141,13 +98,36 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="1"><a href="#safe-operation-functions" class="nav-link">Safe Operation Functions</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#logging" class="nav-link">Logging</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#runstop-functions" class="nav-link">Runstop Functions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#robot-monitor" class="nav-link">Robot Monitor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#robot-sentry" class="nav-link">Robot Sentry</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="stretch-body-guide">Stretch Body Guide</h1>
-<p>The Stretch_Body package provides a low level Python API to the Stretch RE1 hardware. The primary interface is the <a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot.py">Robot class</a>. It encapsulates</p>
+<h1 id="stretch-body-package">Stretch Body Package</h1>
+<p>The Stretch_Body package provides a low level Python API to the Stretch RE1 hardware.  </p>
+<p>The package is available on <a href="https://github.com/hello-robot/stretch_body">Git and installable via Pip</a>.</p>
+<p>It encapsulates</p>
 <ul>
 <li>Mobile base </li>
 <li>Arm </li>
@@ -165,8 +145,7 @@
 </ul>
 <p>The Stretch_Body package is intended for advanced users who prefer to not use ROS to control the robot. It assumes a moderate level of experience programming robot sensors and actuators.</p>
 <h1 id="robot-interface">Robot Interface</h1>
-<p>This quick start guide provides a high level introduction to the Robot API and how to program the Stretch robot using its low level Python interface.</p>
-<p>The primary developer interface to  Stretch_Body is the <a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot.py">Robot class</a>.  </p>
+<p>The primary developer interface to  Stretch_Body is the <a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py">Robot class</a>.  </p>
 <p>As an example, the Python script below prints all Robot sensor and state data to the console every 250ms. </p>
 <pre><code class="python">import time
 import stretch_body.robot
@@ -218,15 +197,15 @@ robot.startup()
 <li>pos_r: radians</li>
 </ul>
 <h4 id="the-robot-status">The Robot Status</h4>
-<p>The Robot derives from the <a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/device.py">Device class</a>. It also encapsulates a number of other Devices:</p>
+<p>The Robot derives from the <a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/device.py">Device class</a>. It also encapsulates a number of other Devices:</p>
 <ul>
-<li><a href=".https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/head.py">robot.head</a></li>
-<li><a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/arm.py">robot.arm</a></li>
-<li><a href=".https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/lift.py">robot.lift</a></li>
-<li><a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/base.py">robot.base</a></li>
-<li><a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/wacc.py">robot.wacc</a></li>
-<li><a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/pimu.py">robot.pimu</a></li>
-<li><a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/end_of_arm.py">robot.end_of_arm</a></li>
+<li><a href=".https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/head.py">robot.head</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/arm.py">robot.arm</a></li>
+<li><a href=".https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/lift.py">robot.lift</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/base.py">robot.base</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/wacc.py">robot.wacc</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/pimu.py">robot.pimu</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/end_of_arm.py">robot.end_of_arm</a></li>
 </ul>
 <p>All devices contain a Status dictionary. The Status contains the most recent sensor and state data of that device. For example, looking at the Arm class we see:</p>
 <pre><code class="python">class Arm(Device):
@@ -384,6 +363,7 @@ stretch_wacc_scope.py
 stretch_urdf_show.py
 stretch_rp_lidar_jog.py
 stretch_hardware_echo.py
+stretch_audio_test.py
 </code></pre>
 
 <p>All tools accept '--help' as a command line argument to learn its function. For example:</p>
@@ -672,7 +652,8 @@ calibration_base_imu
 calibration_guarded_contact  
 calibration_steppers    
 calibration_D435i     
-calibration_ros      
+calibration_ros
+export_urdf
 udev
 stretch_re1_factory_params.yaml  
 stretch_re1_user_params.yaml
@@ -682,6 +663,8 @@ stretch_re1_tool_params.yaml
 <p>A factory image of this data (as shipped), is stored read-only under /etc/hello-robot . This is only for backup and to support cloning the user environment for new users.</p>
 <h4 id="calibration-data">Calibration Data</h4>
 <p>The raw calibration data that was used in production for the robot is also stored for reference within the stretch_user directory. It isn't generally required for development.</p>
+<h4 id="urdf-data">URDF Data</h4>
+<p>A calibrated URDF, and associated mesh files, are provided in the 'export_urdf' directory. This is provided for users who don't wish to use ROS yet still want an accurate model of the robot. The stretch_urdf_view.py tool demonstrates how to visualize the URDF from Python.</p>
 <h4 id="yaml-data">YAML Data</h4>
 <p>Stretch_Body relies upon the following three primary YAML files:</p>
 <table>
@@ -706,10 +689,10 @@ stretch_re1_tool_params.yaml
 </tr>
 </tbody>
 </table>
-<h4 id="factory-settings">Factory Settings</h4>
+<h4 id="factory-parameters">Factory Parameters</h4>
 <p>This stretch_re1_factory_params.yaml file contains the robot's 'factory' settings. This includes things such as PID parameters for motor controllers, calibration constants, and default joint velocities and accelerations. </p>
 <p>The user should not edit this file. Hello Robot retains an 'as shipped' version of this file should it ever get corrupted. It can be instructive to review this file when getting to know the Stretch_Body code base.</p>
-<h4 id="user-settings">User Settings</h4>
+<h4 id="user-parameters">User Parameters</h4>
 <p>The factory settings should suffice for most use cases. However, the user is allowed to override the factory settings. This is done by using same YAML structure and name as is used in the stretch_re1_user_params.yaml file as in the factory file.</p>
 <p>For example, heres the  stretch_re1_user_params.yaml  file is overriding the factory default contact thresholds and  motion speeds.</p>
 <pre><code class="yaml">factory_params: stretch_re1_factory_params.yaml
@@ -730,9 +713,151 @@ base:
 
 </code></pre>
 
-<h4 id="end-of-arm-tool-settings">End of Arm Tool Settings</h4>
+<h4 id="end-of-arm-tool-parameters">End of Arm Tool Parameters</h4>
 <p>The stretch_re1_tool_params.yaml file stores configuration parameters specific to the user's custom end-of-arm-tools. It is read by the Robot class and the parameter data is made accessible to the user's end-of-arm-tool class. </p>
-<p>More information coming soon.</p></div>
+<p>More information coming soon.</p>
+<h1 id="safe-operation-functions">Safe Operation Functions</h1>
+<p>Stretch includes a number of built-in functions that help it maintain safe operating conditions. These functions can be disabled and enabled via the robot YAML parameters.</p>
+<h2 id="logging">Logging</h2>
+<p>Upon instantiation, the Robot class opens a new log file for warning and informational messages to be written to. These timestamped logs are found under $HELLO_FLEET_DIRECTORY/log.</p>
+<p>The logging messages can be echoed to the console by setting:</p>
+<pre><code>robot:
+  log_to_console: 1
+</code></pre>
+
+<h2 id="runstop-functions">Runstop Functions</h2>
+<table>
+<thead>
+<tr>
+<th>YAML</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stop_at_low_voltage</td>
+<td>Trigger runstop / beep when voltage too low</td>
+</tr>
+<tr>
+<td>stop_at_high_current</td>
+<td>Trigger runstop when bus current too high</td>
+</tr>
+<tr>
+<td>stop_at_cliff</td>
+<td>Trigger runstop when a cliff sensor is outside of range</td>
+</tr>
+<tr>
+<td>stop_at_runstop</td>
+<td>Allow runstop to disable motors</td>
+</tr>
+<tr>
+<td>stop_at_tilt</td>
+<td>Trigger runstop when robot tilts too far</td>
+</tr>
+</tbody>
+</table>
+<h2 id="robot-monitor">Robot Monitor</h2>
+<p>The <a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot_monitor.py">Robot Monitor</a> is a thread that monitors the Robot Status data for significant events. For example, it can monitor the error flags from the Dynamixel servos and notify when a thermal overload occurs. The Robot Monitor logs warnings to a log file by default. </p>
+<table>
+<thead>
+<tr>
+<th>YAML</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>monitor_base_bump_event</td>
+<td>Report when the accelerometer detects a bump event</td>
+</tr>
+<tr>
+<td>monitor_base_cliff_event</td>
+<td>Report when a cliff sensor event occurs</td>
+</tr>
+<tr>
+<td>monitor_current</td>
+<td>Report when the battery current exceeds desired range</td>
+</tr>
+<tr>
+<td>monitor_dynamixel_flags</td>
+<td>Report when a Dynamixel servo enters an error state</td>
+</tr>
+<tr>
+<td>monitor_guarded_contact</td>
+<td>Report when a guarded contact event occurs</td>
+</tr>
+<tr>
+<td>monitor_over_tilt_alert</td>
+<td>Report when an over-tilt event occurs</td>
+</tr>
+<tr>
+<td>monitor_runstop</td>
+<td>Report when the runstop is activated / deactivated</td>
+</tr>
+<tr>
+<td>monitor_voltage</td>
+<td>Report when the battery voltage is out of range</td>
+</tr>
+<tr>
+<td>monitor_wrist_single_tap</td>
+<td>Report when the wrist accelerometer reports a single tap event</td>
+</tr>
+</tbody>
+</table>
+<p>The YAML below illustrates the types of events that are can be configured.</p>
+<pre><code class="yaml">robot:
+  log_to_console: 0
+  use_monitor: 1
+  use_sentry: 1
+
+robot_monitor:
+  monitor_base_bump_event: 1
+  monitor_base_cliff_event: 1
+  monitor_current: 1
+  monitor_dynamixel_flags: 1
+  monitor_guarded_contact: 1
+  monitor_over_tilt_alert: 1
+  monitor_runstop: 1
+  monitor_voltage: 1
+  monitor_wrist_single_tap: 1
+
+robot_sentry:
+  base_fan_control: 1
+  base_max_velocity: 1
+  stretch_gripper_overload: 1
+  wrist_yaw_overload: 1
+</code></pre>
+
+<h2 id="robot-sentry">Robot Sentry</h2>
+<p>The <a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot_sentry.py">Robot Sentry</a> is a thread that can override and also generate commands to the robot hardware. It's purpose is to keep the robot operating within a safe regime. For example, the Robot Sentry monitors the position of the Lift and Arm and limits the maximum base velocity and acceleration (in order to reduce the chance of toppling). The Robot Sentry reports events to the log file as well. </p>
+<table>
+<thead>
+<tr>
+<th>YAML</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>base_fan_control</td>
+<td>Turn the fan on when CPU temp exceeds range</td>
+</tr>
+<tr>
+<td>base_max_velocity</td>
+<td>Limit the base velocity when robot CG is high</td>
+</tr>
+<tr>
+<td>stretch_gripper_overload</td>
+<td>Reset commanded position to prevent thermal overload during grasp</td>
+</tr>
+<tr>
+<td>wrist_yaw_overload</td>
+<td>Reset commanded position to prevent thermal overload during pushing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div></p></div>
             </div>
         </div>
 
@@ -761,7 +886,7 @@ base:
                 </p>
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
