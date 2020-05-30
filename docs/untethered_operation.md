@@ -1,7 +1,7 @@
 
 # Untethered Operation
 
-As a mobile manipulator, the Stretch RE1 can only go so far when tethered to the monitor, keyboard, and mouse setup. This guide will explain two methods of setting up the Stretch RE1 for untethered usage. 
+As a mobile manipulator, the Stretch RE1 can only go so far when tethered to the monitor, keyboard, and mouse setup. This guide will explain three methods of setting up the Stretch RE1 for untethered usage.
 
 Both methods typically requires a wireless network, but it is possible to setup either of these methods without a wireless network by [setting up a hotspot](#hotspot).
 
@@ -59,6 +59,24 @@ The copy files from the robot to your computer, run the reverse:
 scp username@ip-address:/path/to/filename ~/path/to/put/it/
 ```
 
+## ROS Remote Master
+
+#### Requirements
+
+This is the recommended approach if you are running Ubuntu 16.04/18.04 with ROS kinetic/melodic installed. This method will utilize the local installation of ROS tools, such as Rviz, rostopic, and rosservice, while retreiving data from the robot.
+
+#### How To
+
+If you are developing ROS code to test on the Stretch RE1 and you already have ROS installed on your local Ubuntu machine, then there is an easier way of using Rviz than the method described in [SSH & X Server](#ssh-x-server). In the ROS world, this concept is known as "remote master".
+
+First, start the ROS launch files on the robot as you normally would. On you local machine, run:
+
+```bash
+export ROS_MASTER_URI=http://username@ip-address:11311
+```
+
+Then you may use tools like Rviz, rostopic, or rosservice on your local machine as you would have on the robot. Additional information can be found in the ROS [Multiple Machines Tutorial](http://wiki.ros.org/ROS/Tutorials/MultipleMachines).
+
 ## Additional Ideas
 
 Although the methods described above will enable you to wirelessly control the robot, there are a number of way to improve usability and security of your wireless connection. These ideas are listed here.
@@ -68,10 +86,6 @@ Although the methods described above will enable you to wirelessly control the r
 Often the trouble with wirelessly controlling the robot is the network. If your network is using industrial security like 2-factor authentication, there may be trouble connecting the robot to the network. If the network is servicing a large number of users, the connection may feel sluggish. The alternative is to skip the network by connecting directly to the robot through a hotspot. Connected through the hotspot, you can follow instructions for either method described above to control the robot. The trade-off is that while connected to the robot's hotspot, you will be unable to connect to the internet.
 
 To setup the robot's hotspot, visit the Wifi Settings page in the robot. Click on the hamburger menu in the top right and select "Enable hotspot". From your local machine, connect to the robot's hotspot and save the credentials. To change the hotspot's password or enable the hotspot automatically whenever the robot boots, see the following [Stackoverflow post](https://askubuntu.com/questions/500370/setting-up-wireless-hotspot-to-be-on-at-boot).
-
-### ROS Remote Master
-
-If you are developing ROS code to test on the Stretch RE1 and you already have ROS installed on your local Ubuntu machine, then there is an easier way of using Rviz than the method described in [SSH & X Server](#ssh-x-server). In the ROS world, this concept is known as "remote master". Start the ROS launch files on the robot as you normally would. On you local machine, run `export ROS_MASTER_URI=http://username@ip-address:11311`. Then you may use tools like Rviz, rostopic, or rosservice on your local machine as you would have on the robot. Additional information can be found in the ROS [Multiple Machines Tutorial](http://wiki.ros.org/ROS/Tutorials/MultipleMachines).
 
 ### VS Code Remote Development
 
