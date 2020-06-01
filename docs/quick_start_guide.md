@@ -1,14 +1,14 @@
 # Stretch RE1: Quick Start Guide
 
-Congratulations on your Stretch RE1! This guide will get you started with your new robot.
+Congratulations on your Stretch RE1! This guide will get you started with your new robot. 
 
-We'd welcome your feedback as you get to know your robot. Please let us know of any issues, questions, or points of confusion. Just email us at support@hello-robot.com.
+## Safety
 
-To start, we highly recommend you first go through the [Robot Safety Guide](robot_safety_guide.md) and watch our Robot Safety Video (coming soon).
+Stretch has the potential to cause harm if not properly used. All users should review the [Stretch Safety Guide](robot_safety_guide.md) and the [Stretch Safety Video]() (coming soon) before operating the robot.
 
 ## Unboxing
 
-Please watch our unboxing video (Coming soon)
+Please watch the [Stretch Unboxing Video](https://vimeo.com/424213333).
 
 ## Robot Tour
 
@@ -35,6 +35,8 @@ To allow motion once again, hold the button down for two seconds. After the beep
 
 Like any robot, it is possible to break Stretch if you're not careful. Use common sense when applying forces to its joints, transporting it, etc. 
 
+The [Stretch Unpowered Best Practices Video](https://vimeo.com/424386241) provides a quick overview of how to work with the robot.
+
 **Things that won't hurt the robot**:
 
 * Manually push and pull the arm (when the motor isn't holding a position).
@@ -44,7 +46,7 @@ Like any robot, it is possible to break Stretch if you're not careful. Use commo
 
 **Things to be mindful of**:
 
-* Backdriving the head and wrist. They will backdrive but they want to go at their own speed.
+* Manually moving the head and wrist. They will move but they want to go at their own speed.
 * The arm will slowly descend when the robot is powered off. If the arm is retracted it may rest the tool on the base. If desired to hold the arm up when un-powered, the provided 'clip-clamp' can be clipped onto the mast below the shoulder to support it. 
 
 **Things that can hurt the robot**: 
@@ -60,15 +62,15 @@ Stretch comes ready to run out of the box. The Xbox Teleoperation demo will let 
 
 ![](./images/xbox.png)
 
+**Note**: You will find the USB Dongle already plugged into the the USB port of the base trunk.
+
 To start the demo after unboxing:
 
 * Remove the 'trunk' cover and power on the robot
-
 * Wait for about 45 seconds. You will hear the Ubuntu startup sound, followed by two beeps (indicating the demo is running). 
-
 * Hit the Connect button on the controller. The upper two LEDs of the ring will illuminate.
-
-* Hit the Home Robot button. Stretch will go through its homing calibration routine.
+* Hit the Home Robot button. Stretch will go through its homing calibration routine. 
+  * **Note**: make sure the space around the robot is clear before running the Home function
 
 
  You're ready to go! A few things to try:
@@ -92,10 +94,17 @@ Let's get plugged in.
 * Remove the 'trunk' cover and power on the robot if its not already on.
 * Plug in a mouse, keyboard and HDMI monitor to the robot trunk
 * Plug in the battery charger
+  * **Note**: You may need to set the charger mode to 12V AGM using the charger 'Mode' button
 
 Log in to the robot computer. The default user credentials came in the box with the robot. 
 
-Before you can start coding you'll want to first kill off the XBox controller process which runs by default at boot:
+
+
+## Start Coding
+
+This will give you a quick look at the [Stretch Body Interface](stretch_body_guide.md), which is the low level Python interface to the robot.
+
+Stretch is configured to run the XBox Controller demo in the background at startup. To run your own code you'll need kill off this process so that it doesn't contend with your code.
 
 ```bash
 >> pkill -f stretch_xbox*
@@ -111,11 +120,7 @@ Search for 'Startup' from Ubuntu Activities. Uncheck the box for 'hello_robot_xb
 
 
 
-
-
-## Start Coding
-
-Open up a Terminal. From the command line, first verify that that all of the hardware is present and happy
+Now open up a Terminal. From the command line, first verify that that all of the hardware is present and happy
 
 ```
 >> stretch_robot_system_check.py
@@ -187,10 +192,18 @@ Finally, let's look at the factory calibrated URDF for your robot. From the cons
 Finally, we recommend that you change the login credentials for the default user, hello-robot. 
 
 ```bash
->>$ sudo passwd
+>>$ sudo passwd hello-robot
 ```
 
-That's it. Happy coding!
+If you'd like to setup a new user account, check out the [Stretch Installation Guide](https://github.com/hello-robot/stretch_install/blob/master/README.md).
 
 ------
 .<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div>
+
+## Join the Community Forum
+
+Join the Hello Robot Community form at forum.hello-robot.com. We'd welcome hearing your feedback as you get to know your robot. 
+
+Hello Robot support monitors the forum closely and will quickly get back to you on any questions or issues you post.
+
+That's it. Happy coding!.

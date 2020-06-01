@@ -27,7 +27,6 @@ Welcome to the home for all Stretch RE1 User Documentation.
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Stretch Hardware User Guide](hardware_user_guide.md)        | Specification and functional description of the Stretch RE1 Hardware |
 | [Stretch Tool Share](https://github.com/hello-robot/stretch_tool_share) | Open resource to share designs and code for end-of-arm tools |
-| [Stretch Care Guide](robot_care_guide.md)                    | Guide to maintain a healthy Stretch                          |
 
 # Software
 
