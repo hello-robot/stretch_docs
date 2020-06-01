@@ -3,14 +3,23 @@
 # Overview
 Welcome to the home for all Stretch RE1 User Documentation. 
 
+# Safety
+
+**WARNING**: Stretch is a potentially dangerous robot. It is incumbent upon users to review the following safety materials prior to operating the robot.
+
+| Resource                                                     | Description                                    |
+| ------------------------------------------------------------ | ---------------------------------------------- |
+| Stretch Safety Video                                         | (Coming soon)                                  |
+| [Stretch Safety Guide](robot_safety_guide.md)                | Guide to safe operation of Stretch             |
+| [Stretch Unpowered Best Practices Video](https://vimeo.com/424386241) | How to work with Stretch when its power is off |
+
 # Quick Start
 
-| Resource                                          | Description                                           |
-| ------------------------------------------------- | ----------------------------------------------------- |
-| Stretch Unboxing Video                            | (Coming soon) How to unpack your new Stretch          |
-| Stretch Best Practices Video                      | (Coming soon) How to safely work with Stretch         |
-| [Stretch Quick Start Guide](quick_start_guide.md) | Getting started  - Xbox Teleoperation Demo and beyond |
-| [Stretch Untethered Operation](untethered_operation.md)   | Guide to working with Stretch untethered      |
+| Resource                                                | Description                                           |
+| ------------------------------------------------------- | ----------------------------------------------------- |
+| [Stretch Unboxing Video](https://vimeo.com/424213333)   | How to unpack your new Stretch                        |
+| [Stretch Quick Start Guide](quick_start_guide.md)       | Getting started  - Xbox Teleoperation Demo and beyond |
+| [Stretch Untethered Operation](untethered_operation.md) | Guide to working with Stretch untethered              |
 
 # Hardware
 
@@ -18,7 +27,6 @@ Welcome to the home for all Stretch RE1 User Documentation.
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Stretch Hardware User Guide](hardware_user_guide.md)        | Specification and functional description of the Stretch RE1 Hardware |
 | [Stretch Tool Share](https://github.com/hello-robot/stretch_tool_share) | Open resource to share designs and code for end-of-arm tools |
-| [Stretch Safety Guide](robot_safety_guide.md)                | Guide for safe use of the Stretch RE1                        |
 | [Stretch Care Guide](robot_care_guide.md)                    | Guide to maintain a healthy Stretch                          |
 
 # Software
@@ -29,7 +37,7 @@ Welcome to the home for all Stretch RE1 User Documentation.
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Stretch Body Guide](stretch_body_guide.md)                  | Guide to the low level Python interface to the Stretch hardware |
 | [Stretch Firmware Guide](https://github.com/hello-robot/stretch_firmware/blob/master/README.md) | Guide to updating the Stretch Firmware                       |
-| [Stretch Installation Guide](ttps://github.com/hello-robot/stretch_install/blob/master/README.md) | Guide to installing a new user and managing the Stretch installation |
+| [Stretch Installation Guide](https://github.com/hello-robot/stretch_install/blob/master/README.md) | Guide to installing a new user and managing the Stretch installation |
 | [Stretch Factory Tools](https://github.com/hello-robot/stretch_factory/blob/master/README.md) | Guide to factory tools for hardware calibration and introspection |
 | Stretch Wrist Expansion Header                               | (Coming soon) Tutorial to the Arduino expansion header in the wrist |
 

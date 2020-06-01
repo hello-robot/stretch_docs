@@ -1,5 +1,5 @@
 # Robot Care Guide
-This guide describes best practices to maintain a happy and healthy Stretch RE1.
+This guide describes best practices to maintain a happy and healthy Stretch RE1. 
 ## Battery Maintenance
 
 The robot has two deep-cycle sealed lead acid batteries which provide 12V/19AH of charge. The provided charger will keep the system at a near full-charge if it is left plugged during non-tethered use. 
@@ -38,13 +38,11 @@ The batteries are fused with a 20mm 8A / slow blow fuse. Nominal load currents f
 
 Should the fuse blow, the robot will fail to power up. Should the fuse need replacement contact support@hello-robot.com.
 
-
-
 ## Belt Tension
 
-A neoprene timing belt drives the arm up and down the lift. It may detension over long periods of time if it experiences sustained loading. In this case, slack will become visually appearant in the belt as the lift moves.
+A neoprene timing belt drives the arm up and down the lift. It may detension over long periods of time if it experiences sustained loading. In this case, slack will become visually apparent in the belt as the lift moves.
 
-The belt is very straightforward to re-tension. Please contact support@hello-robot.com for tensioing instructions.
+The belt is very straightforward to re-tension. Please contact support@hello-robot.com for tensioning instructions.
 
 ## Keeping the Robot Clean
 
@@ -53,6 +51,8 @@ The robot surfaces can be wiped down with an alcohol wipe or a moist rag from ti
 The drive wheels can accumulate dust over time and begin to lose traction. They should be periodically wiped down as well.
 
 When possible, the Trunk cover for the base should be kept on in order to keep dust and debris out of the Trunk connectors.
+
+If the D435i camera requires cleaning use appropriate lens cleaning fluid and a microfiber cloth.
 
 ## Keeping the Robot Calibrated
 
@@ -64,13 +64,15 @@ The robot may become slightly uncalibrated over time for a variety of reasons:
 * The head structure is accidentally load and the structure becomes very slightly bent
 * The wrist and should structure become accidentally highly loaded and become slightly bent
 
-The calibration accuracy can be checked using the provided ROS tools. If necessary, the user can recalibrate the robot. See the Stretch ROS User Guide for more information.
+The calibration accuracy can be checked using the provided ROS tools. If necessary, the user can recalibrate the robot. See the [Stretch URDF Calibration Guide](https://github.com/hello-robot/stretch_ros/blob/master/stretch_calibration/README.md) for more information.
 
 ## Transporting the Robot
 
 Stretch was designed to be easily transported in the back of a car, up a stair case, or around a building.
 
-For short trips, the robot can be simply rolled around by grabbing its mast. It may be picked up by its mast and carried up stairs as well.
+For short trips, the robot can be simply rolled around by grabbing its mast. It may be picked up by its mast and carried up stairs as well. 
+
+**For safety, please use two people to lift the robot.**
 
 For longer trips it is recommended to transport the robot in its original cardboard box with foam packaging. The metal protective cage that surrounds the head is only necessary if the robot might be shipped and the box will not remain upright.
 
@@ -149,7 +151,6 @@ Bus 002 Device 016: ID 8086:0b3a Intel Corp.
 [Pass] : Device found 
 
 ```
-
 
 ------
 .<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div>
