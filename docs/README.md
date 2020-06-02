@@ -7,11 +7,11 @@ Welcome to the home for all Stretch RE1 User Documentation.
 
 **WARNING**: Stretch is a potentially dangerous robot. It is incumbent upon users to review the following safety materials prior to operating the robot.
 
-| Resource                                                     | Description                                    |
-| ------------------------------------------------------------ | ---------------------------------------------- |
-| Stretch Safety Video                                         | (Coming soon)                                  |
-| [Stretch Safety Guide](robot_safety_guide.md)                | Guide to safe operation of Stretch             |
-| [Stretch Unpowered Best Practices Video](https://vimeo.com/424386241) | How to work with Stretch when its power is off |
+| Resource                                                    | Description                                    |
+| ----------------------------------------------------------- | ---------------------------------------------- |
+| Stretch Safety Video                                        | (Coming soon)                                  |
+| [Stretch Safety Guide](robot_safety_guide.md)               | Guide to safe operation of Stretch             |
+| [Stretch Best Practices Video](https://vimeo.com/424386241) | How to work with Stretch when its power is off |
 
 # Quick Start
 
