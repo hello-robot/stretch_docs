@@ -22,6 +22,7 @@ plugins:
         stretch_body:
           section: stable
           source_repo: https://github.com/hello-robot/stretch_body/tree/master/body
+          hidden: ["", "version"]
 markdown_extensions:
   - codehilite:
       guess_lang: false

@@ -10,6 +10,14 @@ $ python3 -m pip install mkdocs-bootswatch
 $ python3 -m pip install mkdocs-material
 ```
 
+Then we're install the `mktheapidocs` plugin. Until a PR gets merged in, the steps are:
+
+```bash
+$ git clone https://github.com/binitshah/mktheapidocs.git -b feature/hidden_submodules
+$ cd mktheapidocs
+$ python3 -m pip install -e .
+```
+
 ## Development
 
 The following command will serve the static website with hot-reloading. There are two static websites in this repository. The main documentation is in the root of the repository (`http://127.0.0.1:8000`). The auto-generated API based on `stretch_body` is in the `api/` folder (`http://127.0.0.1:8000/stable/stretch_body/arm`).
