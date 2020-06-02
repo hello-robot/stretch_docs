@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Hardware User Guide - Stretch RE1</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <link href="../extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Stretch RE1</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li >
+                                <a href="https://forum.hello-robot.com/">Forum</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/hello-robot/stretch_docs/edit/master/docs/hardware_user_guide.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#hardware-user-guide">Hardware User Guide</a></li>
+            <li><a href="#disclaimer">Disclaimer</a></li>
+            <li><a href="#functional-specification">Functional Specification</a></li>
+            <li><a href="#body-plan">Body Plan</a></li>
+            <li><a href="#hardware-architecture">Hardware Architecture</a></li>
+        <li class="main "><a href="#robot-subsystems">Robot Subsystems</a></li>
+            <li><a href="#base">Base</a></li>
+            <li><a href="#trunk">Trunk</a></li>
+            <li><a href="#head">Head</a></li>
+            <li><a href="#lift">Lift</a></li>
+            <li><a href="#arm">Arm</a></li>
+            <li><a href="#wrist">Wrist</a></li>
+            <li><a href="#gripper">Gripper</a></li>
+        <li class="main "><a href="#robot-care">Robot Care</a></li>
+            <li><a href="#battery-maintenance">Battery Maintenance</a></li>
+            <li><a href="#belt-tension">Belt Tension</a></li>
+            <li><a href="#keeping-the-robot-clean">Keeping the Robot Clean</a></li>
+            <li><a href="#keeping-the-robot-calibrated">Keeping the Robot Calibrated</a></li>
+            <li><a href="#transporting-the-robot">Transporting the Robot</a></li>
+            <li><a href="#system-check">System Check</a></li>
+        <li class="main "><a href="#regulatory-compliance">Regulatory Compliance</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="hardware-user-guide">Hardware User Guide</h1>
+<p>This manual provides the engineering data and user guidance for working with the Hello Robot Stretch RE1 hardware.  </p>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>The Hello Robot Stretch Robot is intended for use in the research of mobile manipulation applications by users experienced in the use and programming of research robots. This product is not intended for general use in the home by consumers, and lacks the required certifications for such use. Please see the section on   Regulatory Compliance for further details.</p>
+<h2 id="functional-specification">Functional Specification</h2>
+<p><img alt="image alt text" src="../images/Stretch-RE1 Specification.png" /></p>
+<h2 id="body-plan">Body Plan</h2>
+<p><img alt="image alt text" src="../images/Stretch-RE1-User Interfaces.png" /></p>
+<h2 id="hardware-architecture">Hardware Architecture</h2>
+<p><img alt="image alt text" src="../images/hardware_architecture.png" /></p>
+<h1 id="robot-subsystems">Robot Subsystems</h1>
+<h2 id="base">Base</h2>
+<p>The base is a two wheel differential drive with a passive Mecanum wheel for a caster.  It includes four cliff sensors to allow detection of stairs, thresholds, etc.</p>
+<p><img alt="image alt text" src="../images/hw_image_1.png" /></p>
+<table>
+  <tr>
+    <td></td>
+    <td>Item</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>Drive wheels</td>
+    <td>4 inch diameter, urethane rubber shore 60A</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>Cliff sensors</td>
+    <td>Sharp GP2Y0A51SK0F, Analog, range 2-15 cm</td>
+  </tr>
+  <tr>
+    <td>C</td>
+    <td>Mecanum wheel</td>
+    <td>Diameter 50mm</td>
+  </tr>
+</table>
+
+<p>The base has 6 M4 threaded inserts available for mounting user accessories such as a tray. The mounting pattern is shown below.</p>
+<p><img alt="image alt text" src="../images/hw_image_2.png" /></p>
+<h3 id="base-imu">Base IMU</h3>
+<p>The base has a 9 DOF IMU using the 9 DOF FXOS8700 + FXAS21002 chipset. The IMU orientation is as shown below:</p>
+<p><img alt="image alt text" src="../images/base_imu_top.png" /></p>
+<p><img alt="image alt text" src="../images/base_imu_side.png" /></p>
+<h2 id="trunk">Trunk</h2>
+<p>Development and charge ports are at the back of the base in the trunk. The trunk cover slides into place vertically and is non-latching.</p>
+<p>The trunk height has been designed to accommodate one or more USB based Intel Neural Compute Sticks.</p>
+<p>Two mounting holes are provided inside the trunk. These allow the user to strain relief tethered cables (eg, HDMI and keyboard) during development. It is recommended to strain relief such cables to prevent accidental damage during base motion.</p>
+<p><img alt="image alt text" src="../images/trunk_detail_rs.png" /></p>
+<table>
+  <tr>
+    <td></td>
+    <td>Item</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>Vent</td>
+    <td>Intake vent for computer fan</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>6 Port USB Hub</td>
+    <td>USB 3.0 , powered 5V/3A</td>
+  </tr>
+  <tr>
+    <td>C</td>
+    <td>Ethernet</td>
+    <td>Connected to computer NIC</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>On/Off</td>
+    <td>Robot power on / off. Switch is illuminated when on.</td>
+  </tr>
+  <tr>
+    <td>E</td>
+    <td>Charge</td>
+    <td>Rated for upplied 12V/7A charger</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>HDMI</td>
+    <td>Connected to computer HDMI</td>
+  </tr>
+  <tr>
+    <td>G</td>
+    <td>Mounting points</td>
+    <td>M4 threaded holes</td>
+  </tr>
+</table>
+
+<h2 id="head">Head</h2>
+<p>The head provides the audio interface to the robot, a pan tilt depth camera, a runstop, as well as a developer interface to allow the addition of additional user hardware.</p>
+<p><img alt="image alt text" src="../images/hw_image_4.png" /></p>
+<table>
+  <tr>
+    <td></td>
+    <td>Item</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>Pan tilt depth camera</td>
+    <td>Intel RealSense D435i
+Two Dynamixel XL430-W250-T servos</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>Speakers</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>C</td>
+    <td>Mounting holes</td>
+    <td>2x M4 threaded, spacing 25mm</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>Developer Interface</td>
+    <td>USB2.0-A with 5V@500mA fused 
+JST XHP-2,  12V@3A fused
+Pin 1: 12V
+Pin 2: GND</td>
+  </tr>
+  <tr>
+    <td>E</td>
+    <td>Microphone array</td>
+    <td>With programmable 12 RGB LED ring </td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>Runstop</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>G</td>
+    <td>Audio volume control</td>
+    <td></td>
+  </tr>
+</table>
+
+<h3 id="pan-tilt">Pan Tilt</h3>
+<p>The head pan-tilt unit utilizes two Dynamixel XL430-W250-T servos. It incorporates a small fan in order to ensure proper cooling of the servo and camera during dynamic repeated motions of the tilt DOF.</p>
+<p>The nominal ‘zero’ position is of the head is shown below, along with the corresponding range of motion.</p>
+<p><img alt="image alt text" src="../images/tilt_detail_rs.png" /></p>
+<table>
+  <tr>
+    <td>DOF</td>
+    <td>Range (deg)</td>
+    <td>Min(deg)</td>
+    <td>Max (deg)</td>
+  </tr>
+  <tr>
+    <td>Pan</td>
+    <td>225</td>
+    <td>-100 </td>
+    <td>125</td>
+  </tr>
+  <tr>
+    <td>Tilt</td>
+    <td>115</td>
+    <td>-25</td>
+    <td>90</td>
+  </tr>
+</table>
+
+<h3 id="runstop">Runstop</h3>
+<p>The runstop allows the user to pause the motion of the four primary DOF (base, lift, and arm) by tapping the illuminated button on the head. When the runstop is enabled, these DOF are in a ‘Safety Mode’ that inhibits the motion controller at the firmware level. Disabling the runstop allows normal operation to resume. </p>
+<h2 id="lift">Lift</h2>
+<p>The lift degree of freedom provides vertical translation of the arm. It is driven by a closed loop stepper motor, providing smooth and precise motion through a low gear-ratio belt drive. The ‘shoulder’ includes two mounting holes and a small delivery tray.</p>
+<p><img alt="image alt text" src="../images/lift_detail_rs.png" /></p>
+<p><img alt="image alt text" src="../images/shoulder_detail_rs.png" /></p>
+<table>
+  <tr>
+    <td></td>
+    <td>Item</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>Delivery tray</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>Mounting holes</td>
+    <td>Threaded M4. Spacing 34.5 mm.</td>
+  </tr>
+  <tr>
+    <td>C</td>
+    <td>Aruco Tag</td>
+    <td>Size 40x40 mm</td>
+  </tr>
+</table>
+
+<h2 id="arm">Arm</h2>
+<p><img alt="image alt text" src="../images/arm_top.png" /></p>
+<p>The arm comprises 5 telescoping carbon fiber links set on rollers. Its proprietary drive train is driven by a stepper motor with closed loop control and current sensing, allowing contact sensitivity during motion.</p>
+<p>The arm exhibits a small amount of play (lash) in the X, Y, Z, and theta directions which is a normal characteristic of its design. Despite this it can achieve good repeatability, in part because its gravity loading is fairly constant.</p>
+<p>The retracted arm and wrist combined are designed to fit within the footprint of the base. The arm is designed to have:</p>
+<ul>
+<li>Reach: 0.52m</li>
+</ul>
+<h2 id="wrist">Wrist</h2>
+<h3 id="wrist-accelerometer">Wrist Accelerometer</h3>
+<p>The wrist includes a 3 axis <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf">ADXL343</a> accelerometer which provides bump and tap detection capabilities. The  sensor is mounted inside the distal link of the arm as shown below.</p>
+<p>[Coming soon]</p>
+<h3 id="expansion-usb">Expansion USB</h3>
+<p>The wrist includes a USB 2.0 A interface. This power to this USB port is fused to 500mA@5V.</p>
+<h3 id="expansion-dio">Expansion DIO</h3>
+<p>The wrist includes an expansion DIO header that provides access to pins of the wrist Arduino board.  The DIO connector can be accessed by removing the cap at the end of the arm.</p>
+<p><img alt="image alt text" src="../images/wrist_expansion_port_rs.png" /></p>
+<p>The header is wired to a Atmel SAMD21G18A-AUT (<a href="http://ww1.microchip.com/downloads/en/DeviceDoc/SAM_D21_DA1_Family_DataSheet_DS40001882F.pdf">datasheet</a>) microcontroller (same as Arduino Zero). The expansion header pins are configured at the factory to allow:</p>
+<ul>
+<li>General purpose digital I/O</li>
+<li>Analog input</li>
+</ul>
+<p>In addition, the firmware can be configured for other pin functions, including:</p>
+<ul>
+<li>Serial SPI</li>
+<li>Serial I2C</li>
+<li>Serial UART</li>
+</ul>
+<p>The <a href="https://github.com/hello-robot/stretch_firmware">Stretch Firmware Manual</a> covers this modification.</p>
+<p><strong>The DIO header pins utilize 3V3 TTL logic. They do not have interface protection (eg, ESD, over-voltage, shorts). It is possible to damage your robot if pin specifications are exceeded </strong></p>
+<p>The pin mapping is:</p>
+<table>
+  <tr>
+    <td>Pin</td>
+    <td>Name</td>
+    <td>Function</td>
+      <td>Factory Firmware</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>DGND</td>
+    <td>Digital ground</td>
+      <td></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>3V3</td>
+    <td>3.3V supply fused at 250mA.</td>
+      <td></td>
+  </tr>
+    <tr>
+    <td>3</td>
+    <td>E12V</td>
+    <td>12VDC fused at 500mA</td>
+        <td></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>SS</td>
+    <td>DIO | SPI SS </td>
+      <td>Digital out (D3)</td>
+  </tr>
+    <tr>
+    <td>5</td>
+    <td>SCK</td>
+    <td>DIO | SPI SCK</td>
+        <td>Digital out (D2)</td>
+  </tr>
+    <tr>
+    <td>6</td>
+    <td>MISO</td>
+    <td>DIO | SPI MISO |UART TX</td>
+        <td>Digital in (D0)</td>
+  </tr>
+    <tr>
+    <td>7</td>
+    <td>MOSI</td>
+    <td>DIO | SPI MOSI</td>
+        <td>Digital in (D1)</td>
+  </tr>
+    <tr>
+    <td>8</td>
+    <td>SCL</td>
+    <td>DIO | I2C SCL</td>
+        <td>Not used</td>
+  </tr>
+    <tr>
+    <td>9</td>
+    <td>SS</td>
+    <td>DIO | I2C SDA</td>
+        <td>Not used</td>
+  </tr>
+    <tr>
+    <td>10</td>
+    <td>ANA0</td>
+    <td>Analog input | UART RX</td>
+        <td>Analog in (A0)</td>
+</table>
+
+<p>The expansion DIO uses a 10 pin JST header <a href="https://www.digikey.com/product-detail/en/jst-sales-america-inc/B10B-PHDSS-LF-SN/455-1762-ND/926668">B10B-PHDSS(LF)(SN)</a>.  It is compatible with a <a href="https://www.digikey.com/product-detail/en/jst-sales-america-inc/PHDR-10VS/455-1158-ND/608600">JST PHDR-10VS</a> housing. JST provides pre-crimped wire compatible with this housing ( part <a href="https://www.digikey.com/product-detail/en/jst-sales-america-inc/APAPA22K305/455-3086-ND/6009462">APAPA22K305</a>).</p>
+<p>Pin 1 &amp; 10 are indicated below.</p>
+<p><img alt="image alt text" src="../images/wrist_expansion_pin_no_rs.png" /></p>
+<p>The expansion DIO schematic shown below.</p>
+<p><img alt="image alt text" src="../images/wrist_expansion_schematic_rs.png" /></p>
+<h2 id="gripper">Gripper</h2>
+<p>Coming soon.</p>
+<h1 id="robot-care">Robot Care</h1>
+<h2 id="battery-maintenance">Battery Maintenance</h2>
+<p>The robot has two deep-cycle sealed lead acid batteries which provide 12V/19AH of charge. The provided charger will keep the system at a near full-charge if it is left plugged during non-tethered use. </p>
+<p>While deep-cycle batteries are robust to deep discharge states, it is recommended to avoid doing so if possible. The provide charger is able to recover form such a state if it occurs however.</p>
+<p>We recommend leaving the charger plugged in whenever the robot base is stationary.</p>
+<h4 id="battery-state">Battery State</h4>
+<p>The battery charger LEDs provide an approximate indicator of battery charge. However, this is not especially accurate. A charged battery will typically report a voltage of 12-12.8V and will maintain that voltage across load conditions. Meanwhile, a partially charged battery may report anywhere from 10-12.8V but its voltage will drop rapidly when loaded. </p>
+<p>The  voltage and current draw can be checked by;</p>
+<pre><code class="bash">&gt;&gt;$ stretch_robot_battery_check.py 
+[Pass] Voltage with 12.9889035225
+[Pass] Current with 2.46239192784
+[Pass] CPU Temp with 56.0
+
+</code></pre>
+
+<h4 id="run-time">Run Time</h4>
+<p>The run time for a fully charged system is dependent on the load use case. The vast majority of battery power is consumed by the NUC computer. While the motors can momentarily draw surge currents, the robot is designed such that minimal power is expended to hold the body up against gravity (which keeps average motor current low). </p>
+<p>The robot will continue to operate at battery voltages as low as 9.5V. A fully charged robot running a very high CPU load will take over 2 hours to discharge to 10V. </p>
+<h4 id="low-voltage-alert">Low Voltage Alert</h4>
+<p>When the battery voltage drops below a YAML specified threshold the robot will produce an intermittent double beep sound. This is a reminder to the user to plug in the charger. This threshold is set at 10.5V at the factory but may be overridden.</p>
+<h3 id="battery-fuse">Battery Fuse</h3>
+<p>The batteries are fused with a 20mm 8A / slow blow fuse. Nominal load currents for the robot are 3-5A for most use cases. The fuse provides protection against an internal short. </p>
+<p>Should the fuse blow, the robot will fail to power up. Should the fuse need replacement contact support@hello-robot.com.</p>
+<h2 id="belt-tension">Belt Tension</h2>
+<p>A neoprene timing belt drives the arm up and down the lift. It may detension over long periods of time if it experiences sustained loading. In this case, slack will become visually apparent in the belt as the lift moves.</p>
+<p>The belt is very straightforward to re-tension. Please contact support@hello-robot.com for tensioning instructions.</p>
+<h2 id="keeping-the-robot-clean">Keeping the Robot Clean</h2>
+<p>The robot surfaces can be wiped down with an alcohol wipe or a moist rag from time to time in order to remove and debris or oils that accumulate on the shells or mast. </p>
+<p>The drive wheels can accumulate dust over time and begin to lose traction. They should be periodically wiped down as well.</p>
+<p>When possible, the Trunk cover for the base should be kept on in order to keep dust and debris out of the Trunk connectors.</p>
+<p>If the D435i camera requires cleaning use appropriate lens cleaning fluid and a microfiber cloth.</p>
+<h2 id="keeping-the-robot-calibrated">Keeping the Robot Calibrated</h2>
+<p>The robot comes pre-calibrated with a robot-specific URDF. This calibration allows the D435i depth sensor to accurately estimate where the robot wrist, and body, is in the depth image.</p>
+<p>The robot may become slightly uncalibrated over time for a variety of reasons:</p>
+<ul>
+<li>Normal wear and tear and loosening of joints of the robot</li>
+<li>The head structure is accidentally load and the structure becomes very slightly bent</li>
+<li>The wrist and should structure become accidentally highly loaded and become slightly bent</li>
+</ul>
+<p>The calibration accuracy can be checked using the provided ROS tools. If necessary, the user can recalibrate the robot. See the <a href="https://github.com/hello-robot/stretch_ros/blob/master/stretch_calibration/README.md">Stretch URDF Calibration Guide</a> for more information.</p>
+<h2 id="transporting-the-robot">Transporting the Robot</h2>
+<p>Stretch was designed to be easily transported in the back of a car, up a stair case, or around a building.</p>
+<p>For short trips, the robot can be simply rolled around by grabbing its mast. It may be picked up by its mast and carried up stairs as well. </p>
+<p><strong>For safety, please use two people to lift the robot.</strong></p>
+<p>For longer trips it is recommended to transport the robot in its original cardboard box with foam packaging. The metal protective cage that surrounds the head is only necessary if the robot might be shipped and the box will not remain upright.</p>
+<h2 id="system-check">System Check</h2>
+<p>It is useful to periodically run stretch_robot_system_check.py. This  will check that the robot's hardware devices are  present and within normal operating conditions. </p>
+<pre><code class="bash">&gt;&gt;$ stretch_robot_system_check.py
+
+---- Checking Devices ----
+[Pass] : hello-wacc
+[Pass] : hello-motor-left-wheel
+[Pass] : hello-motor-arm
+[Pass] : hello-dynamixel-wrist
+[Pass] : hello-motor-right-wheel
+[Pass] : hello-motor-lift
+[Pass] : hello-pimu
+[Pass] : hello-respeaker
+[Pass] : hello-lrf
+[Pass] : hello-dynamixel-head
+
+---- Checking Pimu ----
+[Pass] Voltage = 12.8763639927
+[Pass] Current = 3.25908634593
+[Pass] Temperature = 36.3404559783
+[Pass] Cliff-0 = -4.72064208984
+[Pass] Cliff-1 = -8.56213378906
+[Pass] Cliff-2 = 1.08505249023
+[Pass] Cliff-3 = 5.68453979492
+[Pass] IMU AZ = -9.80407142639
+
+
+---- Checking EndOfArm ----
+[Dynamixel ID:013] ping Succeeded. Dynamixel model number : 1060
+[Pass] Ping of: wrist_yaw
+[Pass] Calibrated: wrist_yaw
+
+[Dynamixel ID:014] ping Succeeded. Dynamixel model number : 1060
+[Pass] Ping of: stretch_gripper
+[Pass] Calibrated: stretch_gripper
+
+
+---- Checking Head ----
+[Dynamixel ID:012] ping Succeeded. Dynamixel model number : 1060
+[Pass] Ping of: head_tilt
+
+[Dynamixel ID:011] ping Succeeded. Dynamixel model number : 1060
+[Pass] Ping of: head_pan
+
+
+---- Checking Wacc ----
+[Pass] AX = 9.4840593338
+
+
+---- Checking hello-motor-left-wheel ----
+[Pass] Position = 43.9992256165
+
+
+---- Checking hello-motor-right-wheel ----
+[Pass] Position = 15.1164712906
+
+
+---- Checking hello-motor-arm ----
+[Pass] Position = 59.7719421387
+[Pass] Position Calibrated = True
+
+
+---- Checking hello-motor-lift ----
+[Pass] Position = 83.7744064331
+[Pass] Position Calibrated = True
+
+
+---- Checking for Intel D435i ----
+Bus 002 Device 016: ID 8086:0b3a Intel Corp. 
+[Pass] : Device found 
+
+</code></pre>
+
+<hr />
+<p>.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div></p>
+<h1 id="regulatory-compliance">Regulatory Compliance</h1>
+<p>The Stretch Research Edition 1 (Stretch RE1) is not certified for use as a consumer device in the U.S.</p>
+<p>Unless stated otherwise, the Stretch RE1 is not subjected to compliance testing nor certified to meet any requirements, such as requirements for EMI, EMC, or ESD.</p>
+<p>Per<a href="https://www.law.cornell.edu/cfr/text/47/15.103"> FCC 47 CFR, Part 15, Subpart B, section 15.103(c)</a>, we claim the Stretch Research Edition 1 as an exempted device, since it is a digital device used exclusively as industrial, commercial, or medical test equipment, where test equipment is equipment intended primarily for purposes of performing scientific investigations.</p>
+<p><a href="https://transition.fcc.gov/bureaus/oet/info/documents/bulletins/oet62/oet62rev.pdf">OET BULLETIN NO. 62</a>, titled "UNDERSTANDING THE FCC REGULATIONS FOR COMPUTERS AND OTHER DIGITAL DEVICES" from December 1993 provides further clarification of the Section 15.103(c) exemption: “<em>Test equipment</em> includes devices used for maintenance, research, evaluation, simulation and other analytical or scientific applications in areas such as industrial plants, public utilities, hospitals, universities, laboratories, automotive service centers and electronic repair shops.”</p>
+<hr />
+<p>.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

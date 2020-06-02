@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Hello Robot User Documentation">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Stretch RE1</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <link href="extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href=".">Stretch RE1</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href=".">Home</a>
+                            </li>
+                            <li >
+                                <a href="https://forum.hello-robot.com/">Forum</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/hello-robot/stretch_docs/edit/master/docs/README.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#overview">Overview</a></li>
+        <li class="main "><a href="#safety">Safety</a></li>
+        <li class="main "><a href="#quick-start">Quick Start</a></li>
+        <li class="main "><a href="#hardware">Hardware</a></li>
+        <li class="main "><a href="#software">Software</a></li>
+            <li><a href="#body-interface">Body Interface</a></li>
+            <li><a href="#ros-interface">ROS Interface</a></li>
+            <li><a href="#release-notes">Release Notes</a></li>
+            <li><a href="#license">License</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><img alt="" src="images/hello_robot_large_rs.png" /></p>
+<h1 id="overview">Overview</h1>
+<p>Welcome to the home for all Stretch RE1 User Documentation. </p>
+<h1 id="safety">Safety</h1>
+<p><strong>WARNING</strong>: Stretch is a potentially dangerous robot. It is incumbent upon users to review the following safety materials prior to operating the robot.</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stretch Safety Video</td>
+<td>(Coming soon)</td>
+</tr>
+<tr>
+<td><a href="robot_safety_guide/">Stretch Safety Guide</a></td>
+<td>Guide to safe operation of Stretch</td>
+</tr>
+<tr>
+<td><a href="https://vimeo.com/424386241">Stretch Best Practices Video</a></td>
+<td>How to work with Stretch when its power is off</td>
+</tr>
+</tbody>
+</table>
+<h1 id="quick-start">Quick Start</h1>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://vimeo.com/424213333">Stretch Unboxing Video</a></td>
+<td>How to unpack your new Stretch</td>
+</tr>
+<tr>
+<td><a href="quick_start_guide/">Stretch Quick Start Guide</a></td>
+<td>Getting started  - Xbox Teleoperation Demo and beyond</td>
+</tr>
+<tr>
+<td><a href="untethered_operation/">Stretch Untethered Operation</a></td>
+<td>Guide to working with Stretch untethered</td>
+</tr>
+</tbody>
+</table>
+<h1 id="hardware">Hardware</h1>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="hardware_user_guide/">Stretch Hardware User Guide</a></td>
+<td>Specification and functional description of the Stretch RE1 Hardware</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hello-robot/stretch_tool_share">Stretch Tool Share</a></td>
+<td>Open resource to share designs and code for end-of-arm tools</td>
+</tr>
+</tbody>
+</table>
+<h1 id="software">Software</h1>
+<h3 id="body-interface">Body Interface</h3>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="stretch_body_guide/">Stretch Body Guide</a></td>
+<td>Guide to the low level Python interface to the Stretch hardware</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hello-robot/stretch_firmware/blob/master/README.md">Stretch Firmware Guide</a></td>
+<td>Guide to updating the Stretch Firmware</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hello-robot/stretch_install/blob/master/README.md">Stretch Installation Guide</a></td>
+<td>Guide to installing a new user and managing the Stretch installation</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hello-robot/stretch_factory/blob/master/README.md">Stretch Factory Tools</a></td>
+<td>Guide to factory tools for hardware calibration and introspection</td>
+</tr>
+<tr>
+<td>Stretch Wrist Expansion Header</td>
+<td>(Coming soon) Tutorial to the Arduino expansion header in the wrist</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ros-interface">ROS Interface</h3>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/hello-robot/stretch_ros/tree/master/stretch_demos">Stretch Autonomy Demos</a></td>
+<td>Demonstration of simple autonomous manipulations</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hello-robot/stretch_ros/blob/master/stretch_deep_perception/README.md">Stretch Deep Perception Demos</a></td>
+<td>Demonstration of using open deep learning models to perceive the world</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hello-robot/stretch_ros/blob/master/stretch_funmap/README.md">Stretch FUNMAP Demo</a></td>
+<td>Demonstration of Fast Unified Navigation, Manipulation And Planning (FUNMAP)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hello-robot/stretch_ros/blob/master/stretch_calibration/README.md">Stretch URDF Calibration Tutorial</a></td>
+<td>Tutorial on URDF (re)calibration</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hello-robot/stretch_ros/blob/master/stretch_description/README.md">Stretch Description Guide</a></td>
+<td>Guide to working with the Stretch URDF and using 3rd party tools.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="release-notes">Release Notes</h2>
+<p><a href="batch_errata/">Batch Errata</a></p>
+<h2 id="license">License</h2>
+<p>This documentation is only to be used for an authentic Stretch RE1 robot produced and sold by Hello Robot Inc. </p>
+<p>All Hello Robot stretch_docs related materials are released under the <a href="https://creativecommons.org/licenses/by-nd/4.0">Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</a> license.</p>
+<hr />
+<p>.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2020-06-02 04:26:53
+-->
