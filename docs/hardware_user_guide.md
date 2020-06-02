@@ -1,6 +1,6 @@
 # Hardware User Guide
 
-This manual provides the engineering data relevant to the use of the Hello Robot Stretch RE1 hardware.  
+This manual provides the engineering data and user guidance for working with the Hello Robot Stretch RE1 hardware.  
 
 ## Disclaimer
 
@@ -8,11 +8,19 @@ The Hello Robot Stretch Robot is intended for use in the research of mobile mani
 
 ## Functional Specification
 
-![image alt text](./images/hw_image_0.png)
+![image alt text](./images/Stretch-RE1 Specification.png)
+
+## Body Plan
+
+
+
+![image alt text](./images/Stretch-RE1-User Interfaces.png)
 
 ## Hardware Architecture
 
 ![image alt text](./images/hardware_architecture.png)
+
+# Robot Subsystems
 
 ## Base
 
@@ -50,7 +58,11 @@ The base has 6 M4 threaded inserts available for mounting user accessories such 
 
 ### Base IMU
 
-Coming soon.
+The base has a 9 DOF IMU using the 9 DOF FXOS8700 + FXAS21002 chipset. The IMU orientation is as shown below:
+
+![image alt text](./images/base_imu_top.png)
+
+![image alt text](./images/base_imu_side.png)
 
 ## Trunk
 
@@ -228,17 +240,29 @@ The lift degree of freedom provides vertical translation of the arm. It is drive
 
 ## Arm
 
-Coming soon.
+![image alt text](./images/arm_top.png)
+
+The arm comprises 5 telescoping carbon fiber links set on rollers. Its proprietary drive train is driven by a stepper motor with closed loop control and current sensing, allowing contact sensitivity during motion.
+
+The arm exhibits a small amount of play (lash) in the X, Y, Z, and theta directions which is a normal characteristic of its design. Despite this it can achieve good repeatability, in part because its gravity loading is fairly constant.
+
+The retracted arm and wrist combined are designed to fit within the footprint of the base. The arm is designed to have:
+
+* Reach: 0.52m
+
+
 
 ## Wrist
 
 ### Wrist Accelerometer
 
-Coming soon.
+The wrist includes a 3 axis [ADXL343](https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf) accelerometer which provides bump and tap detection capabilities. The  sensor is mounted inside the distal link of the arm as shown below.
+
+[Coming soon]
 
 ### Expansion USB
 
-The wrist includes a USB 2.0 A interface. This port is fused to 500mA@5V.
+The wrist includes a USB 2.0 A interface. This power to this USB port is fused to 500mA@5V.
 
 ### Expansion DIO
 
