@@ -8,13 +8,13 @@ The Hello Robot Stretch Robot is intended for use in the research of mobile mani
 
 ## Functional Specification
 
-![image alt text](./images/Stretch-RE1 Specification.png)
+![image alt text](./images/hardware_specification.png)
 
 ## Body Plan
 
 
 
-![image alt text](./images/Stretch-RE1-User Interfaces.png)
+![image alt text](./images/user_interface.png)
 
 ## Hardware Architecture
 
