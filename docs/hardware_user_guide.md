@@ -10,6 +10,8 @@ The Hello Robot Stretch Robot is intended for use in the research of mobile mani
 
 ![image alt text](./images/hardware_specification.png)
 
+
+
 ## Body Plan
 
 
@@ -118,6 +120,7 @@ Two mounting holes are provided inside the trunk. These allow the user to strain
     <td>M4 threaded holes</td>
   </tr>
 </table>
+
 ![image alt text](./images/base_mount_back.png)
 
 ## Head
