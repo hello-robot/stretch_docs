@@ -9,7 +9,6 @@ Welcome to the home for all Stretch RE1 User Documentation.
 
 | Resource                                                     | Description                                    |
 | ------------------------------------------------------------ | ---------------------------------------------- |
-| [Stretch Safety Video](https://vimeo.com/425936667)          | Demonstration of Stretch safety hazards        |
 | [Stretch Safety Guide](robot_safety_guide.md)                | Guide to safe operation of Stretch             |
 | [Stretch Best Practices - Powered Off Video](https://vimeo.com/424386241) | How to work with Stretch when its power is off |
 | [Stretch Best Practices - Powered On Video](https://vimeo.com/426339574) | How to work with Stretch when its power is on  |
