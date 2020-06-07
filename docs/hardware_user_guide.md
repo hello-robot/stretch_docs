@@ -54,7 +54,9 @@ The base is a two wheel differential drive with a passive Mecanum wheel for a ca
 
 The base has 6 M4 threaded inserts available for mounting user accessories such as a tray. The mounting pattern is shown below.
 
-![image alt text](./images/hw_image_2.png)
+The inserts are recessed 1mm from the top of the base shell.
+
+![image alt text](./images/base_mount_top.png)
 
 ### Base IMU
 
@@ -116,7 +118,7 @@ Two mounting holes are provided inside the trunk. These allow the user to strain
     <td>M4 threaded holes</td>
   </tr>
 </table>
-
+![image alt text](./images/base_mount_back.png)
 
 ## Head
 
@@ -250,9 +252,41 @@ The retracted arm and wrist combined are designed to fit within the footprint of
 
 * Reach: 0.52m
 
-
-
 ## Wrist
+
+The wrist includes:
+
+* Yaw DOF to allow for stowing of the tool
+* 2 Aruco tags for calibration and visual localization of the tool
+* Expansion port with
+  * Arduino expansion header
+  * USB-A connector
+* Tool plate with dual sided mounting
+* Dynamixel X-Series TTL bus
+
+### Wrist Control Interface
+
+The wrist yaw degree-of-freedom uses a [Dynamixel XL430 servo](http://www.robotis.us/dynamixel-xl430-w250-t/). Additional Dynamixel servos can be daisy chained off of this servo, allowing for one more additional degree-of-freedoms to be easily  integrated onto the robot (such as the provided Stretch Gripper). 
+
+Stretch comes with a XL430 compatible control cable preinstalled into this servo. If a different cable needs to be installed the servo cap can be removed as shown.
+
+![image alt text](./images/wrist_cap_rs.png)
+
+### Wrist Tool Plate
+
+The tool plate allows for mounting on the top or the bottom using the M2 bolt pattern. The mounting pattern is compatible with Robotis Dynamixel frames as well:
+
+* [FR12-H101K](http://www.robotis.us/fr12-h101k-set/)
+* [FR12-S102K](http://www.robotis.us/fr12-s102k-set/)
+* [FR12-S101K](http://www.robotis.us/fr12-s101k-set/)
+
+![image alt text](./images/tool_mount_rs.png)
+
+### Wrist Yaw Range of Motion
+
+The wrist yaw DOF is calibrated so that the index hole faces forward at the 'zero' position. From this pose the wrist has a ROM of +256/-76 degrees as shown.
+
+![image alt text](./images/tool_rom_rs.png)
 
 ### Wrist Accelerometer
 
@@ -260,13 +294,13 @@ The wrist includes a 3 axis [ADXL343](https://www.analog.com/media/en/technical-
 
 [Coming soon]
 
-### Expansion USB
+### Wrist Expansion USB
 
 The wrist includes a USB 2.0 A interface. This power to this USB port is fused to 500mA@5V.
 
-### Expansion DIO
+### Wrist Expansion Header
 
-The wrist includes an expansion DIO header that provides access to pins of the wrist Arduino board.  The DIO connector can be accessed by removing the cap at the end of the arm.
+The wrist includes an expansion header that provides access to pins of the wrist Arduino board.  The header connector can be accessed by removing the cap at the end of the arm.
 
 ![image alt text](./images/wrist_expansion_port_rs.png)
 
@@ -283,7 +317,7 @@ In addition, the firmware can be configured for other pin functions, including:
 
 The [Stretch Firmware Manual](https://github.com/hello-robot/stretch_firmware) covers this modification.
 
-**The DIO header pins utilize 3V3 TTL logic. They do not have interface protection (eg, ESD, over-voltage, shorts). It is possible to damage your robot if pin specifications are exceeded **
+**The header pins utilize 3V3 TTL logic. They do not have interface protection (eg, ESD, over-voltage, shorts). It is possible to damage your robot if pin specifications are exceeded **
 
 The pin mapping is:
 
@@ -366,6 +400,14 @@ Pin 1 & 10 are indicated below.
 The expansion DIO schematic shown below.
 
 ![image alt text](./images/wrist_expansion_schematic_rs.png)
+
+### Wrist Mounts
+
+![image alt text](./images/wrist_mount_top_rs.png)
+
+
+
+![image alt text](./images/wrist_mount_end_rs.png)
 
 ## Gripper
 
