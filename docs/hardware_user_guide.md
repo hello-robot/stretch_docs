@@ -60,6 +60,8 @@ The inserts are recessed 1mm from the top of the base shell.
 
 ![image alt text](./images/base_mount_top.png)
 
+![image alt text](./images/base_side.png)
+
 ### Base IMU
 
 The base has a 9 DOF IMU using the 9 DOF FXOS8700 + FXAS21002 chipset. The IMU orientation is as shown below:
