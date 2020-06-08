@@ -100,7 +100,7 @@ The Stretch RE1 is an open platform with user-modifiable and user-extensible har
 >happen if the robot malfunctions or behaves in a way different from the desired
 >action. Be vigilant.” - [PR2 User Manual](https://www.clearpathrobotics.com/assets/downloads/pr2/pr2_manual_r321.pdf) by Willow Garage from October 5, 2012
 
-The Stretch RE1 is a complex device that includes many mechanical, electrical, and computational systems that have been designed to work together. Be prepared for something to go wrong. For example, a motor control board might fail, software might not operate as anticipated, an unexpected process might still be running on the robot, or the batteries for the Xbox-style controller or the robot itself might run out. 
+The Stretch RE1 is a complex device that includes many mechanical, electrical, and computational systems that have been designed to work together. **Be prepared for something to go wrong.** For example, a motor control board might fail, software might not operate as anticipated, an unexpected process might still be running on the robot, or the batteries for the Xbox-style controller or the robot itself might run out. 
 
 
 # Safety Features
