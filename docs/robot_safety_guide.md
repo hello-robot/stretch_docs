@@ -15,7 +15,7 @@ The Stretch RE1 is a potentially dangerous machine with safety hazards. **If imp
 
 # Safety Hazards
 
-As described later in this document, we have designed the Stretch RE1 to be safer than existing human-scale mobile manipulators, so that researchers can explore the future of mobile manipulation. For example, we have made it smaller and lighter weight with backdrivable torque-sensing joints that can stop when they detect contact.
+As described later in this document, we have designed the Stretch RE1 to be safer than previous commercially-available human-scale mobile manipulators, so that researchers can explore the future of mobile manipulation. For example, we have made it smaller and lighter weight with backdrivable torque-sensing joints that can stop when they detect contact.
 
 Nonetheless, the Stretch RE1 is a research robot that can be dangerous. It is essential that researchers use the Stretch RE1 carefully to avoid damage, injury, or death. Here, we list a number of safety hazards that researchers must consider prior to use and during use of the Stretch RE1. 
 
