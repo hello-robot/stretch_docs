@@ -3,47 +3,84 @@
 
 ![](./images/warning_rs.png)
 
-Stretch is a potentially dangerous machine with safety hazards. If improperly used it may cause injury or death. We strongly advise all users review the following safety information prior to its operation.
+The Stretch RE1 is a potentially dangerous machine with safety hazards. If improperly used it may cause injury or death. 
+
+* All users must carefully read the following safety information prior to operating or programming the robot.
+* Anyone near the robot who has not read this safety information must be closely supervised at all times and made aware that the robot could be dangerous.
+* Only use the robot after inspecting the surrounding environment for potential hazards.
 
 # Intended Use
 
-The Hello Robot Stretch Robot is intended for use in the research of mobile manipulation applications by users experienced in the use and programming of research robots. This product is not intended for general use in the home by consumers, and lacks the required certifications for such use. 
+**The Stretch RE1 (“Stretch”) is intended for use by researchers to conduct research in controlled indoor environments**. This product is not intended for other uses and lacks the required certifications for other uses, such as use in the home by consumers.
 
 # Safety Hazards
 
-### Stretch Can Topple on to a Person
+As described later in this document, we have designed the Stretch RE1 to be safer than existing human-scale mobile manipulators, so that researchers can explore the future of mobile manipulation. For example, we have made it smaller and lighter weight with backdrivable torque-sensing joints that can stop when they detect contact.
 
-The robot in motion may drive off stairs or encounter obstacles that cause it to topple over or tumble down on to a person, causing injury. **Operate the robot only on flat surfaces away from stairs or other obstacles that may cause it to topple**.
+Nonetheless, the Stretch RE1 is a research robot that can be dangerous. It is essential that researchers use the Stretch RE1 carefully to avoid damage, injury, or death. Here, we list a number of safety hazards that researchers must consider prior to use and during use of the Stretch RE1. 
 
-### Stretch Can Cause Lacerations
+### The Stretch RE1 Can Put People And Animals At Risk
 
-The robot wrist and tool has sharp edges that can cause lacerations or punctures to skin or the eyes. **Operate the robot tool away from faces, eyes, and other sensitive body parts**.
+As described in more detail later, the Stretch RE1 can put people and animals at risk. People and animals near the robot must be closely supervised at all times. People must be made aware that the robot could be dangerous. Prior to any use of the robot near people or animals, researchers must carefully assess and minimize risks.  **Researchers who choose to have the robot interact with children, animals, vulnerable adults, and other people do so at their own risk and must take appropriate precautions and obtain required approvals from their organizations**. 
 
-### Stretch Can Trap, Crush, or Pinch Body Parts
+### The Stretch RE1 Can Topple Onto A Person
 
-The robot has moving joints that can trap, crush or pinch hands, fingers, or other body parts. **Keep hands away from designated trap, crush, and pinch points during robot motion.**
+The robot may drive off stairs, push or pull itself over with its telescoping arm, fall over while attempting to traverse a threshold, or encounter obstacles that cause it to fall on or otherwise collide with a person, causing injury. **Operate the robot only on flat surfaces away from stairs or other obstacles that may cause it to topple, and do not allow the robot to push or pull itself over**.
 
-### Stretch Can Entrap Loose Clothing or Hair
+### The Stretch RE1 Should Not Be Lifted By A Single Person
 
-The robot shoulder has rollers that can pull in and entrap loose clothing or hair. **Keep loose clothing and long hair away from the robot shoulder when it is in motion**.
+The Stretch RE1 with the standard gripper weighs about 50.5lb, so two or more people should lift and carry the robot. A single person can move the robot around by enabling the runstop button, tilting it over, and rolling it on flat ground. **At least two people should lift and carry the robot when needed.**
 
-# Common Sense
+### The Stretch RE1 Can Cause Lacerations
 
-The most important aspect of safety with Stretch is to use common sense, including
+The robot wrist and tool have sharp edges that can cause lacerations or punctures to skin or the eyes. **Operate the robot away from eyes and other sensitive body parts**.
 
-* Do not operate unattended by an experienced operator
-* Exhibit caution when operating around young children who may interact with it in unexpected ways
-* Keep an eye on cords, rugs, and any other floor hazards as it drives
-* Keep it at least 3 meters from ledges, curbs, stairs, and any other toppling hazard
-* Keep long hair and clothes away from the moving components of the robot.
-* Do not operate out doors
-* Keep the robot dry and do not operate around liquids
+### The Stretch RE1 Can Trap, Crush, Or Pinch Body Parts
+
+The robot has moving joints that can trap, crush or pinch hands, fingers, or other body parts. The robot could also injure a person or animal by driving over a body part. **Keep body parts away from trap, crush, and pinch points during robot motion, including underneath the wheels.**
+
+### The Stretch RE1 Can Entrap Loose Clothing Or Hair
+
+The robot's shoulder and telescoping arm have rollers that can pull in and entrap loose clothing or hair. **Keep loose clothing and long hair away from the robot's shoulder and telescoping arm when either is in motion**.
+
+### The Stretch RE1 Has Flammable Components
+
+The robot has polyurethane covers that are flammable and must be kept away from potential ignition sources, such as open flames and hot surfaces. The robot’s head, shoulder, and mobile base have polyurethane covers. **Keep the robot away from potential ignition sources and always have a working fire extinguisher nearby**.
+
+### The Stretch RE1 Is An Electrical Device
+
+The Stretch RE1 has batteries, electronics, wires, and other electrical components throughout its body. It also provides uncovered connectors that provide power. While the robot has fuses to reduce electrical risks, users must be careful. **Keep the robot dry and away from liquids, avoid electrical shocks, ensure power cables and wires are in good condition, be careful with the robot’s connectors, and generally exercise caution while working with this electrical device**.
+
+### The Stretch RE1 Can Perform Dangerous Activities
+
+The Stretch RE1 is a versatile robot capable of performing many actions, including actions that would be dangerous to people. For example, if a dangerous object is held by or affixed to the robot, such as a knife, a heavy object, or breakable glass, the robot can become very dangerous. Likewise, the robot is capable of physically altering the environment in ways that would be dangerous, such as turning a knob that releases gas from a gas stove. **Users must be cautious while using the robot to ensure it interacts safely with people and the surrounding environment**.
+
+### The Stretch RE1 Is An Open Platform That Can Be Made More Dangerous
+
+The Stretch RE1 is an open platform with user-modifiable and user-extensible hardware and software. User changes to the hardware or software can entail serious risks. For example, when shipped, the robot has conservative settings that restrict its speed and the forces it applies to reduce the risks associated with the robot. By modifying the robot, users could enable the robot to move at unsafe speeds and apply unsafe forces. As another example, improper electrical connections could result in a fire. **Researchers who choose to modify or extend the robot’s hardware or software do so at their own risk, and should be careful to understand the implications of their modifications or extensions. Changes to the robot could result in dangerous situations that cause injury or death**.
+
+# Additional Risks
+
+**The most important aspect of safety with the Stretch RE1 is to use good judgment and common sense**. Additional important considerations follow:
+
+* **If the robot appears to be damaged, stop operation immediately**
+* **Always be ready to stop the robot**
+* Do not operate the robot unless an experienced user is present and attentive
+* Be aware that the robot can move in unexpected ways
+* Keep an eye on cords, rugs, and any other floor hazards as the robot drives
+* Keep the robot at least 3 meters from ledges, curbs, stairs, and any other toppling hazard
+* Do not operate the robot outdoors
 * Do not attempt to ride the robot
-* If the robot appears to be damaged, stop operation immediately
-* Do not have the robot hold any sharp objects.
+* Do not have the robot hold sharp objects
 * Do not attempt to service the robot without supervision by Hello Robot
-* Use two people to lift and carry the robot when needed
 
+## Other Problems Will Likely Occur
+
+>“**Anticipate potential problems** and hazards. Always imagine what might
+>happen if the robot malfunctions or behaves in a way different from the desired
+>action. Be vigilant.” - [PR2 User Manual](https://www.clearpathrobotics.com/assets/downloads/pr2/pr2_manual_r321.pdf) by Willow Garage from October 5, 2012
+
+The Stretch RE1 is a complex device that includes many mechanical, electrical, and computational systems that have been designed to work together. Be prepared for something to go wrong. For example, a motor control board might fail, software might not operate as anticipated, an unexpected process might still be running on the robot, or the batteries for the Xbox-style controller or the robot itself might run out. 
 
 
 # Safety Features
@@ -51,12 +88,12 @@ The most important aspect of safety with Stretch is to use common sense, includi
 We have considered safety from the outset in the design of Stretch. 
 
 * **Runstop**: The illuminated runstop button on Stretch’s head can be used to pause operation of the four primary joints (base, lift, and arm) of the robot when it is in motion. 
-* **Lightweight design: ** The overall mass of Stretch is 22Kg, and the majority of the mass is in the base. The carbon fiber arm and aluminum mast make for a remarkably lightweight upper body. While this reduces the risk of crushing, crushing injury can still occur and should be carefully monitored.
+* **Lightweight design:** The overall mass of Stretch with the standard gripper is 23Kg (50.5lb), and the majority of the mass is in the base. The carbon fiber arm and aluminum mast make for a remarkably lightweight upper body. While this reduces the risk of crushing, crushing injury can still occur and should be carefully monitored.
 * **Gravity friendly**: The arrangement of Stretch’s manipulator means that it doesn’t have to counteract gravity on a larger lever arm. As a result, the motors and gearboxes are much lower torque and lower weight than a traditional robot manipulator, allowing us to avoid the often dangerous strong shoulder joints of robot arms.
-* **Low gear ratio**: The primary joints of Stretch (base, lift, and arm) have low, gear-ratios (approx 5:1), allowing for backdriving of joints when powered off. A low gear-ratio also reduces the effective inertia of each joint, limiting the impacted force during undesired contacts with people and the environment.
-* **Contact Sensitivity**: The four primary joints of Stretch (base, lift, and, arm) have contact sensitivity. We measure motor currents to estimate contact forces. Because Stretch is a low gear-ratio robot, current sensing provides a fairly sensitive measure of contact forces.
+* **Low gear ratio**: The primary joints of Stretch (base, lift, and arm) have low gear-ratios (approx 5:1), allowing for backdriving of joints when powered off. A low gear-ratio also reduces the effective inertia of each joint, limiting the impacted force during undesired contacts with people and the environment.
+* **Contact Sensitivity**: The four primary joints of Stretch (base, lift, and arm) have contact sensitivity. We measure motor currents to estimate contact forces. Because Stretch is a low gear-ratio robot, current sensing provides a fairly sensitive measure of contact forces.
 * **Firmware limits**: Motor torques are limited at the lowest level of the firmware to configured bounds.
-* **Velocity limits**: Fast motions of the base are restricted when the arm is up high and tool is outside the base footprint. This limits the likelihood of toppling or snagging the tool during base motion.
+* **Velocity limits**: Fast motions of the base are restricted when the arm is up high and the tool is outside the base footprint. This limits the likelihood of toppling or snagging the tool during base motion.
 * **Tilt detection**: The robot can detect when its body is tilted beyond a safe threshold. The robot can be configured to  trigger a runstop event during an over-tilt event.
 
 # Safety Markings
@@ -111,12 +148,11 @@ The runstop logic is:
 </table>
 
 
-
 # Safety Hazard Details
 
 ### Sharp Edges
 
-Stretch RE1 is a piece of laboratory equipment. As such, its structure has moderately sharp corners edges and corners that can be unsafe. These edges can get snagged during motion, or they may cause lacerations when sufficient force is applied to a person. Care should be taken when grasping or otherwise making contact with Stretch that a sharp corner or edge is not contacted.
+Stretch RE1 is a piece of laboratory equipment. As such, its structure has moderately sharp edges and corners that can be unsafe. These edges can get snagged during motion, or they may cause lacerations when sufficient force is applied to a person. Care should be taken when grasping or otherwise making contact with Stretch that a sharp corner or edge is not contacted.
 
 ### Toppling
 
@@ -126,7 +162,7 @@ Stretch is a relatively lightweight robot. In some kinematic configurations a hi
 *  If the arm is raised up high and it pushes or pulls on the environment with sufficient force.
 *  It drives over a drop-off such as a stair or curb
 
-**NOTE: While the Stretch RE1 has cliff sensors, they do not currently inhibit motion of the base. As such, it is possible for the robot to fall down stairs and hurt itself or a person.**
+**NOTE: While the Stretch RE1 has cliff sensors, they do not currently inhibit motion of the base. During typical use, the robot will not attempt to stop itself at a cliff, and can fall down stairs and hurt itself or a person.**
 
 ### Pinch Points
 
@@ -144,7 +180,7 @@ The lift degree of freedom is the strongest joint on the robot and as such can a
 
 The lift, while in motion, may trap or crush objects between the ‘shoulder’ and another surface. As such, best practices for lift safety should always be used when using the lift degree of freedom.  
 
-The lift has a max theoretical strength of nearly 200N of linear force. In practice, this force is limited by the lift’s Guarded Move function, which places the lift in Safety Mode when the actuator forces exceed a threshold. Nominally, this threshold is around 70N but it can be configured in software. When enabled an operating as expected, the Guarded Move controller should keep contact forces within comfortable and safe levels. 
+The lift has a max theoretical strength of nearly 200N of linear force. In practice, this force is limited by the lift’s Guarded Move function, which places the lift in Safety Mode when the actuator forces exceed a threshold. 
 
 The diagrams below show the potential crush points at the top and bottom of the lift range of motion.
 
@@ -152,12 +188,12 @@ The diagrams below show the potential crush points at the top and bottom of the 
 
 ![](./images/lift_up_rs.png)
 
-
-
 It is important for users to keep safety in mind at all times while operating a Hello Robot. When improperly used it is possible for users, bystanders, and property to become harmed. All new users of Hello Robot products should be trained by experienced personnel on best practices for safe operation and interaction with the robot. 
 
-Because Stretch is a mobile manipulator with autonomous capabilities, it may move in unpredictable ways. It may carry potentially dangerous objects that can contact people in unexpected ways. While it is relatively lightweight and able to only exert moderate forces on the environment, dangerous conditions can still occur. 
+Because Stretch is a mobile manipulator with autonomous capabilities, it may move in unpredictable ways. It may carry potentially dangerous objects that can contact people in unexpected ways. 
 
 The moving components of the robot pose dangers of pinching and crushing of body parts. People should always be aware and attentive to the motion and of Stretch robots.
 
-The intended use of the Stretch RE1 is for research and development of mobile manipulation applications within laboratory settings. No robot is ever inherently safe and common sense safety measures should be applied when using Stretch, 
+The intended use of the Stretch RE1 is for research of mobile manipulation applications within controlled settings. No robot is ever inherently safe. Good judgment and common sense safety measures should be applied when using Stretch, 
+
+
