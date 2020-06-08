@@ -40,7 +40,9 @@ Welcome to the home for all Stretch RE1 User Documentation.
 | [Stretch Factory Tools](https://github.com/hello-robot/stretch_factory/blob/master/README.md) | Guide to factory tools for hardware calibration and introspection |
 | Stretch Wrist Expansion Header                               | (Coming soon) Tutorial to the Arduino expansion header in the wrist |
 
-### ROS Interface
+### ROS Code
+
+First, we recommend you visit the [top level director of the *stretch_ros* repository on GitHub](https://github.com/hello-robot/stretch_ros) to see overview information. **Please be aware that the code in this repository is currently under heavy development.**
 
 | Resource                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
