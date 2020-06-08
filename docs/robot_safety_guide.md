@@ -3,15 +3,15 @@
 
 ![](./images/warning_rs.png)
 
-The Stretch RE1 is a potentially dangerous machine with safety hazards. If improperly used it may cause injury or death. 
+The Stretch RE1 is a potentially dangerous machine with safety hazards. **If improperly used it may cause injury or death.** 
 
-* All users must carefully read the following safety information prior to operating or programming the robot.
-* Anyone near the robot who has not read this safety information must be closely supervised at all times and made aware that the robot could be dangerous.
+* **All users must carefully read the following safety information prior to using the robot.**
+* **Anyone near the robot who has not read this safety information must be closely supervised at all times and made aware that the robot could be dangerous.**
 * Only use the robot after inspecting the surrounding environment for potential hazards.
 
 # Intended Use
 
-**The Stretch RE1 (“Stretch”) is intended for use by researchers to conduct research in controlled indoor environments**. This product is not intended for other uses and lacks the required certifications for other uses, such as use in the home by consumers.
+**The Stretch RE1 (“Stretch”) is intended for use by researchers to conduct research in controlled indoor environments.** This product is not intended for other uses and lacks the required certifications for other uses, such as use in the home by consumers.
 
 # Safety Hazards
 
@@ -21,58 +21,78 @@ Nonetheless, the Stretch RE1 is a research robot that can be dangerous. It is es
 
 ### The Stretch RE1 Can Put People And Animals At Risk
 
-As described in more detail later, the Stretch RE1 can put people and animals at risk. People and animals near the robot must be closely supervised at all times. People must be made aware that the robot could be dangerous. Prior to any use of the robot near people or animals, researchers must carefully assess and minimize risks.  **Researchers who choose to have the robot interact with children, animals, vulnerable adults, and other people do so at their own risk and must take appropriate precautions and obtain required approvals from their organizations**. 
+As described in more detail later, the Stretch RE1 can put people and animals at risk. People and animals near the robot must be closely supervised at all times. At all times, an experienced researcher must carefully monitor the robot and be prepared to stop it. Any people near the robot must be made aware that the robot could be dangerous. Prior to any use of the robot near people or animals, researchers must carefully assess and minimize risks.  
+
+**Researchers who use the robot near children, animals, vulnerable adults, or other people do so at their own risk and must take appropriate precautions and obtain required approvals from their organizations.**
 
 ### The Stretch RE1 Can Topple Onto A Person
 
-The robot may drive off stairs, push or pull itself over with its telescoping arm, fall over while attempting to traverse a threshold, or encounter obstacles that cause it to fall on or otherwise collide with a person, causing injury. **Operate the robot only on flat surfaces away from stairs or other obstacles that may cause it to topple, and do not allow the robot to push or pull itself over**.
+The robot may drive off stairs, push or pull itself over with its telescoping arm, fall over while attempting to traverse a threshold, or encounter obstacles that cause it to fall on or otherwise collide with people, causing injury. 
+
+**Operate the robot only on flat surfaces away from stairs or other obstacles that may cause it to topple, and do not allow the robot to push or pull itself over.**
 
 ### The Stretch RE1 Should Not Be Lifted By A Single Person
 
-The Stretch RE1 with the standard gripper weighs about 50.5lb, so two or more people should lift and carry the robot. A single person can move the robot around by enabling the runstop button, tilting it over, and rolling it on flat ground. **At least two people should lift and carry the robot when needed.**
+The Stretch RE1 with the standard gripper weighs about 50.5lb, so two or more people should lift and carry the robot. A single person can move the robot around by enabling the runstop button, tilting it over, and rolling it on flat ground. 
+
+**At least two people should lift and carry the robot when needed.**
 
 ### The Stretch RE1 Can Cause Lacerations
 
-The robot wrist and tool have sharp edges that can cause lacerations or punctures to skin or the eyes. **Operate the robot away from eyes and other sensitive body parts**.
+The robot wrist and tool have sharp edges that can cause lacerations or punctures to skin or the eyes. 
+
+**Operate the robot away from eyes and other sensitive body parts.**
 
 ### The Stretch RE1 Can Trap, Crush, Or Pinch Body Parts
 
-The robot has moving joints that can trap, crush or pinch hands, fingers, or other body parts. The robot could also injure a person or animal by driving over a body part. **Keep body parts away from trap, crush, and pinch points during robot motion, including underneath the wheels.**
+The robot has moving joints that can trap, crush or pinch hands, fingers, or other body parts. The robot could also injure a person or animal by driving over a body part. 
+
+**Keep body parts away from trap, crush, and pinch points during robot motion, including underneath the wheels.**
 
 ### The Stretch RE1 Can Entrap Loose Clothing Or Hair
 
-The robot's shoulder and telescoping arm have rollers that can pull in and entrap loose clothing or hair. **Keep loose clothing and long hair away from the robot's shoulder and telescoping arm when either is in motion**.
+The robot's shoulder and telescoping arm have rollers that can pull in and entrap loose clothing or hair. 
+
+**Keep loose clothing and long hair away from the robot's shoulder and telescoping arm when either is in motion.**
 
 ### The Stretch RE1 Has Flammable Components
 
-The robot has polyurethane covers that are flammable and must be kept away from potential ignition sources, such as open flames and hot surfaces. The robot’s head, shoulder, and mobile base have polyurethane covers. **Keep the robot away from potential ignition sources and always have a working fire extinguisher nearby**.
+The robot has polyurethane covers that are flammable and must be kept away from potential ignition sources, such as open flames and hot surfaces. The robot’s head, shoulder, and mobile base have polyurethane covers. 
+
+**Keep the robot away from potential ignition sources and always have a working fire extinguisher nearby.**
 
 ### The Stretch RE1 Is An Electrical Device
 
-The Stretch RE1 has batteries, electronics, wires, and other electrical components throughout its body. It also provides uncovered connectors that provide power. While the robot has fuses to reduce electrical risks, users must be careful. **Keep the robot dry and away from liquids, avoid electrical shocks, ensure power cables and wires are in good condition, be careful with the robot’s connectors, and generally exercise caution while working with this electrical device**.
+The Stretch RE1 has batteries, electronics, wires, and other electrical components throughout its body. It also provides uncovered connectors that provide power. While the robot has fuses to reduce electrical risks, users must be careful. 
+
+**Keep the robot dry and away from liquids, avoid electrical shocks, ensure power cables and wires are in good condition, be careful with the robot’s connectors, and generally exercise caution while working with this electrical device.**
 
 ### The Stretch RE1 Can Perform Dangerous Activities
 
-The Stretch RE1 is a versatile robot capable of performing many actions, including actions that would be dangerous to people. For example, if a dangerous object is held by or affixed to the robot, such as a knife, a heavy object, or breakable glass, the robot can become very dangerous. Likewise, the robot is capable of physically altering the environment in ways that would be dangerous, such as turning a knob that releases gas from a gas stove. **Users must be cautious while using the robot to ensure it interacts safely with people and the surrounding environment**.
+The Stretch RE1 is a versatile robot capable of performing many actions, including actions that would be dangerous to people. For example, if a dangerous object is held by or affixed to the robot, such as a knife, a heavy object, or breakable glass, the robot can become very dangerous. Likewise, the robot is capable of physically altering the environment in ways that would be dangerous, such as turning a knob that releases gas from a gas stove. 
+
+**Users must be cautious while using the robot to ensure it interacts safely with people and the surrounding environment.**
 
 ### The Stretch RE1 Is An Open Platform That Can Be Made More Dangerous
 
-The Stretch RE1 is an open platform with user-modifiable and user-extensible hardware and software. User changes to the hardware or software can entail serious risks. For example, when shipped, the robot has conservative settings that restrict its speed and the forces it applies to reduce the risks associated with the robot. By modifying the robot, users could enable the robot to move at unsafe speeds and apply unsafe forces. As another example, improper electrical connections could result in a fire. **Researchers who choose to modify or extend the robot’s hardware or software do so at their own risk, and should be careful to understand the implications of their modifications or extensions. Changes to the robot could result in dangerous situations that cause injury or death**.
+The Stretch RE1 is an open platform with user-modifiable and user-extensible hardware and software. User changes to the hardware or software can entail serious risks. For example, when shipped, the robot has conservative settings that restrict its speed and the forces it applies to reduce the risks associated with the robot. By modifying the robot, users could enable the robot to move at unsafe speeds and apply unsafe forces. As another example, improper electrical connections could result in a fire. 
+
+**Researchers who choose to modify or extend the robot’s hardware or software do so at their own risk, and should be careful to understand the implications of their modifications or extensions. Changes to the robot could result in dangerous situations that cause injury or death.**
 
 # Additional Risks
 
-**The most important aspect of safety with the Stretch RE1 is to use good judgment and common sense**. Additional important considerations follow:
+**The most important aspect of safety with the Stretch RE1 is to use good judgment and common sense.** Additional important considerations follow:
 
-* **If the robot appears to be damaged, stop operation immediately**
-* **Always be ready to stop the robot**
-* Do not operate the robot unless an experienced user is present and attentive
-* Be aware that the robot can move in unexpected ways
-* Keep an eye on cords, rugs, and any other floor hazards as the robot drives
-* Keep the robot at least 3 meters from ledges, curbs, stairs, and any other toppling hazard
-* Do not operate the robot outdoors
-* Do not attempt to ride the robot
-* Do not have the robot hold sharp objects
-* Do not attempt to service the robot without supervision by Hello Robot
+* **If the robot appears to be damaged, stop operation immediately.**
+* **Always be ready to stop the robot.**
+* **Do not operate the robot unless an experienced user is present and attentive.**
+* Be aware that the robot can move in unexpected ways.
+* Keep an eye on cords, rugs, and any other floor hazards as the robot drives.
+* Keep the robot at least 3 meters from ledges, curbs, stairs, and any other toppling hazard.
+* Do not operate the robot outdoors.
+* Do not attempt to ride the robot.
+* Do not have the robot hold sharp objects.
+* Do not attempt to service the robot without supervision by Hello Robot.
 
 ## Other Problems Will Likely Occur
 
