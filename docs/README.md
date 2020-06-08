@@ -42,15 +42,7 @@ Welcome to the home for all Stretch RE1 User Documentation.
 
 ### ROS Code
 
-First, we recommend you visit the [top level directory of the *stretch_ros* repository on GitHub](https://github.com/hello-robot/stretch_ros) to see overview information. **Please be aware that the code in this repository is currently under heavy development.**
-
-| Resource                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Stretch Autonomy Demos](https://github.com/hello-robot/stretch_ros/tree/master/stretch_demos) | Demonstration of simple autonomous manipulations             |
-| [Stretch Deep Perception Demos](https://github.com/hello-robot/stretch_ros/blob/master/stretch_deep_perception/README.md) | Demonstration of using open deep learning models to perceive the world |
-| [Stretch FUNMAP Demo](https://github.com/hello-robot/stretch_ros/blob/master/stretch_funmap/README.md) | Demonstration of Fast Unified Navigation, Manipulation And Planning (FUNMAP) |
-| [Stretch URDF Calibration Tutorial](https://github.com/hello-robot/stretch_ros/blob/master/stretch_calibration/README.md) | Tutorial on URDF (re)calibration                             |
-| [Stretch Description Guide](https://github.com/hello-robot/stretch_ros/blob/master/stretch_description/README.md) | Guide to working with the Stretch URDF and using 3rd party tools. |
+We provide ROS-related code for the Stretch RE1 mobile manipulator through the [*stretch_ros* repository on GitHub](https://github.com/hello-robot/stretch_ros). The repository includes a ROS node that provides an interface to the robot, calibration code, and demonstrations of various robot capabilities.  
 
 ## Release Notes
 
