@@ -3,7 +3,7 @@
 
 ![](./images/warning_rs.png)
 
-The Stretch RE1 is a potentially dangerous machine with safety hazards. **If improperly used it may cause injury or death.** 
+The Stretch RE1 is a potentially dangerous machine with safety hazards. **If improperly used it can cause injury or death.** 
 
 * **All users must carefully read the following safety information prior to using the robot.**
 * Anyone near the robot who has not read this safety information must be closely supervised at all times and made aware that the robot could be dangerous.
