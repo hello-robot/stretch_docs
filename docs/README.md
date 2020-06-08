@@ -42,7 +42,7 @@ Welcome to the home for all Stretch RE1 User Documentation.
 
 ### ROS Code
 
-First, we recommend you visit the [top level director of the *stretch_ros* repository on GitHub](https://github.com/hello-robot/stretch_ros) to see overview information. **Please be aware that the code in this repository is currently under heavy development.**
+First, we recommend you visit the [top level directory of the *stretch_ros* repository on GitHub](https://github.com/hello-robot/stretch_ros) to see overview information. **Please be aware that the code in this repository is currently under heavy development.**
 
 | Resource                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
