@@ -81,9 +81,9 @@ The Stretch RE1 is an open platform with user-modifiable and user-extensible har
 
 # Additional Risks
 
-**The most important aspect of safety with the Stretch RE1 is to use good judgment and common sense.** Additional important considerations follow:
+**The most important aspects of safety with the Stretch RE1 are to use good judgment and common sense.** Additional important considerations follow:
 
-* **If the robot appears to be damaged, stop operation immediately.**
+* **If the robot appears to be damaged, stop the robot immediately.**
 * **Always be ready to stop the robot.**
 * **Do not operate the robot unless an experienced user is present and attentive.**
 * Be aware that the robot can move in unexpected ways.
