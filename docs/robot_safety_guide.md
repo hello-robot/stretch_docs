@@ -23,7 +23,7 @@ Nonetheless, the Stretch RE1 is a research robot that can be dangerous. It is es
 
 As described in more detail later, the Stretch RE1 can put people and animals at risk. People and animals near the robot must be closely supervised at all times. At all times, an experienced researcher must carefully monitor the robot and be prepared to stop it. Any people near the robot must be made aware that the robot could be dangerous. Prior to any use of the robot near people or animals, researchers must carefully assess and minimize risks.  
 
-**Researchers who use the robot near children, animals, vulnerable adults, or other people do so at their own risk and must take appropriate precautions and obtain required approvals from their organizations.**
+**Researchers who use the robot near children, animals, vulnerable adults, or other people do so at their own risk. Researchers must take appropriate precautions and obtain required approvals from their organizations.**
 
 ### The Stretch RE1 Can Topple Onto A Person
 
