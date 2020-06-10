@@ -1,7 +1,6 @@
-![](images/hello_robot_large_rs.png)
+![](./images/hello_robot_large_rs.png)
 
-# Overview
-Welcome to the home for all Stretch RE1 User Documentation. 
+### Welcome to the home for all Stretch RE1 User Documentation. 
 
 # Safety
 
@@ -59,7 +58,4 @@ This documentation is only to be used for an authentic Stretch RE1 robot produce
 
 All Hello Robot stretch_docs related materials are released under the [Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0) license.
 
-
-
-------
-.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div>
+The Stretch RE1 has patents pending.
