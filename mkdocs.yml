@@ -15,14 +15,15 @@
 site_name: Hello Robot  Documentation
 site_url: https://docs.hello-robot.com
 site_description: "Hello Robot User Documentation"
-repo_name: "github.com/hello-robot"
-repo_url: https://github.com/hello-robot
+#repo_name: "github.com/hello-robot"
+#repo_url: https://github.com/hello-robot
 
 use_directory_urls: True
 copyright: 'Copyright &copy; 2020 Hello Robot Inc'
 nav:
  - Stretch Docs: README.md
  - Stretch Forum: "https://forum.hello-robot.com/"
+ - Stretch GitHub: "https://github.com/hello-robot"
 theme:
  name: material
  palette: 
@@ -30,7 +31,7 @@ theme:
  logo: images/hello_robot_logo.png
  favicon: images/hello_robot_favicon.png
 extra_css: [extra.css]
-
+plugins: []
 extra:
   social:
     - icon: fontawesome/brands/twitter
