@@ -179,7 +179,7 @@ Stretch RE1 is a piece of laboratory equipment. As such, its structure has moder
 Stretch is a relatively lightweight robot. In some kinematic configurations a high center of gravity can make it prone to toppling. Toppling can occur when:
 
 *  The mobile base is moving at moderate or fast speed and it hits a bump, threshold, or other change in floor property
-*  If the arm is raised up high and it pushes or pulls on the environment with sufficient force.
+*  The arm is raised up high and it pushes or pulls on the environment with sufficient force.
 *  It drives over a drop-off such as a stair or curb
 
 **NOTE: While the Stretch RE1 has cliff sensors, they do not currently inhibit motion of the base. During typical use, the robot will not attempt to stop itself at a cliff, and can fall down stairs and hurt itself or a person.**
