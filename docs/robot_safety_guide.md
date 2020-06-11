@@ -1,4 +1,3 @@
-
 # Robot Safety Guide
 
 ![](./images/warning_rs.png)
@@ -15,13 +14,13 @@ The Stretch RE1 is a potentially dangerous machine with safety hazards. **If imp
 
 # Safety Hazards
 
-As described later in this document, we have designed the Stretch RE1 to be safer than previous commercially-available human-scale mobile manipulators, so that researchers can explore the future of mobile manipulation. For example, we have made it smaller and lighter weight with backdrivable torque-sensing joints that can stop when they detect contact.
+As described later in this document, we have designed Stretch to be safer than previous commercially-available human-scale mobile manipulators, so that researchers can explore the future of mobile manipulation. For example, we have made it smaller and lighter weight with backdrivable torque-sensing joints that can stop when they detect contact.
 
-Nonetheless, the Stretch RE1 is a research robot that can be dangerous. It is essential that researchers use the Stretch RE1 carefully to avoid damage, injury, or death. Here, we list a number of safety hazards that researchers must consider prior to use and during use of the Stretch RE1. 
+Nonetheless, Stretch is a research robot that can be dangerous. It is essential that researchers use Stretch carefully to avoid damage, injury, or death. Here, we list a number of safety hazards that researchers must consider prior to use and during use of Stretch. 
 
 ### Stretch Can Put People And Animals At Risk
 
-As described in more detail later, the Stretch RE1 can put people and animals at risk. People and animals near the robot must be closely supervised at all times. At all times, an experienced researcher must carefully monitor the robot and be prepared to stop it. Any people near the robot must be made aware that the robot could be dangerous. Prior to any use of the robot near people or animals, researchers must carefully assess and minimize risks.  
+As described in more detail later, Stretch can put people and animals at risk. People and animals near the robot must be closely supervised at all times. At all times, an experienced researcher must carefully monitor the robot and be prepared to stop it. Any people near the robot must be made aware that the robot could be dangerous. Prior to any use of the robot near people or animals, researchers must carefully assess and minimize risks.  
 
 **Researchers who use the robot near children, animals, vulnerable adults, or other people do so at their own risk. Researchers must take appropriate precautions and obtain required approvals from their organizations.**
 
@@ -81,7 +80,7 @@ Stretch is an open platform with user-modifiable and user-extensible hardware an
 
 # Additional Risks
 
-**The most important aspects of safety with the Stretch RE1 are to use good judgment and common sense.** Additional important considerations follow:
+**The most important aspects of safety with Stretch are to use good judgment and common sense.** Additional important considerations follow:
 
 * **If the robot appears to be damaged, stop the robot immediately.**
 * **Always be ready to stop the robot.**
@@ -182,7 +181,7 @@ Stretch is a relatively lightweight robot. In some kinematic configurations a hi
 *  The arm is raised up high and it pushes or pulls on the environment with sufficient force.
 *  It drives over a drop-off such as a stair or curb
 
-**NOTE: While the Stretch RE1 has cliff sensors, they do not currently inhibit motion of the base. During typical use, the robot will not attempt to stop itself at a cliff, and can fall down stairs and hurt itself or a person.**
+**NOTE: While Stretch has cliff sensors, they do not currently inhibit motion of the base. During typical use, the robot will not attempt to stop itself at a cliff, and can fall down stairs and hurt itself or a person.**
 
 ### Pinch Points
 
@@ -209,5 +208,3 @@ The diagrams below show the potential crush points at the top and bottom of the 
 ![](./images/lift_down_rs.png)
 
 ![](./images/lift_up_rs.png)
-
-
