@@ -26,6 +26,7 @@
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Stretch Hardware User Guide](hardware_user_guide.md)        | Specification and functional description of the Stretch RE1 Hardware |
 | [Stretch Tool Share](https://github.com/hello-robot/stretch_tool_share) | Open resource to share designs and code for end-of-arm tools |
+| [Stretch Wrist Expansion Header](https://github.com/hello-robot/stretch_firmware/blob/master/tutorial/README.md) | Tutorials on integrating custom hardware on to the Arduino expansion header in the wrist |
 
 # Software
 
@@ -37,7 +38,6 @@
 | [Stretch Firmware Guide](https://github.com/hello-robot/stretch_firmware/blob/master/README.md) | Guide to updating the Stretch Firmware                       |
 | [Stretch Installation Guide](https://github.com/hello-robot/stretch_install/blob/master/README.md) | Guide to installing a new user and managing the Stretch installation |
 | [Stretch Factory Tools](https://github.com/hello-robot/stretch_factory/blob/master/README.md) | Guide to factory tools for hardware calibration and introspection |
-| [Stretch Wrist Expansion Header](https://github.com/hello-robot/stretch_firmware/blob/master/tutorial/README.md)                               | Tutorials on integrating custom devices on to the Arduino expansion header in the wrist |
 
 ### ROS Interface 
 
