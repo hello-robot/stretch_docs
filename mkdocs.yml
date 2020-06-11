@@ -27,8 +27,7 @@ nav:
    - Stretch GitHub: "https://github.com/hello-robot"
    - Stretch Videos: "https://vimeo.com/user108529415"
 theme:
- font:
-   text: "Open Sans"
+ font: Arial
  name: material
  palette: 
   primary: hello-robot  
