@@ -188,7 +188,7 @@ Stretch is a relatively lightweight robot. In some kinematic configurations a hi
 
 Pinch points around the robot's head, gripper, and wrist can cause discomfort and care should be taken when handling these joints as they move.
 
-The shoulder, which travels up and down on the lift, has a series of rollers that ride along the mast. While the shoulder shells can prevent large objects from getting pinched by the rollers, small and thin objects can be pulled into and crushed. C
+The shoulder, which travels up and down on the lift, has a series of rollers that ride along the mast. While the shoulder shells can prevent large objects from getting pinched by the rollers, small and thin objects can be pulled into and crushed.
 
 Extra care should be taken with long hair, clothing, and small fingers around the shoulder rollers.
 
@@ -207,13 +207,5 @@ The diagrams below show the potential crush points at the top and bottom of the 
 ![](./images/lift_down_rs.png)
 
 ![](./images/lift_up_rs.png)
-
-It is important for users to keep safety in mind at all times while operating a Hello Robot. When improperly used it is possible for users, bystanders, and property to become harmed. All new users of Hello Robot products should be trained by experienced personnel on best practices for safe operation and interaction with the robot. 
-
-Because Stretch is a mobile manipulator with autonomous capabilities, it may move in unpredictable ways. It may carry potentially dangerous objects that can contact people in unexpected ways. 
-
-The moving components of the robot pose dangers of pinching and crushing of body parts. People should always be aware and attentive to the motion and of Stretch robots.
-
-The intended use of the Stretch RE1 is for research of mobile manipulation applications within controlled settings. No robot is ever inherently safe. Good judgment and common sense safety measures should be applied when using Stretch, 
 
 
