@@ -190,6 +190,8 @@ Pinch points around the robot's head, gripper, and wrist can cause discomfort an
 
 The shoulder, which travels up and down on the lift, has a series of rollers that ride along the mast. While the shoulder shells can prevent large objects from getting pinched by the rollers, small and thin objects can be pulled into and crushed.
 
+The telescoping arm, which extends and retracts, has rollers that ride along the telescoping elements. While the arm link cuffs can reduce the change of large objects getting pinched, small and thin objects, such as hair, can be pulled in.
+
 Extra care should be taken with long hair, clothing, and small fingers around the shoulder rollers.
 
 ### Crush Points
