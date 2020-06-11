@@ -23,7 +23,7 @@ The provided battery charger can be plugged and unplugged at any time during ope
 ![](./images/trunk_rs.png)
 
 
-#### Runstop
+### Runstop
 
 The illuminated button on the head is its Runstop. Just tap it, you'll hear a beep and it will start flashing. This will pause motion of the primary robot joints during operation. This can be useful if the robot makes an unsafe motion, or if you just want to free up the robot motors while you roll it around.
 
@@ -31,7 +31,7 @@ To allow motion once again, hold the button down for two seconds. After the beep
 
 ![](./images/runstop_rs.png)
 
-#### Safe Handling
+### Safe Handling
 
 Like any robot, it is possible to break Stretch if you're not careful. Use common sense when applying forces to its joints, transporting it, etc. 
 
@@ -175,7 +175,7 @@ robot.stow()
 robot.stop()
 ```
 
-#### URDF Visualization
+### URDF Visualization
 
 Finally, let's look at the factory calibrated URDF for your robot. From the console run:
 

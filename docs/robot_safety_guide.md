@@ -8,11 +8,11 @@ The Stretch RE1 is a potentially dangerous machine with safety hazards. **If imp
 * Anyone near the robot who has not read this safety information must be closely supervised at all times and made aware that the robot could be dangerous.
 * Only use the robot after inspecting the surrounding environment for potential hazards.
 
-# Intended Use
+## Intended Use
 
 **The Stretch RE1 (“Stretch”) is intended for use by researchers to conduct research in controlled indoor environments.** This product is not intended for other uses and lacks the required certifications for other uses, such as use in the home by consumers.
 
-# Safety Hazards
+## Safety Hazards
 
 As described later in this document, we have designed Stretch to be safer than previous commercially-available human-scale mobile manipulators, so that researchers can explore the future of mobile manipulation. For example, we have made it smaller and lighter weight with backdrivable torque-sensing joints that can stop when they detect contact.
 
@@ -78,7 +78,7 @@ Stretch is an open platform with user-modifiable and user-extensible hardware an
 
 **Researchers who choose to modify or extend the robot’s hardware or software do so at their own risk, and should be careful to understand the implications of their modifications or extensions. Changes to the robot could result in dangerous situations that cause injury or death.**
 
-# Additional Risks
+## Additional Risks
 
 **The most important aspects of safety with Stretch are to use good judgment and common sense.** Additional important considerations follow:
 
@@ -102,7 +102,7 @@ Stretch is an open platform with user-modifiable and user-extensible hardware an
 Stretch is a complex device that includes many mechanical, electrical, and computational systems that have been designed to work together. **Be prepared for something to go wrong.** For example, a motor control board might fail, software might not operate as anticipated, an unexpected process might still be running on the robot, or the batteries for the Xbox-style controller or the robot itself might run out. 
 
 
-# Safety Features
+## Safety Features
 
 We have considered safety from the outset in the design of Stretch. 
 
@@ -115,7 +115,7 @@ We have considered safety from the outset in the design of Stretch.
 * **Velocity limits**: Fast motions of the base are restricted when the arm is up high and the tool is outside the base footprint. This limits the likelihood of toppling or snagging the tool during base motion.
 * **Tilt detection**: The robot can detect when its body is tilted beyond a safe threshold. The robot can be configured to  trigger a runstop event during an over-tilt event.
 
-# Safety Markings
+## Safety Markings
 
 Stretch has the following safety markings:
 
@@ -131,7 +131,7 @@ Top of base, indicating potential pinch point between arm and base.
 
 ![](./images/hand_crush2_rs.png)
 
-# Runstop
+## Runstop
 
 ![](./images/runstop_rs.png)
 
@@ -167,7 +167,7 @@ The runstop logic is:
 </table>
 
 
-# Safety Hazard Details
+## Safety Hazard Details
 
 ### Sharp Edges
 

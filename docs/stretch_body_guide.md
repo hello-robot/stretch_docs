@@ -1,5 +1,5 @@
 
-# Stretch Body Package
+# Stretch Body Guide
 The Stretch_Body package provides a low level Python API to the Stretch RE1 hardware.  
 
 The package is available on [Git and installable via Pip](https://github.com/hello-robot/stretch_body).
@@ -23,7 +23,7 @@ The robot's 3rd party hardware devices are intended to be accessed through ROS a
 The Stretch_Body package is intended for advanced users who prefer to not use ROS to control the robot. It assumes a moderate level of experience programming robot sensors and actuators.
 
 
-# Robot Interface
+## Robot Interface
 
 The primary developer interface to  Stretch_Body is the [Robot class](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py).  
 
@@ -73,7 +73,7 @@ robot.stop()
 
 Finally, the stop( ) method shuts down the Robot threads and cleanly closes the open serial ports.
 
-#### Units
+### Units
 
 The Robot API uses SI units of:
 
@@ -89,7 +89,7 @@ Parameters may be named with a suffix to help describe the unit type. For exampl
 * pos_m : meters
 * pos_r: radians
 
-#### The Robot Status
+### The Robot Status
 
 The Robot derives from the [Device class](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/device.py). It also encapsulates a number of other Devices:
 
@@ -126,7 +126,7 @@ if status['arm']['pos']>0.25:
     print 'Arm extension greater than 0.25m'
 ```
 
-#### The Robot Command
+### The Robot Command
 
 In contrast to the Robot Status which pulls data from the Devices, the Robot Command pushes data to the Devices.
 
@@ -177,7 +177,7 @@ robot.push_command()
 
 Commanding robot motion through the Stretch_Body interface is covered in more detail in the Robot Motion section.
 
-#### Stowing and Homing
+### Stowing and Homing
 
 After power up the robot requires homing in order for its joint encoders to find their zero position. The homing procedure will run the robot through a series of moves to find these zeros. It can be done programatically:
 
@@ -204,7 +204,7 @@ Or it can be done manually from the command line when needed:
 >>$ stretch_robot_stow.py 
 ```
 
-# Scripting the Robot
+## Scripting the Robot
 
 A simplified design pattern to script the Robot is as follows
 
@@ -256,7 +256,7 @@ except (KeyboardInterrupt, SystemExit,ThreadServiceExit)
 robot.stop()
 
 ```
-# Command Line Tools
+## Command Line Tools
 
 The Stretch_Body package comes with a suite of command line tools that allow direct interaction with hardware subsystems. These can be useful when developing and debugging applications. They also serve as code examples when developing applications for Stretch_Body.
 
@@ -315,7 +315,7 @@ optional arguments:
 
 ```
 
-#### Commonly Used Tools
+### Commonly Used Tools
 
 These are the tools a typical user will want to become familiar with.
 
@@ -330,7 +330,7 @@ These are the tools a typical user will want to become familiar with.
 
 The other tools are fairly self explanatory. They allow the user to quickly read a sensor value or control an individual hardware subsystem.
 
-# Robot Motion
+## Robot Motion
 
 Controlling the motion of the robot's actuators is typically done through the ROS interfaces. However it is also possible to control the robot directly through the  stretch_body interfaces. 
 
@@ -348,7 +348,7 @@ time.sleep(2.0)
 robot.stop()
 ```
 
-#### Motion Profiles
+### Motion Profiles
 
 All joints support trapezoidal based motion generation. Other types of controllers are available (PID, velocity, etc) but they are not covered here . The trapezoidal motion controllers require three values:
 
@@ -380,7 +380,7 @@ robot.push_command()
 
 The motion will fall back to the 'default' settings found in the YAML if no parameters are provided.
 
-#### Range of Motion
+### Range of Motion
 
 All joints obey motion limits which are specified in the factory YAML. These limits have been set at the factory to prevent damage to the hardware. It is not recommended to set them to be greater than the factory specified values. However, they can be further limited if desired. 
 
@@ -391,7 +391,7 @@ lift:
   range_m: [0.1, 1.095]
 ```
 
-#### Control Modes
+### Control Modes
 
 Each joint has a default safety mode and default control mode.  These are:
 
@@ -425,7 +425,7 @@ robot.push_command()
 
 As shown, care should be taken to reduce commanded velocities to zero to avoid runaway.
 
-#### Runstop
+### Runstop
 
 Runstop activation will cause  the Base, Arm, and Lift to switch to Safety Mode and for motion commands will be ignored. The motion commands will resume smoothly  when the runstop is deactivated.  This is usually done via the runstop button. However, it can also be done via the Pimu interface:
 
@@ -435,7 +435,7 @@ if robot.pimu.status['runstop_event']:
     robot.push_command()
 ```
 
-#### Guarded Motion
+### Guarded Motion
 
 The Arm, Lift, and Base support a guarded motion function.  It will automatically transition the actuator from Control mode to Safety mode when the exerted motor torque exceeds a threshold. 
 
@@ -489,7 +489,7 @@ robot.push_command( )
 
 **Note: The units of Newtons are approximations only and may not be accurate to real world contact forces.**
 
-#### Synchronized Motion
+### Synchronized Motion
 
 The Arm, Lift, and Base actuators have a hardware synchronization mechanism. This allows for controller commands to be time synchronized across joints. By default these are turned out in the factory YAML:
 
@@ -498,7 +498,7 @@ hello-motor-arm:
   gains: {enable_sync_mode: 1,...}
 ```
 
-#### Motion Status
+### Motion Status
 
 It can be useful to poll the status of a joint during motion in order to modify the robot behavior, etc. The useful status values include:
 
@@ -513,7 +513,7 @@ robot.arm.motor.status['in_guarded_event']	#Has a guarded event occured
 robot.arm.motor.status['in_safety_event']	#Has a safety event occured
 ```
 
-#### Update Rates
+### Update Rates
 
 The following update rates apply to Stretch:
 
@@ -530,7 +530,7 @@ The Stretch_Body interface is not designed to support high bandwidth control app
 
 In practice, a Python based control loop that calls push_command( ) at 1Hz to 10Hz is sufficiently matched to the robot natural dynamics. 
 
-# Robot Parameters
+## Robot Parameters
 
 All robot data is stored in the stretch_user directory.  The location of this directory can be found by:
 
@@ -558,15 +558,15 @@ stretch_re1_tool_params.yaml
 
 A factory image of this data (as shipped), is stored read-only under /etc/hello-robot . This is only for backup and to support cloning the user environment for new users.
 
-#### Calibration Data
+### Calibration Data
 
 The raw calibration data that was used in production for the robot is also stored for reference within the stretch_user directory. It isn't generally required for development.
 
-#### URDF Data
+### URDF Data
 
 A calibrated URDF, and associated mesh files, are provided in the 'export_urdf' directory. This is provided for users who don't wish to use ROS yet still want an accurate model of the robot. The stretch_urdf_view.py tool demonstrates how to visualize the URDF from Python.
 
-#### YAML Data
+### YAML Data
 
 Stretch_Body relies upon the following three primary YAML files:
 
@@ -576,13 +576,13 @@ Stretch_Body relies upon the following three primary YAML files:
 | stretch_re1_user_params.yaml    | User parameters that override the factory parameters         |
 | stretch_re1_tool_params.yaml    | Settings and configuration data for optional 3rd party end-of-arm tools. |
 
-#### Factory Parameters
+### Factory Parameters
 
 This stretch_re1_factory_params.yaml file contains the robot's 'factory' settings. This includes things such as PID parameters for motor controllers, calibration constants, and default joint velocities and accelerations. 
 
 The user should not edit this file. Hello Robot retains an 'as shipped' version of this file should it ever get corrupted. It can be instructive to review this file when getting to know the Stretch_Body code base.
 
-#### User Parameters
+### User Parameters
 
 The factory settings should suffice for most use cases. However, the user is allowed to override the factory settings. This is done by using same YAML structure and name as is used in the stretch_re1_user_params.yaml file as in the factory file.
 
@@ -607,17 +607,17 @@ base:
 
 ```
 
-#### End of Arm Tool Parameters
+### End of Arm Tool Parameters
 
 The stretch_re1_tool_params.yaml file stores configuration parameters specific to the user's custom end-of-arm-tools. It is read by the Robot class and the parameter data is made accessible to the user's end-of-arm-tool class. 
 
 More information coming soon.
 
-# Safe Operation Functions
+## Safe Operation Features
 
 Stretch includes a number of built-in functions that help it maintain safe operating conditions. These functions can be disabled and enabled via the robot YAML parameters.
 
-## Logging
+### Logging
 
 Upon instantiation, the Robot class opens a new log file for warning and informational messages to be written to. These timestamped logs are found under $HELLO_FLEET_DIRECTORY/log.
 
@@ -628,7 +628,7 @@ robot:
   log_to_console: 1
 ```
 
-## Runstop Functions
+### Runstop Functions
 
 | YAML                 | Function                                                |
 | -------------------- | ------------------------------------------------------- |
@@ -638,7 +638,7 @@ robot:
 | stop_at_runstop      | Allow runstop to disable motors                         |
 | stop_at_tilt         | Trigger runstop when robot tilts too far                |
 
-## Robot Monitor
+### Robot Monitor
 
 The [Robot Monitor](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot_monitor.py) is a thread that monitors the Robot Status data for significant events. For example, it can monitor the error flags from the Dynamixel servos and notify when a thermal overload occurs. The Robot Monitor logs warnings to a log file by default. 
 
@@ -680,7 +680,7 @@ robot_sentry:
   wrist_yaw_overload: 1
 ```
 
-## Robot Sentry
+### Robot Sentry
 
 The [Robot Sentry](https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot_sentry.py) is a thread that can override and also generate commands to the robot hardware. It's purpose is to keep the robot operating within a safe regime. For example, the Robot Sentry monitors the position of the Lift and Arm and limits the maximum base velocity and acceleration (in order to reduce the chance of toppling). The Robot Sentry reports events to the log file as well. 
 

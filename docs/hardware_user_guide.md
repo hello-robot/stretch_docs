@@ -2,7 +2,7 @@
 
 This manual provides the engineering data and user guidance for working with the Hello Robot Stretch RE1 hardware.  
 
-## Disclaimer
+### Disclaimer
 
 The Hello Robot Stretch Robot is intended for use in the research of mobile manipulation applications by users experienced in the use and programming of research robots. This product is not intended for general use in the home by consumers, and lacks the required certifications for such use. Please see the section on   Regulatory Compliance for further details.
 
@@ -22,9 +22,9 @@ The Hello Robot Stretch Robot is intended for use in the research of mobile mani
 
 ![image alt text](./images/hardware_architecture.png)
 
-# Robot Subsystems
+## Robot Subsystems
 
-## Base
+### Base
 
 The base is a two wheel differential drive with a passive Mecanum wheel for a caster.  It includes four cliff sensors to allow detection of stairs, thresholds, etc.
 
@@ -62,7 +62,7 @@ The inserts are recessed 1mm from the top of the base shell.
 
 ![image alt text](./images/base_side.png)
 
-### Base IMU
+#### Base IMU
 
 The base has a 9 DOF IMU using the 9 DOF FXOS8700 + FXAS21002 chipset. The IMU orientation is as shown below:
 
@@ -70,7 +70,7 @@ The base has a 9 DOF IMU using the 9 DOF FXOS8700 + FXAS21002 chipset. The IMU o
 
 ![image alt text](./images/base_imu_side.png)
 
-## Trunk
+### Trunk
 
 Development and charge ports are at the back of the base in the trunk. The trunk cover slides into place vertically and is non-latching.
 
@@ -125,7 +125,7 @@ Two mounting holes are provided inside the trunk. These allow the user to strain
 
 ![image alt text](./images/base_mount_back.png)
 
-## Head
+### Head
 
 The head provides the audio interface to the robot, a pan tilt depth camera, a runstop, as well as a developer interface to allow the addition of additional user hardware.
 
@@ -179,7 +179,7 @@ Pin 2: GND</td>
 </table>
 
 
-### Pan Tilt
+#### Pan Tilt
 
 The head pan-tilt unit utilizes two Dynamixel XL430-W250-T servos. It incorporates a small fan in order to ensure proper cooling of the servo and camera during dynamic repeated motions of the tilt DOF.
 
@@ -209,11 +209,11 @@ The nominal ‘zero’ position is of the head is shown below, along with the co
 </table>
 
 
-### Runstop
+#### Runstop
 
 The runstop allows the user to pause the motion of the four primary DOF (base, lift, and arm) by tapping the illuminated button on the head. When the runstop is enabled, these DOF are in a ‘Safety Mode’ that inhibits the motion controller at the firmware level. Disabling the runstop allows normal operation to resume. 
 
-## Lift
+### Lift
 
 The lift degree of freedom provides vertical translation of the arm. It is driven by a closed loop stepper motor, providing smooth and precise motion through a low gear-ratio belt drive. The ‘shoulder’ includes two mounting holes and a small delivery tray.
 
@@ -245,7 +245,7 @@ The lift degree of freedom provides vertical translation of the arm. It is drive
 </table>
 
 
-## Arm
+### Arm
 
 ![image alt text](./images/arm_top.png)
 
@@ -257,7 +257,7 @@ The retracted arm and wrist combined are designed to fit within the footprint of
 
 * Reach: 0.52m
 
-## Wrist
+### Wrist
 
 The wrist includes:
 
@@ -269,7 +269,7 @@ The wrist includes:
 * Tool plate with dual sided mounting
 * Dynamixel X-Series TTL bus
 
-### Wrist Control Interface
+#### Wrist Control Interface
 
 The wrist yaw degree-of-freedom uses a [Dynamixel XL430 servo](http://www.robotis.us/dynamixel-xl430-w250-t/). Additional Dynamixel servos can be daisy chained off of this servo, allowing for one more additional degree-of-freedoms to be easily  integrated onto the robot (such as the provided Stretch Gripper). 
 
@@ -277,7 +277,7 @@ Stretch comes with a XL430 compatible control cable preinstalled into this servo
 
 ![image alt text](./images/wrist_cap_rs.png)
 
-### Wrist Tool Plate
+#### Wrist Tool Plate
 
 The tool plate allows for mounting on the top or the bottom using the M2 bolt pattern. The mounting pattern is compatible with Robotis Dynamixel frames as well:
 
@@ -287,23 +287,23 @@ The tool plate allows for mounting on the top or the bottom using the M2 bolt pa
 
 ![image alt text](./images/tool_mount_rs.png)
 
-### Wrist Yaw Range of Motion
+#### Wrist Yaw Range of Motion
 
 The wrist yaw DOF is calibrated so that the index hole faces forward at the 'zero' position. From this pose the wrist has a ROM of +256/-76 degrees as shown.
 
 ![image alt text](./images/tool_rom_rs.png)
 
-### Wrist Accelerometer
+#### Wrist Accelerometer
 
 The wrist includes a 3 axis [ADXL343](https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf) accelerometer which provides bump and tap detection capabilities. The  sensor is mounted inside the distal link of the arm as shown below.
 
 [Coming soon]
 
-### Wrist Expansion USB
+#### Wrist Expansion USB
 
 The wrist includes a USB 2.0 A interface. This power to this USB port is fused to 500mA@5V.
 
-### Wrist Expansion Header
+#### Wrist Expansion Header
 
 The wrist includes an expansion header that provides access to pins of the wrist Arduino board.  The header connector can be accessed by removing the cap at the end of the arm.
 
@@ -406,7 +406,7 @@ The expansion DIO schematic shown below.
 
 ![image alt text](./images/wrist_expansion_schematic_rs.png)
 
-### Wrist Mounts
+#### Wrist Mounts
 
 ![image alt text](./images/wrist_mount_top_rs.png)
 
@@ -414,13 +414,13 @@ The expansion DIO schematic shown below.
 
 ![image alt text](./images/wrist_mount_end_rs.png)
 
-## Gripper
+### Gripper
 
 Coming soon.
 
-# Robot Care 
+## Robot Care 
 
-## Battery Maintenance
+### Battery Maintenance
 
 The robot has two deep-cycle sealed lead acid batteries which provide 12V/19AH of charge. The provided charger will keep the system at a near full-charge if it is left plugged during non-tethered use. 
 
@@ -452,19 +452,19 @@ The robot will continue to operate at battery voltages as low as 9.5V. A fully c
 
 When the battery voltage drops below a YAML specified threshold the robot will produce an intermittent double beep sound. This is a reminder to the user to plug in the charger. This threshold is set at 10.5V at the factory but may be overridden.
 
-### Battery Fuse
+#### Battery Fuse
 
 The batteries are fused with a 20mm 8A / slow blow fuse. Nominal load currents for the robot are 3-5A for most use cases. The fuse provides protection against an internal short. 
 
 Should the fuse blow, the robot will fail to power up. Should the fuse need replacement contact support@hello-robot.com.
 
-## Belt Tension
+### Belt Tension
 
 A neoprene timing belt drives the arm up and down the lift. It may detension over long periods of time if it experiences sustained loading. In this case, slack will become visually apparent in the belt as the lift moves.
 
 The belt is very straightforward to re-tension. Please contact support@hello-robot.com for tensioning instructions.
 
-## Keeping the Robot Clean
+### Keeping the Robot Clean
 
 The robot surfaces can be wiped down with an alcohol wipe or a moist rag from time to time in order to remove and debris or oils that accumulate on the shells or mast. 
 
@@ -474,7 +474,7 @@ When possible, the Trunk cover for the base should be kept on in order to keep d
 
 If the D435i camera requires cleaning use appropriate lens cleaning fluid and a microfiber cloth.
 
-## Keeping the Robot Calibrated
+### Keeping the Robot Calibrated
 
 The robot comes pre-calibrated with a robot-specific URDF. This calibration allows the D435i depth sensor to accurately estimate where the robot wrist, and body, is in the depth image.
 
@@ -486,7 +486,7 @@ The robot may become slightly uncalibrated over time for a variety of reasons:
 
 The calibration accuracy can be checked using the provided ROS tools. If necessary, the user can recalibrate the robot. See the [Stretch URDF Calibration Guide](https://github.com/hello-robot/stretch_ros/blob/master/stretch_calibration/README.md) for more information.
 
-## Transporting the Robot
+### Transporting the Robot
 
 Stretch was designed to be easily transported in the back of a car, up a stair case, or around a building.
 
@@ -496,7 +496,7 @@ For short trips, the robot can be simply rolled around by grabbing its mast. It 
 
 For longer trips it is recommended to transport the robot in its original cardboard box with foam packaging. The metal protective cage that surrounds the head is only necessary if the robot might be shipped and the box will not remain upright.
 
-## System Check
+### System Check
 
 It is useful to periodically run stretch_robot_system_check.py. This  will check that the robot's hardware devices are  present and within normal operating conditions. 
 
@@ -576,7 +576,7 @@ Bus 002 Device 016: ID 8086:0b3a Intel Corp.
 
 .<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div>
 
-# Regulatory Compliance
+## Regulatory Compliance
 
 The Stretch Research Edition 1 (Stretch RE1) is not certified for use as a consumer device in the U.S.
 
