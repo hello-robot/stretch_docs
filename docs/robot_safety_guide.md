@@ -86,6 +86,7 @@ Stretch is an open platform with user-modifiable and user-extensible hardware an
 * **Always be ready to stop the robot.**
 * **Do not operate the robot unless an experienced user is present and attentive.**
 * Be aware that the robot can move in unexpected ways.
+* Do not put fingers or other objects into the channel that runs along the length of the mast. A belt moves within this channel.
 * Keep an eye on cords, rugs, and any other floor hazards as the robot drives.
 * Keep the robot at least 3 meters from ledges, curbs, stairs, and any other toppling hazard.
 * Do not operate the robot outdoors.
