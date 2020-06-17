@@ -1,6 +1,4 @@
-![](./images/hello_robot_large_rs.png)
-
-### Welcome to the home for all Stretch RE1 User Documentation. 
+![](./images/stretch_banner.png)
 
 # Safety
 
@@ -44,9 +42,17 @@
 We provide ROS-related code for the Stretch RE1 mobile manipulator, including a ROS node that interfaces to the robot, calibration code, and demonstrations of various autonomous robot capabilities.  
 
 
+| Resource                                                     | Description                                  |
+| ------------------------------------------------------------ | -------------------------------------------- |
+| [stretch_ros repository on GitHub](https://github.com/hello-robot/stretch_ros) | Repository with ROS-related code for Stretch |
+
+### Other Tools
+
 | Resource                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [stretch_ros repository on GitHub](https://github.com/hello-robot/stretch_ros) | Repository with ROS-related code for the Stretch RE1 mobile manipulator           |
+| [Stretch Web Interface](https://github.com/hello-robot/stretch_web_interface) | Repository with code to allow a user to operate a Stretch through a web browser |
+
+
 
 ## Release Notes
 

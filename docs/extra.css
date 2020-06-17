@@ -6,3 +6,10 @@
 #--md-primary-bg-color: hsla(0,0%, 0%, 0.87);
 #--md-primary-bg-color--light: hsla(0, 0%, 0%, 0.54);
 --md-text-link-color: #0550b3}
+p.normal{
+  font-weight: 100;
+}
+
+ th, td {
+    font-size: 16px;
+  }

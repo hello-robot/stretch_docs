@@ -265,6 +265,7 @@ These tools can be found by tab completion of  'stretch_' from a terminal.
 ```bash
 >>$ stretch_
 
+stretch_about.py
 stretch_arm_home.py                
 stretch_head_jog.py                
 stretch_robot_battery_check.py     
