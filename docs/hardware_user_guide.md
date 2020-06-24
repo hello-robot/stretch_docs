@@ -297,9 +297,9 @@ The wrist yaw DOF is calibrated so that the index hole faces forward at the 'zer
 
 The wrist includes a 3 axis [ADXL343](https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf) accelerometer which provides bump and tap detection capabilities. The  sensor is mounted inside the distal link of the arm as shown below.
 
-![image alt text](./images/wacc_accel_top.png)
+![image alt text](./images/wacc_accel_top_rs.png)
 
-![image alt text](./images/wacc_accel_side.png)
+![image alt text](./images/wacc_accel_side_rs.png)
 
 #### Wrist Expansion USB
 
@@ -453,13 +453,13 @@ Here we describe removing the Stretch Compliant gripper. Installation is simply 
 3. Remove the gripper from the mounting bracket
 4. Unscrew the 8 screws holding the mounting bracket to the bottom of the tool plate.
 
-![image alt text](./images/gripper_mount_b.png)
+![image alt text](./images/gripper_mount_b_rs.png)
 
 
 
 
 
-![image alt text](./images/gripper_mount_a.png)
+![image alt text](./images/gripper_mount_a_rs.png)
 
 ## Robot Care 
 

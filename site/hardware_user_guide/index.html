@@ -401,6 +401,19 @@
     Gripper
   </a>
   
+    <nav class="md-nav" aria-label="Gripper">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gripper-removal" class="md-nav__link">
+    Gripper Removal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -754,7 +767,8 @@ Pin 2: GND</td>
 <p><img alt="image alt text" src="../images/tool_rom_rs.png" /></p>
 <h4 id="wrist-accelerometer">Wrist Accelerometer</h4>
 <p>The wrist includes a 3 axis <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf">ADXL343</a> accelerometer which provides bump and tap detection capabilities. The  sensor is mounted inside the distal link of the arm as shown below.</p>
-<p>[Coming soon]</p>
+<p><img alt="image alt text" src="./images/wacc_accel_top.png" /></p>
+<p><img alt="image alt text" src="../images/wacc_accel_side.png" /></p>
 <h4 id="wrist-expansion-usb">Wrist Expansion USB</h4>
 <p>The wrist includes a USB 2.0 A interface. This power to this USB port is fused to 500mA@5V.</p>
 <h4 id="wrist-expansion-header">Wrist Expansion Header</h4>
@@ -851,7 +865,38 @@ Pin 2: GND</td>
 <p><img alt="image alt text" src="../images/wrist_mount_top_rs.png" /></p>
 <p><img alt="image alt text" src="../images/wrist_mount_end_rs.png" /></p>
 <h3 id="gripper">Gripper</h3>
-<p>Coming soon.</p>
+<p>The Stretch Compliant Gripper utilizes a Dynamixel XL430-W250-T servo to drive the spring grasper mechanism. The kinematics of the grasper mechanism are complex and non-linear relative to the motor position.  As shown, it includes mounting features on  one side to allow for attachment of simple rigid tools such as <a href="https://github.com/hello-robot/stretch_tool_share/tree/master/puller_v1">hooks and pullers</a>. </p>
+<p><img alt="image alt text" src="../images/gripper.png" /></p>
+<table>
+  <tr>
+    <td></td>
+    <td>Item</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>Stud attachment</td>
+    <td>Threaded 6-32</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>Thread attahcment</td>
+    <td>Threaded M4</td>
+  </tr>
+</table>
+
+<p>The attachment features are spaced at 9mm.</p>
+<p>The weight of the Stretch Compliant Gripper is 240g.</p>
+<h4 id="gripper-removal">Gripper Removal</h4>
+<p>Here we describe removing the Stretch Compliant gripper. Installation is simply these steps in reverse.</p>
+<ol>
+<li>Unplug the Dynamixel cable from the back of the gripper. </li>
+<li>Remove the 4 screws holding the gripper to the bracket.</li>
+<li>Remove the gripper from the mounting bracket</li>
+<li>Unscrew the 8 screws holding the mounting bracket to the bottom of the tool plate.</li>
+</ol>
+<p><img alt="image alt text" src="../images/gripper_mount_b.png" /></p>
+<p><img alt="image alt text" src="../images/gripper_mount_a.png" /></p>
 <h2 id="robot-care">Robot Care</h2>
 <h3 id="battery-maintenance">Battery Maintenance</h3>
 <p>The robot has two deep-cycle sealed lead acid batteries which provide 12V/19AH of charge. The provided charger will keep the system at a near full-charge if it is left plugged during non-tethered use. </p>
