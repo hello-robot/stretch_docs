@@ -297,7 +297,9 @@ The wrist yaw DOF is calibrated so that the index hole faces forward at the 'zer
 
 The wrist includes a 3 axis [ADXL343](https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf) accelerometer which provides bump and tap detection capabilities. The  sensor is mounted inside the distal link of the arm as shown below.
 
-[Coming soon]
+![image alt text](./images/wacc_accel_top.png)
+
+![image alt text](./images/wacc_accel_side.png)
 
 #### Wrist Expansion USB
 
@@ -416,7 +418,48 @@ The expansion DIO schematic shown below.
 
 ### Gripper
 
-Coming soon.
+The Stretch Compliant Gripper utilizes a Dynamixel XL430-W250-T servo to drive the spring grasper mechanism. The kinematics of the grasper mechanism are complex and non-linear relative to the motor position.  As shown, it includes mounting features on  one side to allow for attachment of simple rigid tools such as [hooks and pullers](https://github.com/hello-robot/stretch_tool_share/tree/master/puller_v1). 
+
+![image alt text](./images/gripper.png)
+
+<table>
+  <tr>
+    <td></td>
+    <td>Item</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>Stud attachment</td>
+    <td>Threaded 6-32</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>Thread attahcment</td>
+    <td>Threaded M4</td>
+  </tr>
+</table>
+
+The attachment features are spaced at 9mm.
+
+The weight of the Stretch Compliant Gripper is 240g.
+
+#### Gripper Removal
+
+Here we describe removing the Stretch Compliant gripper. Installation is simply these steps in reverse.
+
+1. Unplug the Dynamixel cable from the back of the gripper. 
+2. Remove the 4 screws holding the gripper to the bracket.
+3. Remove the gripper from the mounting bracket
+4. Unscrew the 8 screws holding the mounting bracket to the bottom of the tool plate.
+
+![image alt text](./images/gripper_mount_b.png)
+
+
+
+
+
+![image alt text](./images/gripper_mount_a.png)
 
 ## Robot Care 
 
