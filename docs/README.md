@@ -7,14 +7,14 @@
 | Resource                                                     | Description                                    |
 | ------------------------------------------------------------ | ---------------------------------------------- |
 | [Stretch Safety Guide](robot_safety_guide.md)                | Safety guide for users of the Stretch RE1      |
-| [Stretch Best Practices - Powered Off Video](https://vimeo.com/424386241) | How to work with Stretch when its power is off |
-| [Stretch Best Practices - Powered On Video](https://vimeo.com/426339574) | How to work with Stretch when its power is on  |
+| [Stretch Best Practices - Powered Off Video](https://youtu.be/mQdOGEksdYM) | How to work with Stretch when its power is off |
+| [Stretch Best Practices - Powered On Video](https://youtu.be/iEaapHNfEWA) | How to work with Stretch when its power is on  |
 
 # Quick Start
 
 | Resource                                                | Description                                           |
 | ------------------------------------------------------- | ----------------------------------------------------- |
-| [Stretch Unboxing Video](https://vimeo.com/424213333)   | How to unpack your new Stretch                        |
+| [Stretch Unboxing Video](https://youtu.be/gTfFy6cFKl4)  | How to unpack your new Stretch                        |
 | [Stretch Quick Start Guide](quick_start_guide.md)       | Getting started  - Xbox Teleoperation Demo and beyond |
 | [Stretch Untethered Operation](untethered_operation.md) | Guide to working with Stretch untethered              |
 

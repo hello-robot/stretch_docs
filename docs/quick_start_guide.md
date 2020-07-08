@@ -4,11 +4,11 @@ Congratulations on your Stretch RE1! This guide will get you started with your n
 
 ## Safety
 
-Stretch has the potential to cause harm if not properly used. All users should review the [Stretch Safety Guide](robot_safety_guide.md) and the [Stretch Safety Video]() (coming soon) before operating the robot.
+Stretch has the potential to cause harm if not properly used. All users should review the [Stretch Safety Guide](robot_safety_guide.md) before operating the robot.
 
 ## Unboxing
 
-Please watch the [Stretch Unboxing Video](https://vimeo.com/424213333).
+Please watch the [Stretch Unboxing Video](https://youtu.be/gTfFy6cFKl4).
 
 ## Robot Tour
 
@@ -35,7 +35,7 @@ To allow motion once again, hold the button down for two seconds. After the beep
 
 Like any robot, it is possible to break Stretch if you're not careful. Use common sense when applying forces to its joints, transporting it, etc. 
 
-The [Stretch Unpowered Best Practices Video](https://vimeo.com/424386241) provides a quick overview of how to work with the robot.
+The [Stretch Unpowered Best Practices Video](https://youtu.be/mQdOGEksdYM) provides a quick overview of how to work with the robot.
 
 **Things that won't hurt the robot**:
 
@@ -84,6 +84,8 @@ To start the demo after unboxing:
 * Try delivering an object to a person
 
 If you're done, hold down the Shutdown PC button for 2 seconds. This will cause the PC to turn off. You can then power down the robot. Or proceed to the next step...
+
+Now that you're familiar with the robot, take a minute to watch the [Stretch Powered Best Practices Video](https://youtu.be/iEaapHNfEWA).
 
 
 
@@ -202,7 +204,7 @@ If you'd like to setup a new user account, check out the [Stretch Installation G
 
 ## Join the Community Forum
 
-Join the Hello Robot Community form at forum.hello-robot.com. We'd welcome hearing your feedback as you get to know your robot. 
+Join the [Hello Robot Community](https://forum.hello-robot.com). We'd welcome hearing your feedback as you get to know your robot. 
 
 Hello Robot support monitors the forum closely and will quickly get back to you on any questions or issues you post.
 
