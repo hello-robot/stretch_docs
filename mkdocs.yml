@@ -25,7 +25,7 @@ nav:
  - Resources:
    - Stretch Forum: "https://forum.hello-robot.com/"
    - Stretch GitHub: "https://github.com/hello-robot"
-   - Stretch Videos: "https://vimeo.com/user108529415"
+   - Stretch Videos: "https://www.youtube.com/channel/UCzoafc2G5uW5QuyTZ22OWRA"
 theme:
  font: Arial
  name: material
@@ -38,4 +38,4 @@ plugins: []
 extra:
   social:
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/theHelloRobot
+      link: https://twitter.com/HelloRobotInc
