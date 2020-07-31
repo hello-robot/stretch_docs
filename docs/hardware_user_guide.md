@@ -196,9 +196,9 @@ The nominal ‘zero’ position is of the head is shown below, along with the co
   </tr>
   <tr>
     <td>Pan</td>
-    <td>225</td>
-    <td>-100 </td>
-    <td>125</td>
+    <td>346</td>
+    <td>-234 </td>
+    <td>112</td>
   </tr>
   <tr>
     <td>Tilt</td>
@@ -207,6 +207,7 @@ The nominal ‘zero’ position is of the head is shown below, along with the co
     <td>90</td>
   </tr>
 </table>
+
 
 
 #### Runstop
