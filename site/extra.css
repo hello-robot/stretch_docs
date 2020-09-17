@@ -1,0 +1,15 @@
+[data-md-color-primary=hello-robot]
+{
+--md-primary-fg-color: #FDF1F5;
+#--md-primary-fg-color--light: hsla(0,0%, 100%, 0.7);
+#--md-primary-fg-color--dark: hsla(0, 0%, 0%, 0.07);
+#--md-primary-bg-color: hsla(0,0%, 0%, 0.87);
+#--md-primary-bg-color--light: hsla(0, 0%, 0%, 0.54);
+--md-text-link-color: #0550b3}
+p.normal{
+  font-weight: 100;
+}
+
+ th, td {
+    font-size: 16px;
+  }

@@ -1,0 +1,41 @@
+
+
+#Old
+# pip install mkdocs-bootswatch
+#Sizing images: convert foo.png -resize x100 foo_rs.png
+#Local site: 127.0.0.1:8000
+# name: flatly
+
+#pip install mkdocs (py3)
+#pip install mkdocs-material (py3)
+#extra:
+# logo: 'images/hello_robot_logo.png'
+
+
+site_name: Hello Robot  Documentation
+site_url: https://docs.hello-robot.com
+site_description: "Hello Robot User Documentation"
+#repo_name: "github.com/hello-robot"
+#repo_url: https://github.com/hello-robot
+
+use_directory_urls: True
+copyright: 'Copyright &copy; 2020 Hello Robot Inc'
+nav:
+ - Home: README.md
+ - Resources:
+   - Stretch Forum: "https://forum.hello-robot.com/"
+   - Stretch GitHub: "https://github.com/hello-robot"
+   - Stretch Videos: "https://youtube.com/c/HelloRobot"
+theme:
+ font: Arial
+ name: material
+ palette: 
+  primary: hello-robot  
+ logo: images/hello_robot_logo.png
+ favicon: images/hello_robot_favicon.png
+extra_css: [extra.css]
+plugins: []
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/HelloRobotInc
