@@ -189,9 +189,6 @@ Finally, we recommend that you change the login credentials for the default user
 
 If you'd like to setup a new user account, check out the [Stretch Installation Guide](https://github.com/hello-robot/stretch_install/blob/master/README.md).
 
-------
-.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div>
-
 ## Join the Community Forum
 
 Join the [Hello Robot Community](https://forum.hello-robot.com). We'd welcome hearing your feedback as you get to know your robot. 
@@ -204,6 +201,8 @@ Encounter any issues while getting started? Please let us know at support@hello-
 
 We recommend next exploring the ROS based demos that ship with Stretch.  These [are found in the stretch_ros repository](https://github.com/hello-robot/stretch_ros/tree/master/stretch_demos).
 
-
-
 That's it. Happy coding!
+
+
+
+.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div>
