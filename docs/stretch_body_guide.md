@@ -265,34 +265,36 @@ These tools can be found by tab completion of  'stretch_' from a terminal.
 ```bash
 >>$ stretch_
 
-stretch_about.py
-stretch_arm_home.py                
-stretch_head_jog.py                
-stretch_robot_battery_check.py     
-stretch_robot_monitor.py           
-stretch_wrist_yaw_home.py
-stretch_arm_jog.py                 
-stretch_lift_home.py               
+
+stretch_about.py                   
+stretch_gripper_home.py            
+stretch_lift_jog.py                
 stretch_robot_dynamixel_reboot.py  
 stretch_robot_stow.py              
-stretch_wrist_yaw_jog.py
-stretch_base_jog.py                
-stretch_lift_jog.py                
+stretch_wacc_scope.py              
+stretch_arm_home.py                
+stretch_gripper_jog.py             
+stretch_pimu_jog.py                
 stretch_robot_home.py              
 stretch_robot_system_check.py      
-stretch_xbox_controller_teleop.py
-stretch_gripper_home.py            
-stretch_pimu_jog.py                
-stretch_robot_jog.py               
-stretch_wacc_jog.py                
-stretch_gripper_jog.py             
+stretch_wrist_yaw_home.py          
+stretch_arm_jog.py                 
+stretch_hardware_echo.py           
 stretch_pimu_scope.py              
+stretch_robot_jog.py               
+stretch_rp_lidar_jog.py            
+stretch_wrist_yaw_jog.py           
+stretch_audio_test.py              
+stretch_head_jog.py                
+stretch_respeaker_test.py          
 stretch_robot_keyboard_teleop.py   
-stretch_wacc_scope.py 
-stretch_urdf_show.py
-stretch_rp_lidar_jog.py
-stretch_hardware_echo.py
-stretch_audio_test.py
+stretch_urdf_show.py               
+stretch_xbox_controller_teleop.py  
+stretch_base_jog.py                
+stretch_lift_home.py               
+stretch_robot_battery_check.py     
+stretch_robot_monitor.py           
+stretch_wacc_jog.py 
 ```
 
 All tools accept '--help' as a command line argument to learn its function. For example:
@@ -531,6 +533,58 @@ The Stretch_Body interface is not designed to support high bandwidth control app
 
 In practice, a Python based control loop that calls push_command( ) at 1Hz to 10Hz is sufficiently matched to the robot natural dynamics. 
 
+## Sensors
+
+### Base IMU
+
+Coming soon.
+
+### Wrist Accelerometer
+
+Coming soon.
+
+### Cliff Sensors
+
+Stretch has [four IR cliff sensors](https://docs.hello-robot.com/hardware_user_guide/#base) pointed towards the floor. These report the distance to the floor, allowing for detection of thresholds, stair edges, etc. 
+
+Relevant parameters in the factory YAML are
+
+```yaml
+pimu:
+  config:
+    cliff_LPF: 10.0
+    cliff_thresh: -50
+    cliff_zero:
+    - 523.7940936279297
+    - 508.10246490478517
+    - 496.55742706298827
+    - 525.149652709961
+    stop_at_cliff: 0
+```
+
+The  `stop_at_cliff` field causes the robot to execute a Runstop when the cliff sensor readings are out of bounds. 
+
+**Note: As configured at the factory,  `stop_at_cliff` is set to zero and Stretch does not stop its motion based on the cliff sensor readings. Hello Robot makes no guarantees as to the reliability of Stretch's ability to avoid driving over ledges and stairs when this flag is enabled.**
+
+The sensors are calibrated such that a zero value indicates the sensor is at the correct height from the floor surface. A negative value indicates a drop off such as a stair ledge while a positive value indicates an obstacle like a threshold or high pile carpet.
+
+The calibrated range values from the sensors can be read from the `robot.pimu.status` message. Relevant fields are:
+
+```python
+
+In [1]: robot.pimu.pretty_print()
+------ Pimu -----
+...
+At Cliff [False, False, False, False]
+Cliff Range [2.043212890625, 3.710906982421875, 1.6026611328125, 1.95098876953125]
+Cliff Event False
+...
+```
+
+A Cliff Event flag is set when any of the four sensor readings exceed `cliff_thresh` and `stop_at_cliff` is enabled. In the event of a Cliff Event, it must be reset by `robot.pimu.cliff_event_reset()`in order to reset the generated Runstop.
+
+The cliff detection logic can be found in the [Pimu firmware](https://github.com/hello-robot/stretch_firmware/blob/master/arduino/hello_pimu/Pimu.cpp).
+
 ## Robot Parameters
 
 All robot data is stored in the stretch_user directory.  The location of this directory can be found by:
@@ -612,7 +666,7 @@ base:
 
 The stretch_re1_tool_params.yaml file stores configuration parameters specific to the user's custom end-of-arm-tools. It is read by the Robot class and the parameter data is made accessible to the user's end-of-arm-tool class. 
 
-More information coming soon.
+More information on integrating custom hardware on the End of Arm Dynamixel bus can be found at the [Extending Wrist DOF Tutorial](https://github.com/hello-robot/stretch_body/tree/master/tutorial/extending_wrist_dof)
 
 ## Safe Operation Features
 
