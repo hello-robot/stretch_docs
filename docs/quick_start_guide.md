@@ -8,7 +8,7 @@ Stretch has the potential to cause harm if not properly used. All users should r
 
 ## Unboxing
 
-Please watch the [Stretch Unboxing Video](https://youtu.be/gTfFy6cFKl4).
+Please watch the [Stretch Unboxing Video](https://youtu.be/O-6VrqqGlig).
 
 ## Robot Tour
 
