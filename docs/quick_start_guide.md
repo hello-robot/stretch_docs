@@ -104,7 +104,7 @@ Log in to the robot computer. The default user credentials came in the box with 
 
 ## Start Coding
 
-This will give you a quick look at the [Stretch Body Interface](stretch_body_guide.md), which is the low level Python interface to the robot.
+Python is the easiest way to begin writing code for the robot. This section will give you a quick look at Stretch Body, which is the low level Python interface to the robot. Detailed information on the [Stretch Body Interface](stretch_body_guide.md) can be found here.
 
 Stretch is configured to run the XBox Controller demo in the background at startup. To run your own code you'll need kill off this process so that it doesn't contend with your code.
 
@@ -187,7 +187,7 @@ Finally, we recommend that you change the login credentials for the default user
 >>$ sudo passwd hello-robot
 ```
 
-If you'd like to setup a new user account, check out the [Stretch Installation Guide](https://github.com/hello-robot/stretch_install/blob/master/README.md).
+If you'd like to setup a new user account, check out the [Stretch Installation Guide](https://github.com/hello-robot/stretch_install/blob/master/README.md). In a lab setting, it's useful for lab members to have their own user accounts to run experiments.
 
 ## Join the Community Forum
 
