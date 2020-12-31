@@ -85,7 +85,7 @@ It is possible for Stretch's batteries to become damaged due to repeated deep di
 
 ## Stretch doesn't respond to commands
 
-If more than one [Robot](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py) i instance is instantiated at a time, Stretch Body will report communication errors and will not always execute motion commands as expected. This is because  [Robot](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py)  manages communications with the robot hardware and it doesn't support multiple writes to the USB devices.
+If more than one instance of Stretch Body's [Robot](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py) class is instantiated at a time, Stretch Body will report communication errors and will not always execute motion commands as expected. This is because [Robot](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py)  manages communications with the robot hardware and it doesn't support multiple writes to the USB devices.
 
 These errors can appear as
 
@@ -104,10 +104,11 @@ IOError(None): None
 ...
 ```
 
-As shipped, Stretch launches  [stretch_xbox_controller_teleop.py](https://github.com/hello-robot/stretch_body/blob/master/tools/bin/stretch_xbox_controller_teleop.py0) upon boot. It is necessary to turn off this automatic launch feature, otherwise your own Robot instance will conflict with this script.
+To check if a instance of [Robot](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py) is already instantiated, you may use the Unix [top](https://www.unixtutorial.org/commands/top) command to monitor active processes. You may use the Unix [pkill](https://linuxize.com/post/pkill-command-in-linux/) command to end the background instance of Robot.
 
- To turn it off, search for 'Startup' from Ubuntu Activities. Uncheck the box for 'hello_robot_xbox_teleop' 
+As shipped, Stretch launches [stretch_xbox_controller_teleop.py](https://github.com/hello-robot/stretch_body/blob/master/tools/bin/stretch_xbox_controller_teleop.py) upon boot. It is necessary to turn off this automatic launch feature, otherwise your own Robot instance will conflict with this script. Additionally, if you are logged into multiple accounts, a Robot instance may be active in another user account.
 
+To turn it off, search for 'Startup' from Ubuntu Activities. Uncheck the box for 'hello_robot_xbox_teleop'.
 
 
 ![](./images/xbox_off_rs.png)
