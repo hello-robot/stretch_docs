@@ -17,7 +17,7 @@
 | [Stretch Unboxing Video](https://youtu.be/O-6VrqqGlig)    | How to unpack your new Stretch                        |
 | [Stretch Quick Start Guide](quick_start_guide.md)         | Getting started  - Xbox Teleoperation Demo and beyond |
 | [Stretch Troubleshooting Guide](troubleshooting_guide.md) | Solutions to common issues                            |
-| [Stretch Untethered Operation](untethered_operation.md)   | Guide to working with Stretch untethered              |
+| [Stretch Network Setup](untethered_operation.md)   | Guide to network setup for working with Stretch untethered |
 
 # Hardware
 
