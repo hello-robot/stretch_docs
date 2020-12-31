@@ -466,7 +466,7 @@ Here we describe removing the Stretch Compliant gripper. Installation is simply 
 
 ### Battery Maintenance
 
-The robot has two deep-cycle sealed lead acid batteries which provide 12V/19AH of charge. The provided charger will keep the system at a near full-charge if it is left plugged during non-tethered use. 
+The robot has two deep-cycle sealed lead acid batteries which provide 12V/18AH of charge. The provided charger will keep the system at a near full-charge if it is left plugged during non-tethered use.
 
 While deep-cycle batteries are robust to deep discharge states, it is recommended to avoid doing so if possible. The provide charger is able to recover form such a state if it occurs however.
 
