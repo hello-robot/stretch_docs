@@ -3,7 +3,7 @@
 
 As a mobile manipulator, the Stretch RE1 can only go so far when tethered to the monitor, keyboard, and mouse setup. This guide will explain three methods of setting up the Stretch RE1 for untethered usage.
 
-Both methods typically requires a wireless network, but it is possible to setup either of these methods without a wireless network by [setting up a hotspot](#hotspot).
+These methods typically requires a wireless network, but it is possible to setup any of these methods without a wireless network by [setting up a hotspot](#hotspot).
 
 ## Remote Desktop
 
@@ -83,9 +83,9 @@ Although the methods described above will enable you to wirelessly control the r
 
 ### Hotspot
 
-Often the trouble with wirelessly controlling the robot is the network. If your network is using industrial security like 2-factor authentication, there may be trouble connecting the robot to the network. If the network is servicing a large number of users, the connection may feel sluggish. The alternative is to skip the network by connecting directly to the robot through a hotspot. Connected through the hotspot, you can follow instructions for either method described above to control the robot. The trade-off is that while connected to the robot's hotspot, you will be unable to connect to the internet.
+Often the trouble with wirelessly controlling the robot is the network. If your network is using industrial security like 2-factor authentication, there may be trouble connecting the robot to the network. If the network is servicing a large number of users, the connection may feel sluggish. The alternative is to skip the network by connecting directly to the robot. After starting a hotspot on the robot, you can follow instructions for any of the methods described above to control the robot. The trade-off is that while connected to the robot's hotspot, you will be unable to connect to the internet.
 
-To setup the robot's hotspot, visit the Wifi Settings page in the robot. Click on the hamburger menu in the top right and select "Enable hotspot". From your local machine, connect to the robot's hotspot and save the credentials. To change the hotspot's password or enable the hotspot automatically whenever the robot boots, see the following [Stackoverflow post](https://askubuntu.com/questions/500370/setting-up-wireless-hotspot-to-be-on-at-boot).
+To setup the robot's hotspot, visit the Ubuntu Wifi Settings page in the robot. Click on the hamburger menu in the top right and select "Enable hotspot". From your local machine, connect to the robot's hotspot and save the credentials. To change the hotspot's password or enable the hotspot automatically whenever the robot boots, see the following [Stackoverflow post](https://askubuntu.com/questions/500370/setting-up-wireless-hotspot-to-be-on-at-boot).
 
 ### VS Code Remote Development
 
