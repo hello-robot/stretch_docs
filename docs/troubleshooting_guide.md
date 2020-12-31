@@ -83,7 +83,7 @@ It is possible for Stretch's batteries to become damaged due to repeated deep di
 6. Boot the robot up with the charger unattached. 
 7. Check the battery voltage by running `stretch_robot_battery_check.py`. The reported voltage should be >=12V 
 
-## Stretch doesn't respond to commands
+## RPC Transport Errors (Stretch doesn't respond to commands)
 
 If more than one instance of Stretch Body's [Robot](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py) class is instantiated at a time, Stretch Body will report communication errors and will not always execute motion commands as expected. This is because [Robot](https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py)  manages communications with the robot hardware and it doesn't support multiple writes to the USB devices.
 
