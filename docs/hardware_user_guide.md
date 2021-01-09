@@ -466,41 +466,7 @@ Here we describe removing the Stretch Compliant gripper. Installation is simply 
 
 ### Battery Maintenance
 
-The robot has two deep-cycle sealed lead acid batteries which provide 12V/18AH of charge. The provided charger will keep the system at a near full-charge if it is left plugged during non-tethered use.
-
-While deep-cycle batteries are robust to deep discharge states, it is recommended to avoid doing so if possible. The provide charger is able to recover form such a state if it occurs however.
-
-We recommend leaving the charger plugged in whenever the robot base is stationary.
-
-#### Battery State
-
-The battery charger LEDs provide an approximate indicator of battery charge. However, this is not especially accurate. A charged battery will typically report a voltage of 12-12.8V and will maintain that voltage across load conditions. Meanwhile, a partially charged battery may report anywhere from 10-12.8V but its voltage will drop rapidly when loaded. 
-
-The  voltage and current draw can be checked by;
-
-```bash
->>$ stretch_robot_battery_check.py 
-[Pass] Voltage with 12.9889035225
-[Pass] Current with 2.46239192784
-[Pass] CPU Temp with 56.0
-
-```
-
-#### Run Time
-
-The run time for a fully charged system is dependent on the load use case. The vast majority of battery power is consumed by the NUC computer. While the motors can momentarily draw surge currents, the robot is designed such that minimal power is expended to hold the body up against gravity (which keeps average motor current low). 
-
-The robot will continue to operate at battery voltages as low as 9.5V. A fully charged robot running a very high CPU load will take over 2 hours to discharge to 10V. 
-
-#### Low Voltage Alert
-
-When the battery voltage drops below a YAML specified threshold the robot will produce an intermittent double beep sound. This is a reminder to the user to plug in the charger. This threshold is set at 10.5V at the factory but may be overridden.
-
-#### Battery Fuse
-
-The batteries are fused with a 20mm 8A / slow blow fuse. Nominal load currents for the robot are 3-5A for most use cases. The fuse provides protection against an internal short. 
-
-Should the fuse blow, the robot will fail to power up. Should the fuse need replacement contact support@hello-robot.com.
+Please review the [Battery Maintenance Guide](./battery_maintenance_guide.md) for proper care and charging of the Stretch batteries.
 
 ### Belt Tension
 

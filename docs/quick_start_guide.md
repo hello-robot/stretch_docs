@@ -22,9 +22,18 @@ The entire robot powers up and down with the On/Off switch. When powering down, 
 
 ![](./images/trunk_rs.png)
 
-The provided battery charger can be plugged and unplugged at any time during operation. We recommend keeping the charger plugged in whenever it isn't running untethered. The charger should be '12V AGM' mode while charging:
+The provided battery charger can be plugged and unplugged at any time during operation. Stretch uses the following charger modes:
 
-![](./images/noco10_agm_rs2.png)
+| Mode    | Function                                                     |
+| ------- | ------------------------------------------------------------ |
+| STANDBY | Charger not charging the robot                               |
+| 12V AGM | Charging while robot is powered down                         |
+| SUPPLY  | 1) Power the robot during tethered use<br/>2) Repair damaged batteries. |
+| REPAIR  | Repair damaged batteries.                                    |
+
+Please review the [Battery Maintenance Guide](./battery_maintenance_guide.md) for proper care and charging of Stretch batteries. 
+
+![](./images/NOCO_Genius10_UI_rs.png)
 
 ### Runstop
 
@@ -99,6 +108,7 @@ Let's get plugged in.
 * Remove the 'trunk' cover and power on the robot if its not already on.
 * Plug in a mouse, keyboard and HDMI monitor to the robot trunk
 * Plug in the battery charger
+* Place the charger in SUPPLY mode
 
 Log in to the robot computer. The default user credentials came in the box with the robot. 
 
@@ -188,6 +198,16 @@ Finally, we recommend that you change the login credentials for the default user
 ```
 
 If you'd like to setup a new user account, check out the [Stretch Installation Guide](https://github.com/hello-robot/stretch_install/blob/master/README.md). In a lab setting, it's useful for lab members to have their own user accounts to run experiments.
+
+## Power Down
+
+The recommended power down procedure is
+
+1. Place a clamp on the mast below the shoulder to prevent dropping
+2. Shutdown the computer from the Desktop
+3. When the laser range finder has stopped spinning, turn off the main power switch
+4. Attach the charger
+5. Place the charger in 12V AGM mode
 
 ## Join the Community Forum
 

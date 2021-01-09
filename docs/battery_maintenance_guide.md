@@ -23,7 +23,7 @@ Stretch utilizes four of the available modes on these chargers.
 
 | Mode    | Function                                                     |
 | ------- | ------------------------------------------------------------ |
-| STANDBY | Charger not applying voltage to the robot                    |
+| STANDBY | Charger not charging the robot                               |
 | 12V AGM | Charging while robot is powered down                         |
 | SUPPLY  | 1) Power the robot during tethered use<br/>2) Repair damaged batteries. |
 | REPAIR  | Repair damaged batteries.                                    |
@@ -48,12 +48,12 @@ Stretch utilizes four of the available modes on these chargers.
 
 ![alt_text](images/NOCO_G7200_UI.png "image_tooltip")
 
-| Mode    | Procedure                                                    |
-| ------- | ------------------------------------------------------------ |
-| STANDBY | Illuminates when charger not charging                        |
-| 12V AGM | 1) From STANDBY, charger attached<br>2) Press MODE button repeatedly until 12V AGM indicator is illuminated |
-| SUPPLY  | 1) From STANDBY, charger not attached<br>2) Press and hold MODE button for 3s<br>3) Attach charger<br>4) Press MODE button until SUPPLY indicator is illuminated |
-| REPAIR  | 1) From STANDBY, charger attached<br>2) Press and hold MODE button for 3s<br/>3) Press MODE button until REPAIR indicator is illuminated |
+| Mode        | Procedure                                                    |
+| ----------- | ------------------------------------------------------------ |
+| **STANDBY** | Illuminates when charger not charging                        |
+| **12V AGM** | 1) From STANDBY, charger attached<br>2) Press MODE button repeatedly until 12V AGM indicator is illuminated |
+| **SUPPLY**  | 1) From STANDBY, charger not attached<br>2) Press and hold MODE button for 3s<br>3) Attach charger<br>4) Press MODE button until SUPPLY indicator is illuminated |
+| **REPAIR**  | 1) From STANDBY, charger attached<br>2) Press and hold MODE button for 3s<br/>3) Press MODE button until REPAIR indicator is illuminated |
 
 ## Charging Best Practices
 
@@ -63,10 +63,10 @@ We recommend following the best practices below to avoid deep discharge of the b
 
 | Use Case                                                     | Best Practice                                                | Reason                                                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Robot is running an application untethered                   | 1) Regularly check the battery voltage using the command line tool. <br/><br/>2) Shutdown the computer and power off the robot when voltage falls below 11V.  <br/><br/>3) Attach the charger in **12V AGM** mode. <br/><br/>4) Charge to 100% before resuming operation. | The 12V AGM charge mode expects the battery voltage to be above 11V in order to charge. |
-| User is actively developing on the robot and robot base is not in motion | 1) Leave the charger attached in **SUPPLY** mode.<br/><br/>2) Shutdown and power off the robot when development is done. | When the robot is powered on its current draw can confuse the ‘smart’ charger when in 12V AGM mode. |
-| Robot is not in use                                          | 1) Shutdown the computer and turn off the robot power. <br><br>2) Leave the charger attached and place it in <strong>12V AGM mode</strong>. | The charger will maintain a ‘trickle charge’ on the battery, keeping the charge at 100%. <br><br>Leaving the robot power on may cause the batteries to deep discharge. |
-| Robot is coming out of storage                               | 1) Attach charger in 12V AGM mode<br><br>2) Charge for 2-3 hours until charger reports 100% | SLA batteries naturally lose charge over time due to ‘self-discharge’. |
+| **Robot is running an application untethered**               | 1) Regularly check the battery voltage using the command line tool. <br/><br/>2) Shutdown the computer and power off the robot when voltage falls below 11V.  <br/><br/>3) Attach the charger in **12V AGM** mode. <br/><br/>4) Charge to 100% before resuming operation. | The 12V AGM charge mode expects the battery voltage to be above 11V in order to charge. |
+| **User is actively developing on the robot and robot base is not in motion** | 1) Leave the charger attached in **SUPPLY** mode.<br/><br/>2) Shutdown and power off the robot when development is done. | When the robot is powered on its current draw can confuse the ‘smart’ charger when in 12V AGM mode. |
+| **Robot is not in use**                                      | 1) Shutdown the computer and turn off the robot power. <br><br>2) Leave the charger attached and place it in <strong>12V AGM mode</strong>. | The charger will maintain a ‘trickle charge’ on the battery, keeping the charge at 100%. <br><br>Leaving the robot power on may cause the batteries to deep discharge. |
+| **Robot is coming out of storage**                           | 1) Attach charger in 12V AGM mode<br><br>2) Charge for 2-3 hours until charger reports 100% | SLA batteries naturally lose charge over time due to ‘self-discharge’. |
 
 
 
@@ -83,11 +83,11 @@ If desired, the intermittent beep functionality can be disabled by setting the `
 
 | Issue                                                        | How to Diagnose                                              | Cause                                                        | Corrective Procedure                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Robot shows no power on activity                             | Nothing happens when you toggle on the robot’s power switch. <br><br>There is no visible illumination of LEDs, motion of the laser range finder, or audible noise of the robot fans. | The robot fuse may have blown. <br>When the batteries drain the current required to maintain power goes up, which can ultimately blow the fuse. | Proceed to “Changing the Fuse” steps below                   |
-| Robot powers on momentarily                                  | When you toggle on the robot’s power switch some activity occurs  (illumination of LEDs, audible noise of robot fans, etc) but the computer fails to boot. | The battery voltage is too low to maintain power.<br><br> As the power draw increases during power-on, the voltage dips and causes the system to shut down. | Connect the battery charger in 12V AGM mode and leave until fully charged. |
-| Battery won’t charge in 12V AGM mode                         | When the robot is powered down and the charger is connected in 12V AGM mode, the charger eventually switches to a different mode. | The battery voltage is too low for the charger to function correctly in normal operation. | Proceed to the “Recovering from Low Battery Voltage” steps below. |
-| Charger reports 100% charge but the batteries are discharged | When the robot is powered down and the charger is connected in 12V AGM mode, the charger status shows 100%.  <br>However the robot fails to turn on properly. | Damage to the batteries (usually caused by excessively low voltage) may artificially raise the open circuit voltage of the battery, causing the battery to appear fully charged, while providing low capacity. | Proceed to the “Recovering from Low Battery Voltage” steps below. |
-| Charger will not charge or stay in any mode.                 | When placed in 12V AGM, SUPPLY, or REPAIR  mode, it continually reverts to STANDBY mode after ~ 20 minutes. | Charger may be defective.                                    | Contact Hello Robot Support for a replacement.               |
+| **Robot shows no power on activity**                         | Nothing happens when you toggle on the robot’s power switch. <br><br>There is no visible illumination of LEDs, motion of the laser range finder, or audible noise of the robot fans. | The robot fuse may have blown. <br>When the batteries drain the current required to maintain power goes up, which can ultimately blow the fuse. | Proceed to “Changing the Fuse” steps below                   |
+| **Robot powers on momentarily**                              | When you toggle on the robot’s power switch some activity occurs  (illumination of LEDs, audible noise of robot fans, etc) but the computer fails to boot. | The battery voltage is too low to maintain power.<br><br> As the power draw increases during power-on, the voltage dips and causes the system to shut down. | Connect the battery charger in 12V AGM mode and leave until fully charged. |
+| **Battery won’t charge in 12V AGM mode**                     | When the robot is powered down and the charger is connected in 12V AGM mode, the charger eventually switches to a different mode. | The battery voltage is too low for the charger to function correctly in normal operation. | Proceed to the “Recovering from Low Battery Voltage” steps below. |
+| **Charger reports 100% charge but the batteries are discharged** | When the robot is powered down and the charger is connected in 12V AGM mode, the charger status shows 100%.  <br>However the robot fails to turn on properly. | Damage to the batteries (usually caused by excessively low voltage) may artificially raise the open circuit voltage of the battery, causing the battery to appear fully charged, while providing low capacity. | Proceed to the “Recovering from Low Battery Voltage” steps below. |
+| **Charger will not charge or stay in any mode.**             | When placed in 12V AGM, SUPPLY, or REPAIR  mode, it continually reverts to STANDBY mode after ~ 20 minutes. | Charger may be defective.                                    | Contact Hello Robot Support for a replacement.               |
 
 
 
@@ -116,43 +116,17 @@ The recommended power down procedure is
 
 Stretch RE1 has an automotive fuse inside the base that may need to be replaced. The type of fuse depends on your build version of the RE1
 
-
-<table>
-  <tr>
-   <td><strong>Build Version</strong>
-   </td>
-   <td><strong>Fuse Type</strong>
-   </td>
-   <td><strong>Recommended Fuse</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Guthrie
-   </td>
-   <td>8A 5x20mm Fast Blow Glass
-   </td>
-   <td>Bussman S505-8-R
-   </td>
-  </tr>
-  <tr>
-   <td>Hank and later
-   </td>
-   <td>7.5A ATM Fast Blow Blade
-   </td>
-   <td>Bussman VP/ATM-7-1/2-RP
-   </td>
-  </tr>
-</table>
-
+| Build Version  | Fuse Type                 | Recommended Fuse        |
+| -------------- | ------------------------- | ----------------------- |
+| Guthrie        | 8A 5x20mm Fast Blow Glass | Bussman S505-8-R        |
+| Hank and later | 7.5A ATM Fast Blow Blade  | Bussman VP/ATM-7-1/2-RP |
 
 The fuse location is shown below.  For guidance on replacing the fuse, contact Hello Robot support: [support@hello-robot.com](mailto:support@hello-robot.com).
 
 
 
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/base_fuse.png)
 
 
 
@@ -161,19 +135,12 @@ The fuse location is shown below.  For guidance on replacing the fuse, contact H
 The battery charger LEDs provide an approximate indicator of battery charge when it is in 12V AGM mode. 
 
 
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/genius10_100pct.png)
 
 
 
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/g7200_100pct.png)
 
 
 
@@ -185,15 +152,14 @@ A charged battery will typically report a voltage of 12-12.8V and will maintain 
 
 **Measuring Battery Voltage from the Command Line**
 
-The battery voltage and current draw can be checked from the command line;
+The battery voltage and current draw can be checked from the command line:
 
->>$ stretch_robot_battery_check.py 
-
+```bash
+>>$ stretch_robot_battery_check.py
 [Pass] Voltage with 12.9889035225
-
 [Pass] Current with 2.46239192784
-
 [Pass] CPU Temp with 56.0
+```
 
 **Measuring Battery Voltage with a DMM**
 
@@ -202,19 +168,13 @@ When troubleshooting a deeply discharged battery it may be useful to directly me
 NOTE: Caution should be taken as it is possible to short the battery when doing this. 
 
 
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/base_dmm.png)
 
 
 
 ### Repairing Damaged Batteries
 
 It is possible for Stretch's batteries to become damaged due to repeated deep discharge. If the robot has continued issues maintaining a charge we recommend attempting the following procedure:
-
-
 
 1. Power off the robot and plug in the charger
 2. Place the charger in REPAIR mode
