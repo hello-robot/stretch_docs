@@ -24,6 +24,7 @@
 | Resource                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Stretch Hardware User Guide](hardware_user_guide.md)        | Specification and functional description of the Stretch RE1 Hardware |
+| [Stretch Battery Maintenance Guide](battery_maintenance_guide.md)        | Guide to Care for and Charge the Stretch Batteries |
 | [Stretch Tool Share](https://github.com/hello-robot/stretch_tool_share) | Open resource to share designs and code for end-of-arm tools |
 | [Stretch Wrist Expansion Header](https://github.com/hello-robot/stretch_firmware/blob/master/tutorial/README.md) | Tutorials on integrating custom hardware on to the Arduino expansion header in the wrist |
 
