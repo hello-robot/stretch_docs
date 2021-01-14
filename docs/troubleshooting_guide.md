@@ -19,7 +19,7 @@ In addition, check that the provided USB dongle is plugged into the robot USB po
 
 ## Battery is not staying charged
 
-Please review the troubleshooting section of the [Battery Maintenance Guide](./batter_maintenance_guide.md).
+Please review the troubleshooting section of the [Battery Maintenance Guide](./battery_maintenance_guide.md).
 
 ## RPC Transport Errors (Stretch doesn't respond to commands)
 
