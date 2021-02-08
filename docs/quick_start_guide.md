@@ -181,7 +181,7 @@ robot.head.pose('ahead')
 robot.end_of_arm.move_to('wrist_yaw',0)
 
 robot.end_of_arm.move_to('stretch_gripper',50)
-robot.end_of_arm.move_to('gripper',-50)
+robot.end_of_arm.move_to('stretch_gripper',-50)
 
 robot.stow()
 robot.stop()
