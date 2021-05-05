@@ -3,7 +3,7 @@
 
 As a mobile manipulator, the Stretch RE1 can only go so far when tethered to the monitor, keyboard, and mouse setup. This guide will explain three methods of setting up the Stretch RE1 for untethered usage.
 
-These methods typically requires a wireless network, but it is possible to setup any of these methods without a wireless network by [setting up a hotspot](#hotspot).
+These methods typically require a wireless network, but it is possible to set up any of these methods without a wireless network by [setting up a hotspot](#hotspot).
 
 ## Remote Desktop
 
@@ -13,7 +13,14 @@ This is the recommended approach if you are running Windows or MacOS. This metho
 
 #### How To
 
-While the Stretch RE1 is tethered to the monitor, keyboard, and mouse setup, go to System Setting first verify that the robot is connected to the wireless network. Then, select the Sharing tab and turn it on. Then, turn on Screen Sharing and choose a password. If you plan to connect to the robot from a Windows or MacOS machine, then open a terminal and run the following command.
+While the Stretch RE1 is tethered to the monitor, keyboard, and mouse setup, first verify that the robot is connected to the wireless network then install Vino VNC server using the following command:
+
+```bash
+sudo apt install vino
+```
+
+
+Go to System Settings. Select the Sharing tab and turn it on then, turn on Screen Sharing and choose a password. If you plan to connect to the robot from a Windows or MacOS machine, then open a terminal and run the following command.
 
 ```bash
 sudo gsettings set org.gnome.Vino require-encryption false
@@ -21,7 +28,7 @@ sudo gsettings set org.gnome.Vino require-encryption false
 
 Finally, we need the robot's IP address, username, and password. Open a terminal and run `ifconfig`, which will print out the network information of the machine. In the wireless section (typically named wlp2s0), look for something that looks like "inet 10.0.0.15". The four numbers represent the IP address of the robot on the local network. The robot's default username and password is printed on papers that came in the tools box alongside the robot.
 
-Next, on your computer, connect to the same wireless network as the robot and open the VNC package being used. Using the robot's IP address and username, initialize a new connection to the robot. The robot's desktop will open in a new window.
+VNC will only function properly with an external display attached to the robot. Using a dummy HDMI dongle when operating the robot untethered via VNC is recommended. On your computer, connect to the same wireless network as the robot and open the VNC package being used. Using the robot's IP address and username, initialize a new connection to the robot. The robot's desktop will open in a new window.
 
 ## SSH & X Server
 
@@ -31,7 +38,7 @@ This is the recommended approach if you are running an Unix-based operating syst
 
 #### How To
 
-While the Remote Desktop approach requires only a VNC, the approach is often slow. In this method, we will use SSH and X Server to accomplish the same a bit faster. SSH stands for Secure Shell, enabling one to remotely use the terminal (shell) of another machine. X Server is used on many Unix variants to render the Windowed GUI of applications and it makes possible to render on your machine's screen the Windowed GUI of an application running on another machine.
+While the Remote Desktop approach requires only a VNC, the approach is often slow. In this method, we will use SSH and X Server to accomplish the same a bit faster. SSH stands for Secure Shell, enabling one to remotely use the terminal (shell) of another machine. X Server is used on many Unix variants to render the Windowed GUI of applications. With X Server it is possible to render the Windowed GUI of an application running on another machine on your machine's screen.
 
 The first step is to identify the robot's IP address on the local network. While the Stretch RE1 is tethered to the monitor, keyboard, and mouse, verify that the robot is connected to a wireless network. Then, open a terminal and run `ifconfig`, which will print out the network information of the machine. In the wireless section (typically named wlp2s0), look for something that looks like "inet 10.0.0.15". The four numbers represent the IP address of the robot on the local network. Using any other machine on the same local network, I can SSH into the robot using this IP address. Take note of the username and password of the robot. The default combo is printed on papers that came in the tools box alongside the robot.
 
@@ -63,7 +70,7 @@ scp username@ip-address:/path/to/filename ~/path/to/put/it/
 
 #### Requirements
 
-This is the recommended approach if you are running Ubuntu 16.04/18.04 with ROS kinetic/melodic installed. This method will utilize the local installation of ROS tools, such as Rviz, rostopic, and rosservice, while retreiving data from the robot.
+This is the recommended approach if you are running Ubuntu 16.04/18.04 with ROS kinetic/melodic installed. This method will utilize the local installation of ROS tools, such as Rviz, rostopic, and rosservice, while retrieving data from the robot.
 
 #### How To
 
@@ -85,7 +92,7 @@ Although the methods described above will enable you to wirelessly control the r
 
 Often the trouble with wirelessly controlling the robot is the network. If your network is using industrial security like 2-factor authentication, there may be trouble connecting the robot to the network. If the network is servicing a large number of users, the connection may feel sluggish. The alternative is to skip the network by connecting directly to the robot. After starting a hotspot on the robot, you can follow instructions for any of the methods described above to control the robot. The trade-off is that while connected to the robot's hotspot, you will be unable to connect to the internet.
 
-To setup the robot's hotspot, visit the Ubuntu Wifi Settings page in the robot. Click on the hamburger menu in the top right and select "Enable hotspot". From your local machine, connect to the robot's hotspot and save the credentials. To change the hotspot's password or enable the hotspot automatically whenever the robot boots, see the following [Stackoverflow post](https://askubuntu.com/questions/500370/setting-up-wireless-hotspot-to-be-on-at-boot).
+To set up the robot's hotspot, visit the Ubuntu Wifi Settings page in the robot. Click on the hamburger menu in the top right and select "Enable hotspot". From your local machine, connect to the robot's hotspot and save the credentials. To change the hotspot's password or enable the hotspot automatically whenever the robot boots, see the following [Stackoverflow post](https://askubuntu.com/questions/500370/setting-up-wireless-hotspot-to-be-on-at-boot).
 
 ### VS Code Remote Development
 
@@ -93,13 +100,13 @@ It is possible to simultaneously develop code on the robot while running wireles
 
 ### Static IP Address
 
-Routers that serve wireless networks often dynamically assign IP address to machines that connect to the network. This means that your robot's IP address may have changed since the last time you turned it on. Since it becomes a pain to connect to the monitor, keyboard, and mouse setup every time to run `ifconfig`, many users prefer to assign the robot a static IP address. If you control the router, visit the router's setting page to setup the robot's static IP address. It is common at universities and companies to have staff dedicated to the management of the network. This staff will often be able to setup a static IP address for the robot.
+Routers that serve wireless networks often dynamically assign IP address to machines that connect to the network. This means that your robot's IP address may have changed since the last time you turned it on. Since it becomes a pain to connect to the monitor, keyboard, and mouse setup every time to run `ifconfig`, many users prefer to assign the robot a static IP address. If you control the router, visit the router's settings page to set up the robot's static IP address. It is common at universities and companies to have staff dedicated to the management of the network. This staff will often be able to set up a static IP address for the robot.
 
 ### Public Key Authentication
 
-The method of SSH described in [SSH & X Server](#ssh-x-server) is the most basic method of SSH-ing. There is better and more-secure method of SSH-ing into the robot called Public Key Authentication. This method will allow multiple developers to SSH into the robot without having to share the robot's admin password.
+The method of SSH described in [SSH & X Server](#ssh-x-server) is the most basic method of SSH-ing. There is a better and more-secure method of SSH-ing into the robot called Public Key Authentication. This method will allow multiple developers to SSH into the robot without having to share the robot's admin password.
 
-The first step is to generating a public and private keys on your computer. Linux and MacOS machines can simply open the terminal and run:
+The first step is to generate public and private keys on your computer. Linux and MacOS machines can simply open the terminal and run:
 
 ```bash
 ssh-keygen
