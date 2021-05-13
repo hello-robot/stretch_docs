@@ -29,8 +29,8 @@ nav:
 theme:
  font: Arial
  name: material
- palette: 
-  primary: hello-robot  
+ palette:
+  primary: hello-robot
  logo: images/hello_robot_logo.png
  favicon: images/hello_robot_favicon.png
 extra_css: [extra.css]
