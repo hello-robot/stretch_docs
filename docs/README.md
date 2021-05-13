@@ -47,6 +47,7 @@ We provide ROS-related code for the Stretch RE1 mobile manipulator, including a 
 | Resource                                                     | Description                                  |
 | ------------------------------------------------------------ | -------------------------------------------- |
 | [stretch_ros repository on GitHub](https://github.com/hello-robot/stretch_ros) | Repository with ROS-related code for Stretch |
+| [Stretch ROS Tutorial: Writing a HelloNode](https://github.com/hello-robot/stretch_ros) | Learn how to command basic motions to Stretch with a ROS node |
 
 ### Other Tools
 
