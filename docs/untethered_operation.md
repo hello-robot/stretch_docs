@@ -19,7 +19,6 @@ While the Stretch RE1 is tethered to the monitor, keyboard, and mouse setup, fir
 sudo apt install vino
 ```
 
-
 Go to System Settings. Select the Sharing tab and turn it on then, turn on Screen Sharing and choose a password. If you plan to connect to the robot from a Windows or MacOS machine, then open a terminal and run the following command.
 
 ```bash
@@ -28,7 +27,7 @@ sudo gsettings set org.gnome.Vino require-encryption false
 
 Finally, we need the robot's IP address, username, and password. Open a terminal and run `ifconfig`, which will print out the network information of the machine. In the wireless section (typically named wlp2s0), look for something that looks like "inet 10.0.0.15". The four numbers represent the IP address of the robot on the local network. The robot's default username and password is printed on papers that came in the tools box alongside the robot.
 
-VNC will only function properly with an external display attached to the robot. Using a dummy HDMI dongle when operating the robot untethered via VNC is recommended. On your computer, connect to the same wireless network as the robot and open the VNC package being used. Using the robot's IP address and username, initialize a new connection to the robot. The robot's desktop will open in a new window.
+VNC will only function properly with an external display attached to the robot. Using a dummy HDMI dongle when operating the robot untethered via VNC is recommended. One possible dummy HDMI dongle can be found on Amazon [here](https://www.amazon.com/gp/product/B07BBT9NCZ/). On your computer, connect to the same wireless network as the robot and open the VNC package being used. Using the robot's IP address and username, initialize a new connection to the robot. The robot's desktop will open in a new window.
 
 ## SSH & X Server
 
@@ -38,7 +37,7 @@ This is the recommended approach if you are running an Unix-based operating syst
 
 #### How To
 
-While the Remote Desktop approach requires only a VNC, the approach is often slow. In this method, we will use SSH and X Server to accomplish the same a bit faster. SSH stands for Secure Shell, enabling one to remotely use the terminal (shell) of another machine. X Server is used on many Unix variants to render the Windowed GUI of applications. With X Server it is possible to render the Windowed GUI of an application running on another machine on your machine's screen.
+While the Remote Desktop approach is easy to set up, graphics and interaction with the remote desktop is often slow. In this method, we will use SSH and X Server to accomplish the same a bit faster. SSH stands for Secure Shell, enabling one to remotely use the terminal (shell) of another machine. X Server is used on many Unix variants to render the Windowed GUI of applications. With SSH and X Server, it is possible to render the Windowed GUI of an application running on a remote machine on your machine's screen.
 
 The first step is to identify the robot's IP address on the local network. While the Stretch RE1 is tethered to the monitor, keyboard, and mouse, verify that the robot is connected to a wireless network. Then, open a terminal and run `ifconfig`, which will print out the network information of the machine. In the wireless section (typically named wlp2s0), look for something that looks like "inet 10.0.0.15". The four numbers represent the IP address of the robot on the local network. Using any other machine on the same local network, I can SSH into the robot using this IP address. Take note of the username and password of the robot. The default combo is printed on papers that came in the tools box alongside the robot.
 
@@ -61,7 +60,7 @@ To send the files from your computer to the robot, run:
 scp ./filename username@ip-address:~/path/to/put/it/
 ```
 
-The copy files from the robot to your computer, run the reverse:
+To copy the files from the robot to your computer, run the reverse:
 ```bash
 scp username@ip-address:/path/to/filename ~/path/to/put/it/
 ```
