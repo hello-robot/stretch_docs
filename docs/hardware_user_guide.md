@@ -375,7 +375,7 @@ The pin mapping is:
     <tr>
     <td>7</td>
     <td>MOSI</td>
-    <td>DIO | SPI MOSI</td>
+    <td>DIO | SPI MOSI | UART RX</td>
         <td>Digital in (D1)</td>
   </tr>
     <tr>
@@ -393,7 +393,7 @@ The pin mapping is:
     <tr>
     <td>10</td>
     <td>ANA0</td>
-    <td>Analog input | UART RX</td>
+    <td>Analog input </td>
         <td>Analog in (A0)</td>
 </table>
 
