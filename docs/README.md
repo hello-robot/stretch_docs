@@ -19,14 +19,24 @@
 | [Stretch Troubleshooting Guide](troubleshooting_guide.md) | Solutions to common issues                            |
 | [Stretch Network Setup](untethered_operation.md)   | Guide to network setup for working with Stretch untethered |
 
+# Tutorials
+
+| Resource                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Working with Robot Parameters](parameters_tutorial.md)      | Learn how to query, set, and manage robot parameters.        |
+| [Working with Dynamixel Servos][dynamixel_tutorial.md]       | Learn how to use various tools to manage Dynamixel servos    |
+| [Changing End of Arm Tools](tool_change_tutorial.md)         | Learn how to configure the Stretch software interfaces to support other tools |
+| [Extending the Wrist DOF](https://github.com/hello-robot/stretch_body/tree/master/tutorial/extending_wrist_dof) | Learn how to integrate additional DOF to the End of Arm      |
+| [Working with the Wrist Expansion Header](https://github.com/hello-robot/stretch_firmware/blob/master/tutorial/README.md) | Learn how to integrate custom hardware on to the expansion header in the wrist. |
+
 # Hardware
 
 | Resource                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Stretch Hardware User Guide](hardware_user_guide.md)        | Specification and functional description of the Stretch RE1 Hardware |
-| [Stretch Battery Maintenance Guide](battery_maintenance_guide.md)        | Guide to Care for and Charge the Stretch Batteries |
+| [Stretch Dex Wrist User Guide](dex_wrist_user_guide.md)      | Installing, configuring, and working with the Stretch Dex Wrist |
+| [Stretch Battery Maintenance Guide](battery_maintenance_guide.md) | Guide to Care for and Charge the Stretch Batteries           |
 | [Stretch Tool Share](https://github.com/hello-robot/stretch_tool_share) | Open resource to share designs and code for end-of-arm tools |
-| [Stretch Wrist Expansion Header](https://github.com/hello-robot/stretch_firmware/blob/master/tutorial/README.md) | Tutorials on integrating custom hardware on to the Arduino expansion header in the wrist |
 
 # Software
 
