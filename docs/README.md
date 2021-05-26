@@ -24,7 +24,7 @@
 | Resource                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Working with Robot Parameters](parameters_tutorial.md)      | Learn how to query, set, and manage robot parameters.        |
-| [Working with Dynamixel Servos][dynamixel_tutorial.md]       | Learn how to use various tools to manage Dynamixel servos    |
+| [Working with Dynamixel Servos](dynamixel_tutorial.md)       | Learn how to use various tools to manage Dynamixel servos    |
 | [Changing End of Arm Tools](tool_change_tutorial.md)         | Learn how to configure the Stretch software interfaces to support other tools |
 | [Extending the Wrist DOF](https://github.com/hello-robot/stretch_body/tree/master/tutorial/extending_wrist_dof) | Learn how to integrate additional DOF to the End of Arm      |
 | [Working with the Wrist Expansion Header](https://github.com/hello-robot/stretch_firmware/blob/master/tutorial/README.md) | Learn how to integrate custom hardware on to the expansion header in the wrist. |
