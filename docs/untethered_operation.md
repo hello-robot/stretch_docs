@@ -75,13 +75,20 @@ This is the recommended approach if you are running Ubuntu 16.04/18.04 with ROS 
 
 If you are developing ROS code to test on the Stretch RE1 and you already have ROS installed on your local Ubuntu machine, then there is an easier way of using Rviz than the method described in [SSH & X Server](#ssh-x-server). In the ROS world, this concept is known as "remote master".
 
-First, start the ROS launch files on the robot as you normally would. On you local machine, run:
+First, run the following on the robot:
 
 ```bash
-export ROS_MASTER_URI=http://username@ip-address:11311
+export ROS_IP=ip-address
+export ROS_MASTER_URI=http://ip-address:11311/
 ```
 
-Then you may use tools like Rviz, rostopic, or rosservice on your local machine as you would have on the robot. Additional information can be found in the ROS [Multiple Machines Tutorial](http://wiki.ros.org/ROS/Tutorials/MultipleMachines).
+Next, start the ROS launch files on the robot as you normally would. Finally, on your local machine, run:
+
+```bash
+export ROS_MASTER_URI=http://ip-address:11311
+```
+
+Then you may use tools like Rviz, rostopic, or rosservice on your local machine as you would have on the robot. Additional information can be found in the ROS [Multiple Machines Tutorial](http://wiki.ros.org/ROS/Tutorials/MultipleMachines). If you use ROS Remote Master often, you may export these environment variables in your [bashrc](https://www.maketecheasier.com/what-is-bashrc/).
 
 ## Additional Ideas
 
