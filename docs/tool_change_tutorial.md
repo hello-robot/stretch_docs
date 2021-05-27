@@ -70,9 +70,7 @@ In [7]: r.stop()
 
 ## Loading Tool Interfaces from the Stretch Tool Share
 
-The [Stretch Tool Share](https://github.com/hello-robot/stretch_tool_share/) is an open Git repository for non-standard RE1 tools. It hosts both the CAD, URDF, and Python files needed to integrate these tools onto your robot.
-
-**NOTE**:  Only select tools hosted on the Tool Share include URDF and Python data.
+The [Stretch Tool Share](https://github.com/hello-robot/stretch_tool_share/) is an open Git repository for non-standard RE1 tools. It hosts the CAD, URDF, and Python files needed to integrate these tools onto your robot.
 
 To use Stretch Tool Share tools, first update your installation:
 
