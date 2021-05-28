@@ -2,15 +2,17 @@
 
 In this guide we will cover the installation, configuration, and use of the Stretch Dex Wrist.
 
-![](./images/dex_wrist_A.png)
-
-
-
 ## Overview
 
 The Stretch Dex Wrist is an optional add-on to the RE1. It adds pitch and roll degrees of freedom to the standard wrist yaw joint. It also includes a slightly modified version of the standard Stretch Compliant Gripper. 
 
 **NOTE:** If your robot did not ship with the Stretch Dex Wrist pre-installed you will want to first proceed to the Appendix: Installation and Configuration at the end of this guide. 
+
+## Functional Specification
+
+![](./images/dex_wrist_specification.PNG)
+
+
 
 ## Working with the Dex Wrist
 
@@ -158,7 +160,9 @@ You can type 'q' then Ctrl-C to exit when done. The menu interface is:
 
 ## Appendix: Installation and Configuration
 
-### Hardware Upgrades
+Robots that did not ship with the Dex Wrist installed will require additional hardware and software installation.
+
+### Production Batch Variation
 
 Earlier production 'batches' of Stretch will require a hardware upgrade prior to use the Dex Wrist. To check your robot's batch, run:
 
@@ -178,7 +182,64 @@ Earlier production 'batches' of Stretch will require a hardware upgrade prior to
 
 If your robot requires a Wacc Board upgrade please follow the [instructions here](https://github.com/hello-robot/stretch_factory/tree/master/updates/013_WACC_INSTALL) with the assistance of Hello Robot support. This must be done before attaching the Dex Wrist to our robot.
 
-If your robot does not yet have a Dex Wrist installed, please follow the [instructions here](https://github.com/hello-robot/stretch_factory/blob/master/updates/015_DEX_WRIST/README.md) before proceeding.
+### Attaching the Dex Wrist
+
+The Dex Wrist mounts to the bottom of the [Stretch Wrist Tool Plate](https://docs.hello-robot.com/hardware_user_guide/#wrist-tool-plate)  requires
+
+* 8 [M2x6mm Torx FHCS bolts](https://www.mcmaster.com/90236A104/) (provided)
+* 4 [M2.5x4mm Torx FHCS bolts](https://www.mcmaster.com/92703A448/) (provided)
+* 2 [M2.5x8mm SHCS bolts](https://www.mcmaster.com/91290A102/) (provided)
+* T6 Torx wrench (provided)
+* T8 Torx wrench (provided)
+* 2mm Hex key (provided)
+
+First, remove the standard Stretch Gripper if it is still attached [according to the Hardware User Guide](https://docs.hello-robot.com/hardware_user_guide/#gripper-removal). 
+
+#### Mounting Bracket
+
+Note where the forward direction is on the wrist yaw tool plate. The forward direction is indicated by the  additional alignment hole that is just outside the bolt pattern (shown pointing down in the image)
+
+![](./images/dex_wrist_C.png)
+
+Using the T6 Torx wrench, attach the wrist mount bracket to the bottom of the tool plate using the provided  M2x6mm bolts. 
+
+**NOTE: ensure that the forward direction of the bracket (also indicated by an alignment hole) matches the forward direction of the tool plate.**
+
+
+
+![![]](./images/dex_wrist_backet_install.PNG)
+
+Now route the Dynamixel cable coming from the Stretch Wrist Yaw through the hollow bore of the wrist yaw joint.
+
+Next, raise the wrist module up vertically into the mounting bracket, then sliding it over horizontally so that the bearing mates onto its post.  
+
+**NOTE: During this step ensure the Dynamixel cable from the wrist yaw exits out the back (towards the shoulder)**
+
+
+
+
+
+![![]](./images/dex_wrist_roll_install.png)
+
+
+
+
+
+![![]](./images/dex_wrist_roll_install2.png)
+
+
+
+Now rotate the wrist yaw joint so the wrist pitch servo body is accessible. Attach the pitch servo to the mounting bracket using the 4 M2.5x4mm screws at T8 Torx wrench.
+
+
+
+![](./images/dex_wrist_pitch_bracket_attach.png)
+
+Finally, plug route the Dynamixel cable into the wrist pitch servo (pink) and install the cable clip using the M2.5x8mm bolts and the 2mm hex wrench.
+
+ ![](./images/dex_wrist_cable_route.png)
+
+
 
 ### Software Configuration
 
@@ -232,19 +293,29 @@ Merge the following additions to you your  `~/stretch_user/$HELLO_FLEET_ID/stret
 ```yaml
 
 params:
-  - stretch_tool_share.stretch_dex_wrist_beta.params
-
-end_of_arm:
-  tool: tool_stretch_dex_wrist
+  - stretch_tool_share.stretch_dex_wrist.params
 
 robot:
   use_collision_manager: 1
+  
+end_of_arm:
+  tool: tool_stretch_dex_wrist
+  baud: 115200
+head:
+  baud: 115200
+wrist_yaw:
+  baud: 115200
+head_tilt:
+  baud: 115200
+head_pan:
+  baud: 115200
 
 stretch_gripper:
   range_t:
     - 0
     - 6667
   zero_t: 3817
+  baud: 115200
 
 lift:
   i_feedforward: 0.75
@@ -270,7 +341,7 @@ First pull down the latest Stretch ROS, Stretch Tool Share, and copy in the URDF
 >>$ cp meshes/*.STL ~/catkin_ws/src/stretch_ros/stretch_description/meshes
 ```
 
-Now configure `stretch_description.xacro` to use the DexWrist:
+Now configure `stretch_description.xacro` to use the Dex Wrist:
 
 ```bash
 >>$ nano ~/catkin_ws/src/stretch_ros/stretch_description/urdf/stretch_description.xacro
