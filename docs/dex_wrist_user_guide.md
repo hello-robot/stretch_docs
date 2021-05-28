@@ -10,7 +10,7 @@ The Stretch Dex Wrist is an optional add-on to the RE1. It adds pitch and roll d
 
 ## Functional Specification
 
-![](./images/dex_wrist_specification.PNG)
+![](./images/dex_wrist_specification.png)
 
 
 
@@ -199,7 +199,7 @@ First, remove the standard Stretch Gripper if it is still attached [according to
 
 Note where the forward direction is on the wrist yaw tool plate. The forward direction is indicated by the  additional alignment hole that is just outside the bolt pattern (shown pointing down in the image)
 
-![](./images/dex_wrist_C.png)
+![](./images/dex_wrist_C_rs.png)
 
 Using the T6 Torx wrench, attach the wrist mount bracket to the bottom of the tool plate using the provided  M2x6mm bolts. 
 
@@ -207,7 +207,7 @@ Using the T6 Torx wrench, attach the wrist mount bracket to the bottom of the to
 
 
 
-![![]](./images/dex_wrist_backet_install.PNG)
+![![]](./images/dex_wrist_bracket_install_rs.png)
 
 Now route the Dynamixel cable coming from the Stretch Wrist Yaw through the hollow bore of the wrist yaw joint.
 
@@ -219,13 +219,13 @@ Next, raise the wrist module up vertically into the mounting bracket, then slidi
 
 
 
-![![]](./images/dex_wrist_roll_install.png)
+![![]](./images/dex_wrist_roll_install_rs.png)
 
 
 
 
 
-![![]](./images/dex_wrist_roll_install2.png)
+![![]](./images/dex_wrist_roll_install2_rs.png)
 
 
 
@@ -233,11 +233,11 @@ Now rotate the wrist yaw joint so the wrist pitch servo body is accessible. Atta
 
 
 
-![](./images/dex_wrist_pitch_bracket_attach.png)
+![](./images/dex_wrist_pitch_bracket_attach_rs.png)
 
 Finally, plug route the Dynamixel cable into the wrist pitch servo (pink) and install the cable clip using the M2.5x8mm bolts and the 2mm hex wrench.
 
- ![](./images/dex_wrist_cable_route.png)
+ ![](./images/dex_wrist_cable_route_rs.png)
 
 
 
