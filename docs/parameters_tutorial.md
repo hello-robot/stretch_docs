@@ -182,7 +182,7 @@ Out[7]:
 
 ```
 
-You can set any of the `robot_params` pro grammatically. For example to adjust the contact sensitivity for the arm:
+You can set any of the `robot_params` programmatically. For example to adjust the contact sensitivity for the arm:
 
 ```python
 In [9]: r.arm.params['contact_thresh_N']
