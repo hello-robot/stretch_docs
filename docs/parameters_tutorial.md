@@ -65,7 +65,7 @@ As shown below, the parameters are loaded into the `robot_params` dictionary in 
 
 
 
-You can configure which parameters data sources are loaded, and their order, in your `stretch_re1_user_params.yaml`. For example:
+You can configure which external parameters' data sources are loaded, and their order, in your `stretch_re1_user_params.yaml`. For example:
 
 ```yaml
 factory_params: stretch_re1_factory_params.yaml
