@@ -288,7 +288,7 @@ The Dex Wrist requires a number of updates to the robot user YAML
 
 YAML doesn't allow definition of multiple fields with the same name. Depending on what is already listed in your user YAML you will need to manually merge fields. 
 
-Merge the following additions to you your  `~/stretch_user/$HELLO_FLEET_ID/stretch_re1_user_params.yaml`
+Merge the new following additions to you your  `~/stretch_user/$HELLO_FLEET_ID/stretch_re1_user_params.yaml`
 
 ```yaml
 
