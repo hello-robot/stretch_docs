@@ -292,15 +292,20 @@ Merge the new following additions to you your  `~/stretch_user/$HELLO_FLEET_ID/s
 
 ```yaml
 
+factory_params: stretch_re1_factory_params.yaml
+
 params:
   - stretch_tool_share.stretch_dex_wrist.params
 
 robot:
   use_collision_manager: 1
-  
-end_of_arm:
   tool: tool_stretch_dex_wrist
+
+tool_none:
+  baud: 11520
+tool_stretch_gripper:
   baud: 115200
+
 head:
   baud: 115200
 wrist_yaw:
@@ -313,8 +318,8 @@ head_pan:
 stretch_gripper:
   range_t:
     - 0
-    - 6667
-  zero_t: 3817
+    - 6415
+  zero_t: 4017
   baud: 115200
 
 lift:
@@ -325,7 +330,7 @@ hello-motor-lift:
     i_safety_feedforward: 0.75
 
 ```
-
+Note: The factory gripper calibration may not provide the full range of motion in some cases. If necessary you can dial in the gripper calibration with the tool `./RE1_gripper_calibrate.py`
 #### Configure for use in ROS
 
 First pull down the latest Stretch ROS, Stretch Tool Share, and copy in the URDF data:
