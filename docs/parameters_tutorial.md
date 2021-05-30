@@ -8,7 +8,7 @@ In this tutorial we will discuss how parameters are managed in Stretch Body and 
 
 Stretch Body shares a global set of parameters across all of its Python [Devices](). A quick way to see what parameters are available are with the `stretch_params.py` tool:
 
-```
+```bash
 stretch_params.py 
 ################################### Parameters for stretch-re1-1039 ######################################
 Origin                                   Parameter                                     Value                        
