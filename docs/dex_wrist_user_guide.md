@@ -337,7 +337,7 @@ First pull down the latest Stretch ROS, Stretch Tool Share, and copy in the URDF
 >>$ cd ~/repos
 >>$ git clone https://github.com/hello-robot/stretch_tool_share
 >>$ cd stretch_tool_share/tool_share/stretch_dex_wrist/stretch_description
->>$ cp urdf/stretch_dex_wrist_beta.xacro ~/catkin_ws/src/stretch_ros/stretch_description/urdf
+>>$ cp urdf/stretch_dex_wrist.xacro ~/catkin_ws/src/stretch_ros/stretch_description/urdf
 >>$ cp meshes/*.STL ~/catkin_ws/src/stretch_ros/stretch_description/meshes
 ```
 
@@ -352,7 +352,7 @@ Now configure `stretch_description.xacro` to use the Dex Wrist:
 ```bash
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="stretch_description">
-  <xacro:include filename="stretch_dex_wrist_beta.xacro" />
+  <xacro:include filename="stretch_dex_wrist.xacro" />
   <xacro:include filename="stretch_main.xacro" />
   <xacro:include filename="stretch_aruco.xacro" />
   <xacro:include filename="stretch_d435i.xacro" />
