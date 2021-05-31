@@ -1,5 +1,6 @@
 
 
+
 #Old
 # pip install mkdocs-bootswatch
 #Sizing images: convert foo.png -resize x100 foo_rs.png
