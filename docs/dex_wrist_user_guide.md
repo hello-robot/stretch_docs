@@ -250,10 +250,10 @@ Robots that did not ship with the Dex Wrist pre-installed will require their sof
 Ensure the latest version of Stretch Body and Stretch Factory are installed
 
 ```bash
->>$ pip2 install hello-robot-stretch-body -U
->>$ pip2 install hello-robot-stretch-body-tools -U
->>$ pip2 install hello-robot-stretch-factory -U
->>$ pip2 install hello-robot-stretch-tool-share
+>>$ pip2 install hello-robot-stretch-body -U --no-cache-dir
+>>$ pip2 install hello-robot-stretch-body-tools -U --no-cache-dir
+>>$ pip2 install hello-robot-stretch-factory -U --no-cache-dir
+>>$ pip2 install hello-robot-stretch-tool-share -U --no-cache-dir
 ```
 
 #### Update Servo Baud Rates
