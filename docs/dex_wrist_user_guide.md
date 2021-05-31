@@ -253,6 +253,7 @@ Ensure the latest version of Stretch Body and Stretch Factory are installed
 >>$ pip2 install hello-robot-stretch-body -U
 >>$ pip2 install hello-robot-stretch-body-tools -U
 >>$ pip2 install hello-robot-stretch-factory -U
+>>$ pip2 install hello-robot-stretch-tool-share
 ```
 
 #### Update Servo Baud Rates
@@ -333,10 +334,11 @@ hello-motor-lift:
 Note: The factory gripper calibration may not provide the full range of motion in some cases. If necessary you can dial in the gripper calibration with the tool `./RE1_gripper_calibrate.py`
 #### Configure for use in ROS
 
-First pull down the latest Stretch ROS, Stretch Tool Share, and copy in the URDF data:
+First pull down the Dex Wrist branch of Stretch ROS, Stretch Tool Share, and copy in the URDF data:
 
 ```bash
 >>$ cd ~/catkin_ws/src/stretch_ros/
+>>$ git checkout feature/pluggable_end_effector
 >>$ git pull
 
 >>$ cd ~/repos
