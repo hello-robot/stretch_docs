@@ -45,7 +45,7 @@ With Stretch Body v0.1.0 we introduce a [simple collision avoidance controller](
 
 The collision avoidance behavior acts to dynamically set the robot joint limits according to simple models of its kinematic state.  The avoidance behavior is defined in [`collision_model.py`](https://github.com/hello-robot/stretch_tool_share/blob/master/python/stretch_tool_share/stretch_dex_wrist/collision_model.py)
 
-For performance reasons this collision avoidance behavior is coarse and does not prevent all self-collisions and considered 'experimental'. The collision avoidance is off by default but it can be turned on by adding the following to your user YAML:
+For performance reasons this collision avoidance behavior is coarse and does not prevent all self-collisions and considered 'experimental'. The collision avoidance is off by default for the standard Stretch RE1. For robots with the wrist we turn it on by default. It be turned on or off by modifying the following in your user YAML:
 
 ```yaml
 robot:
