@@ -69,26 +69,29 @@ scp username@ip-address:/path/to/filename ~/path/to/put/it/
 
 #### Requirements
 
-This is the recommended approach if you are running Ubuntu 16.04/18.04 with ROS kinetic/melodic installed. This method will utilize the local installation of ROS tools, such as Rviz, rostopic, and rosservice, while retrieving data from the robot.
+This is the recommended approach if you are running Ubuntu 16.04/18.04/20.04 with ROS kinetic/melodic/noetic installed. This method will utilize the local installation of ROS tools, such as Rviz, rostopic, and rosservice, while retrieving data from the robot.
 
 #### How To
 
 If you are developing ROS code to test on the Stretch RE1 and you already have ROS installed on your local Ubuntu machine, then there is an easier way of using Rviz than the method described in [SSH & X Server](#ssh-x-server). In the ROS world, this concept is known as "remote master".
 
-First, run the following on the robot:
+First, identify the robot and local machine's ip address on the network (e.g. using `ifconfig`). These are `robot-ip-address` and `machine-ip-address` respectively.
+
+Next, run the following on the robot:
 
 ```bash
-export ROS_IP=ip-address
-export ROS_MASTER_URI=http://ip-address:11311/
+export ROS_IP=robot-ip-address
+export ROS_MASTER_URI=http://robot-ip-address:11311/
 ```
 
 Next, start the ROS launch files on the robot as you normally would. Finally, on your local machine, run:
 
 ```bash
-export ROS_MASTER_URI=http://ip-address:11311
+export ROS_IP=machine-ip-address
+export ROS_MASTER_URI=http://robot-ip-address:11311
 ```
 
-Then you may use tools like Rviz, rostopic, or rosservice on your local machine as you would have on the robot. Additional information can be found in the ROS [Multiple Machines Tutorial](http://wiki.ros.org/ROS/Tutorials/MultipleMachines). If you use ROS Remote Master often, you may export these environment variables in your [bashrc](https://www.maketecheasier.com/what-is-bashrc/).
+Then you may use tools like Rviz, rostopic, or rosservice on your local machine as you would have on the robot. Additional information can be found in the ROS [Multiple Machines Tutorial](http://wiki.ros.org/ROS/Tutorials/MultipleMachines). If you'd like to visualize the robot model on your local machine using Rviz, you'll need to setup a ROS workspace with the [stretch_description](https://github.com/hello-robot/stretch_ros/tree/master/stretch_description) package. If you use ROS Remote Master often, you may export these environment variables in your [bashrc](https://www.maketecheasier.com/what-is-bashrc/).
 
 ## Additional Ideas
 
