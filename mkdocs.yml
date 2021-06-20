@@ -12,7 +12,7 @@ use_directory_urls: True
 copyright: 'Copyright &copy; 2021 Hello Robot Inc'
 
 theme:
- font: Arial
+
  name: material
  palette:
   - scheme: default
@@ -27,6 +27,11 @@ theme:
       name: Switch to light mode
  logo: docs/images/hello_robot_logo_light.png
  favicon: docs/images/hello_robot_favicon.png
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
 extra_css:
   - docs/extra.css
 plugins:
@@ -34,7 +39,9 @@ plugins:
   - simple:
       merge_docs_dir: false
       include_extensions: [".css", ".png"]
-      ignore_folders: ["repos/stretch_firmware/arduino"]
+      ignore_folders:
+        - "repos/stretch_firmware/arduino"
+        - "repos/stretch_factory/updates"
 extra:
   social:
     - icon: fontawesome/brands/twitter
@@ -50,31 +57,31 @@ nav:
     - Stretch Forum: "https://forum.hello-robot.com/"
     - Stretch GitHub: "https://github.com/hello-robot"
     - Stretch Videos: "https://youtube.com/c/HelloRobot"
-  - Code:
-    - Stretch Body: "https://github.com/hello-robot/stretch_body"
-    - Stretch ROS: "https://github.com/hello-robot/stretch_ros"
-    - Stretch Firmware: "https://github.com/hello-robot/stretch_firmware"
-    - Stretch Tool Share: "https://github.com/hello-robot/stretch_tool_share"
-    - Stretch Factory: "https://github.com/hello-robot/stretch_factory"
+  - Code Overview:
+    - Stretch Body: repos/stretch_body/README.md
+    - Stretch ROS: repos/stretch_ros/README.md
+    - Stretch Firmware: repos/stretch_firmware/README.md
+    - Stretch Tool Share: repos/stretch_tool_share/README.md
+    - Stretch Factory: repos/stretch_factory/README.md
+    - Stretch Web Interface: repos/stretch_web_interface/README.md
   - User Guides:
-    - Quick Start: docs/quick_start_guide.md
-    - Robot Safety: docs/robot_safety_guide.md
-    - Battery Maintenance: docs/battery_maintenance_guide.md
-    - Stretch RE1 Hardware: docs/hardware_user_guide.md
-    - Stretch RE1 DexWrist: docs/dex_wrist_user_guide.md
-    - Troubleshooting: docs/troubleshooting_guide.md
+    - Quick Start: docs/guides/quick_start_guide.md
+    - Robot Safety: docs/guides/robot_safety_guide.md
+    - Battery Maintenance: docs/guides/battery_maintenance_guide.md
+    - Stretch RE1 Hardware: docs/guides/hardware_user_guide.md
+    - Stretch RE1 DexWrist: docs/guides/dex_wrist_user_guide.md
+    - Troubleshooting: docs/guides/troubleshooting_guide.md
   - Tutorials:
     - Fundamentals:
-      - Updating the Software: docs/tool_change_tutorial.md
-      - Untethered Operation: docs/untethered_operation.md
-      - Changing Tools: docs/tool_change_tutorial.md
+      - Updating the Software: docs/fundamentals/tool_change_tutorial.md
+      - Untethered Operation: docs/fundamentals/untethered_operation.md
+      - Changing Tools: docs/fundamentals/tool_change_tutorial.md
     - Stretch Body:
-      - Exploring Stretch Body: docs/stretch_body_guide.md
-      - Working With Dynamixels: docs/dynamixel_tutorial.md
-      - Working With Parameters: docs/parameters_tutorial.md
-      - Extending the Wrist DOF: repos/stretch_body/tutorial/extending_wrist_dof/README.md
+      - Exploring Stretch Body: repos/stretch_body/docs/stretch_body_guide.md
+      - Working With Dynamixel Servos: repos/stretch_body/docs/dynamixel_tutorial.md
+      - Working With Parameters: repos/stretch_body/docs/parameters_tutorial.md
+      - Extending the Wrist DOF: repos/stretch_body/docs/extending_wrist_dof/README.md
     - Stretch ROS:
-        - Exploring Stretch ROS: repos/stretch_ros/README.md
         - URDF Calibration: repos/stretch_ros/stretch_calibration/README.md
         - Deep Perception Demos: repos/stretch_ros/stretch_deep_perception/README.md
         - Autonomy Demos: repos/stretch_ros/stretch_demos/README.md
@@ -84,12 +91,10 @@ nav:
         - ROS MoveIt: repos/stretch_ros/stretch_moveit_config/README.md
         - ROS Navigation: repos/stretch_ros/stretch_navigation/README.md
     - Stretch Firmware:
-      - Updating the Firmware: repos/stretch_firmware/tutorial/Arduino_IDE_install.md
-      - Integrating Custom Data: repos/stretch_firmware/tutorial/docs/data_transfer.md
-      - Integrating I2C Devices: repos/stretch_firmware/tutorial/docs/i2c_sensor.md
-      - Integrating Serial Devices: repos/stretch_firmware/tutorial/docs/serial_sensor.md
-      - Integrating SPI Devices: repos/stretch_firmware/tutorial/docs/spi_sensor.md
-      - Emmulating the Wacc: repos/stretch_firmware/tutorial/docs/wacc_emulation.md
+      - Updating the Firmware: repos/stretch_firmware/tutorials/docs/updating_firmware.md
+      - Integrating Custom Data: repos/stretch_firmware/tutorials/docs/data_transfer.md
+      - Integrating Custom Hardware: repos/stretch_firmware/tutorials/docs/README.md
+
   - Jupyter:
       - Coming Soon: foo.md
   - API:

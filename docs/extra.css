@@ -4,7 +4,7 @@
   --md-primary-fg-color--dark: hsla(0, 0%, 0%, 0.07);
   --md-primary-bg-color: hsla(341, 85%, 89%, 1.0);
   --md-typeset-a-color: #0550b3;
-
+  --md-code-hl-number-color: hsla(196, 86%, 29%, 1);
 }
 [data-md-color-primary=hello-robot-dark]{
   --md-primary-fg-color: #122837;
@@ -12,6 +12,7 @@
   --md-primary-fg-color--dark: hsla(0, 0%, 0%, 0.07);
   --md-primary-bg-color: hsla(341, 85%, 89%, 1.0);
   --md-typeset-a-color: hsla(341, 85%, 89%, 1.0);
+  --md-code-hl-number-color: hsla(196, 86%, 29%, 1);
 }
 
 

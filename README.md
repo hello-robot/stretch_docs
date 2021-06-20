@@ -1,25 +1,27 @@
-# stretch_docs
+![](./docs/images/banner.png)
+# Getting Started
+Welcome Stretch users! If you're new to Stretch we strongly recommend reviewing the links below to get started. 
 
-This repository generates the documentation hosted at [docs.hello-robot.com](docs.hello-robot.com).
+## Safety
+**WARNING**: The Stretch RE1 is a potentially dangerous robot. All users must carefully read the [Stretch Safety Guide](robot_safety_guide.md) prior to using the robot.
 
-## Setup
+| Resource                                                     | Description                                    |
+| ------------------------------------------------------------ | ---------------------------------------------- |
+| [Stretch Safety Guide](robot_safety_guide.md)                | Safety guide for users of the Stretch RE1      |
+| [Stretch Best Practices - Powered Off Video](https://youtu.be/mQdOGEksdYM) | How to work with Stretch when its power is off |
+| [Stretch Best Practices - Powered On Video](https://youtu.be/iEaapHNfEWA) | How to work with Stretch when its power is on  |
 
-```
-$ python3 -m pip install mkdocs mkdocs-material mktheapidocs
-```
+## Quick Start
+| Resource                                                  | Description                                           |
+| --------------------------------------------------------- | ----------------------------------------------------- |
+| [Stretch Unboxing Video](https://youtu.be/O-6VrqqGlig)    | How to unpack your new Stretch                        |
+| [Stretch Quick Start Guide](quick_start_guide.md)         | Getting started  - Xbox Teleoperation Demo and beyond |
+| [Stretch Troubleshooting Guide](troubleshooting_guide.md) | Solutions to common issues                            |
+| [Stretch Network Setup](untethered_operation.md)   | Guide to network setup for working with Stretch untethered |
 
-## Development
+## License
+This documentation is only to be used for an authentic Stretch RE1 robot produced and sold by Hello Robot Inc. 
 
-The following command will serve the static website with hot-reloading (i.e. your edits are reflected in real time).
+All Hello Robot stretch_docs related materials are released under the [Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0) license.
 
-```
-$ python3 -m mkdocs serve
-```
-
-## Deploying
-
-Next to this repository, clone [hello-robot/hello-robot.github.io](https://github.com/hello-robot/hello-robot.github.io). The `deploy.sh` script with automatically build the docs, replace the contents of hello-robot.github.io, and push the new docs to master. Github will reflect the changes at [docs.hello-robot.com](docs.hello-robot.com).
-
-```
-$ ./deploy.sh
-```
+The Stretch RE1 has patents pending.

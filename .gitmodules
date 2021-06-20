@@ -7,3 +7,9 @@
 [submodule "repos/stretch_ros"]
 	path = repos/stretch_ros
 	url = https://github.com/hello-robot/stretch_ros
+[submodule "repos/stretch_tool_share"]
+	path = repos/stretch_tool_share
+	url = https://github.com/hello-robot/stretch_tool_share
+[submodule "repos/stretch_factory"]
+	path = repos/stretch_factory
+	url = https://github.com/hello-robot/stretch_factory
