@@ -1,17 +1,6 @@
-
-
-
-#Old
-# pip install mkdocs-bootswatch
-#Sizing images: convert foo.png -resize x100 foo_rs.png
 #Local site: 127.0.0.1:8000
-# name: flatly
-
-#pip install mkdocs (py3)
-#pip install mkdocs-material (py3)
 #extra:
 # logo: 'images/hello_robot_logo.png'
-
 
 site_name: Hello Robot  Documentation
 site_url: https://docs.hello-robot.com
@@ -20,23 +9,90 @@ site_description: "Hello Robot User Documentation"
 #repo_url: https://github.com/hello-robot
 
 use_directory_urls: True
-copyright: 'Copyright &copy; 2020 Hello Robot Inc'
-nav:
- - Home: README.md
- - Resources:
-   - Stretch Forum: "https://forum.hello-robot.com/"
-   - Stretch GitHub: "https://github.com/hello-robot"
-   - Stretch Videos: "https://youtube.com/c/HelloRobot"
+copyright: 'Copyright &copy; 2021 Hello Robot Inc'
+
 theme:
  font: Arial
  name: material
  palette:
-  primary: hello-robot
- logo: images/hello_robot_logo.png
- favicon: images/hello_robot_favicon.png
-extra_css: [extra.css]
-plugins: []
+  - scheme: default
+    primary: hello-robot-light
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to dark mode
+  - scheme: slate
+    primary: hello-robot-dark
+    toggle:
+      icon: material/lightbulb
+      name: Switch to light mode
+ logo: docs/images/hello_robot_logo_light.png
+ favicon: docs/images/hello_robot_favicon.png
+extra_css:
+  - docs/extra.css
+plugins:
+  - search
+  - simple:
+      merge_docs_dir: false
+      include_extensions: [".css", ".png"]
+      ignore_folders: ["repos/stretch_firmware/arduino"]
 extra:
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/HelloRobotInc
+
+
+edit_uri: ''
+
+# ##########################################################
+nav:
+  - Home: README.md
+  - Resources:
+    - Stretch Forum: "https://forum.hello-robot.com/"
+    - Stretch GitHub: "https://github.com/hello-robot"
+    - Stretch Videos: "https://youtube.com/c/HelloRobot"
+  - Code:
+    - Stretch Body: "https://github.com/hello-robot/stretch_body"
+    - Stretch ROS: "https://github.com/hello-robot/stretch_ros"
+    - Stretch Firmware: "https://github.com/hello-robot/stretch_firmware"
+    - Stretch Tool Share: "https://github.com/hello-robot/stretch_tool_share"
+    - Stretch Factory: "https://github.com/hello-robot/stretch_factory"
+  - User Guides:
+    - Quick Start: docs/quick_start_guide.md
+    - Robot Safety: docs/robot_safety_guide.md
+    - Battery Maintenance: docs/battery_maintenance_guide.md
+    - Stretch RE1 Hardware: docs/hardware_user_guide.md
+    - Stretch RE1 DexWrist: docs/dex_wrist_user_guide.md
+    - Troubleshooting: docs/troubleshooting_guide.md
+  - Tutorials:
+    - Fundamentals:
+      - Updating the Software: docs/tool_change_tutorial.md
+      - Untethered Operation: docs/untethered_operation.md
+      - Changing Tools: docs/tool_change_tutorial.md
+    - Stretch Body:
+      - Exploring Stretch Body: docs/stretch_body_guide.md
+      - Working With Dynamixels: docs/dynamixel_tutorial.md
+      - Working With Parameters: docs/parameters_tutorial.md
+      - Extending the Wrist DOF: repos/stretch_body/tutorial/extending_wrist_dof/README.md
+    - Stretch ROS:
+        - Exploring Stretch ROS: repos/stretch_ros/README.md
+        - URDF Calibration: repos/stretch_ros/stretch_calibration/README.md
+        - Deep Perception Demos: repos/stretch_ros/stretch_deep_perception/README.md
+        - Autonomy Demos: repos/stretch_ros/stretch_demos/README.md
+        - Working with the URDF: repos/stretch_ros/stretch_description/README.md
+        - Fast Unified Navigation, Manipulation And Planning (FUNMAP): repos/stretch_ros/stretch_funmap/README.md
+        - ROS Gazebo: repos/stretch_ros/stretch_gazebo/README.md
+        - ROS MoveIt: repos/stretch_ros/stretch_moveit_config/README.md
+        - ROS Navigation: repos/stretch_ros/stretch_navigation/README.md
+    - Stretch Firmware:
+      - Updating the Firmware: repos/stretch_firmware/tutorial/Arduino_IDE_install.md
+      - Integrating Custom Data: repos/stretch_firmware/tutorial/docs/data_transfer.md
+      - Integrating I2C Devices: repos/stretch_firmware/tutorial/docs/i2c_sensor.md
+      - Integrating Serial Devices: repos/stretch_firmware/tutorial/docs/serial_sensor.md
+      - Integrating SPI Devices: repos/stretch_firmware/tutorial/docs/spi_sensor.md
+      - Emmulating the Wacc: repos/stretch_firmware/tutorial/docs/wacc_emulation.md
+  - Jupyter:
+      - Coming Soon: foo.md
+  - API:
+      - Coming Soon: foo.md
+  - Command Line Tools:
+      - Coming Soon: foo.md
