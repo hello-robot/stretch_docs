@@ -4,6 +4,7 @@
 
 **WARNING: The Stretch RE1 is a potentially dangerous robot. All users must carefully read the [Stretch Safety Guide](robot_safety_guide.md) prior to using the robot.**
 
+
 | Resource                                                     | Description                                    |
 | ------------------------------------------------------------ | ---------------------------------------------- |
 | [Stretch Safety Guide](robot_safety_guide.md)                | Safety guide for users of the Stretch RE1      |
