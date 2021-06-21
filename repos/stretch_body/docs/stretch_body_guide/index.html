@@ -1,0 +1,2407 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hello Robot User Documentation">
+      
+      
+      
+      
+        <link rel="canonical" href="https://docs.hello-robot.com/repos/stretch_body/docs/stretch_body_guide/">
+      
+      <link rel="icon" href="../../../../images/hello_robot_favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Working With Stretch Body - Hello Robot  Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="hello-robot-light" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#working-with-stretch-body" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Hello Robot  Documentation" class="md-header__button md-logo" aria-label="Hello Robot  Documentation" data-md-component="logo">
+      
+  <img src="../../../../images/hello_robot_logo_light.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hello Robot  Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Working With Stretch Body
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="hello-robot-light" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="hello-robot-dark" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Hello Robot  Documentation" class="md-nav__button md-logo" aria-label="Hello Robot  Documentation" data-md-component="logo">
+      
+  <img src="../../../../images/hello_robot_logo_light.png" alt="logo">
+
+    </a>
+    Hello Robot  Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forum.hello-robot.com/" class="md-nav__link">
+        Stretch Forum
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/hello-robot" class="md-nav__link">
+        Stretch GitHub
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://youtube.com/c/HelloRobot" class="md-nav__link">
+        Stretch Videos
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Code Overview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Code Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Code Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Stretch Body
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_ros/" class="md-nav__link">
+        Stretch ROS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_firmware/" class="md-nav__link">
+        Stretch Firmware
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_tool_share/" class="md-nav__link">
+        Stretch Tool Share
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_factory/" class="md-nav__link">
+        Stretch Factory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_web_interface/" class="md-nav__link">
+        Stretch Web Interface
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        User Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          User Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/quick_start_guide/" class="md-nav__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/robot_safety_guide/" class="md-nav__link">
+        Robot Safety
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/battery_maintenance_guide/" class="md-nav__link">
+        Battery Maintenance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/hardware_user_guide/" class="md-nav__link">
+        Stretch RE1 Hardware
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/dex_wrist_user_guide/" class="md-nav__link">
+        Stretch RE1 DexWrist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/troubleshooting_guide/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        Fundamentals
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Fundamentals" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/updating_software/" class="md-nav__link">
+        Updating the Software
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/untethered_operation/" class="md-nav__link">
+        Untethered Operation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/tool_change_tutorial/" class="md-nav__link">
+        Changing Tools
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+      
+      <label class="md-nav__link" for="__nav_5_2">
+        Stretch Body
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Stretch Body" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Stretch Body
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Working With Stretch Body
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Working With Stretch Body
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#robot-interface" class="md-nav__link">
+    Robot Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    Units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-robot-status" class="md-nav__link">
+    The Robot Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-robot-command" class="md-nav__link">
+    The Robot Command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stowing-and-homing" class="md-nav__link">
+    Stowing and Homing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripting-the-robot" class="md-nav__link">
+    Scripting the Robot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-tools" class="md-nav__link">
+    Command Line Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Line Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commonly-used-tools" class="md-nav__link">
+    Commonly Used Tools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-motion" class="md-nav__link">
+    Robot Motion
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot Motion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motion-profiles" class="md-nav__link">
+    Motion Profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-of-motion" class="md-nav__link">
+    Range of Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-modes" class="md-nav__link">
+    Control Modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runstop" class="md-nav__link">
+    Runstop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guarded-motion" class="md-nav__link">
+    Guarded Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronized-motion" class="md-nav__link">
+    Synchronized Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motion-status" class="md-nav__link">
+    Motion Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-rates" class="md-nav__link">
+    Update Rates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    Sensors
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-imu" class="md-nav__link">
+    Base IMU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrist-accelerometer" class="md-nav__link">
+    Wrist Accelerometer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cliff-sensors" class="md-nav__link">
+    Cliff Sensors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-parameters" class="md-nav__link">
+    Robot Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibration-data" class="md-nav__link">
+    Calibration Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urdf-data" class="md-nav__link">
+    URDF Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-data" class="md-nav__link">
+    YAML Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factory-parameters" class="md-nav__link">
+    Factory Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-parameters" class="md-nav__link">
+    User Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-of-arm-tool-parameters" class="md-nav__link">
+    End of Arm Tool Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safe-operation-features" class="md-nav__link">
+    Safe Operation Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Safe Operation Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runstop-functions" class="md-nav__link">
+    Runstop Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robot-monitor" class="md-nav__link">
+    Robot Monitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robot-sentry" class="md-nav__link">
+    Robot Sentry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dynamixel_tutorial/" class="md-nav__link">
+        Working With Dynamixel Servos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameters_tutorial/" class="md-nav__link">
+        Working With Parameters
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending_wrist_dof/" class="md-nav__link">
+        Extending the Wrist DOF
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      <label class="md-nav__link" for="__nav_5_3">
+        Stretch ROS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Stretch ROS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Stretch ROS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_ros/stretch_calibration/" class="md-nav__link">
+        URDF Calibration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_ros/stretch_deep_perception/" class="md-nav__link">
+        Deep Perception Demos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_ros/stretch_demos/" class="md-nav__link">
+        Autonomy Demos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_ros/stretch_description/" class="md-nav__link">
+        Working with the URDF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_ros/stretch_funmap/" class="md-nav__link">
+        Fast Unified Navigation, Manipulation And Planning (FUNMAP)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_ros/stretch_gazebo/" class="md-nav__link">
+        ROS Gazebo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_ros/stretch_moveit_config/" class="md-nav__link">
+        ROS MoveIt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_ros/stretch_navigation/" class="md-nav__link">
+        ROS Navigation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      <label class="md-nav__link" for="__nav_5_4">
+        Stretch Firmware
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Stretch Firmware" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Stretch Firmware
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_firmware/tutorials/docs/updating_firmware/" class="md-nav__link">
+        Updating the Firmware
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_firmware/tutorials/docs/data_transfer/" class="md-nav__link">
+        Integrating Custom Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stretch_firmware/tutorials/docs/" class="md-nav__link">
+        Integrating Custom Hardware
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Jupyter
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Jupyter" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Jupyter
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../foo.md" class="md-nav__link">
+        Coming Soon
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api-docs-stretch_body" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../foo.md" class="md-nav__link">
+        Coming Soon
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Command Line Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Command Line Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../foo.md" class="md-nav__link">
+        Coming Soon
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#robot-interface" class="md-nav__link">
+    Robot Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    Units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-robot-status" class="md-nav__link">
+    The Robot Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-robot-command" class="md-nav__link">
+    The Robot Command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stowing-and-homing" class="md-nav__link">
+    Stowing and Homing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripting-the-robot" class="md-nav__link">
+    Scripting the Robot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-tools" class="md-nav__link">
+    Command Line Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Line Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commonly-used-tools" class="md-nav__link">
+    Commonly Used Tools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-motion" class="md-nav__link">
+    Robot Motion
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot Motion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motion-profiles" class="md-nav__link">
+    Motion Profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-of-motion" class="md-nav__link">
+    Range of Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-modes" class="md-nav__link">
+    Control Modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runstop" class="md-nav__link">
+    Runstop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guarded-motion" class="md-nav__link">
+    Guarded Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronized-motion" class="md-nav__link">
+    Synchronized Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motion-status" class="md-nav__link">
+    Motion Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-rates" class="md-nav__link">
+    Update Rates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    Sensors
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-imu" class="md-nav__link">
+    Base IMU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrist-accelerometer" class="md-nav__link">
+    Wrist Accelerometer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cliff-sensors" class="md-nav__link">
+    Cliff Sensors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-parameters" class="md-nav__link">
+    Robot Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibration-data" class="md-nav__link">
+    Calibration Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urdf-data" class="md-nav__link">
+    URDF Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-data" class="md-nav__link">
+    YAML Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factory-parameters" class="md-nav__link">
+    Factory Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-parameters" class="md-nav__link">
+    User Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-of-arm-tool-parameters" class="md-nav__link">
+    End of Arm Tool Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safe-operation-features" class="md-nav__link">
+    Safe Operation Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Safe Operation Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runstop-functions" class="md-nav__link">
+    Runstop Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robot-monitor" class="md-nav__link">
+    Robot Monitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robot-sentry" class="md-nav__link">
+    Robot Sentry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><img alt="" src="../images/banner.png" /></p>
+<h1 id="working-with-stretch-body">Working with Stretch Body</h1>
+<p>The Stretch_Body package provides a pure Python SDK to the Stretch RE1 hardware.  </p>
+<p>The package is available on <a href="https://github.com/hello-robot/stretch_body">Git and installable via Pip</a>.</p>
+<p>It encapsulates</p>
+<ul>
+<li>Mobile base </li>
+<li>Arm </li>
+<li>Lift </li>
+<li>Head actuators</li>
+<li>Wrist and tool actuators</li>
+<li>Wrist accelerometer and Arduino</li>
+<li>Base power and IMU board</li>
+</ul>
+<p>The robot's 3rd party hardware devices are intended to be accessed through ROS and not Stretch_Body. However, it is possible to directly access this hardware through open-source Python packages:</p>
+<ul>
+<li>Laser range finder:  <a href="https://github.com/SkoltechRobotics/rplidar">rplidar</a></li>
+<li>Respeaker: <a href="https://github.com/respeaker/respeaker_python_library">respeaker_python_library</a></li>
+<li>D435i: <a href="https://pypi.org/project/pyrealsense2/">pyrealsense2</a></li>
+</ul>
+<p>The Stretch_Body package is intended for advanced users who prefer to not use ROS to control the robot. It assumes a moderate level of experience programming robot sensors and actuators.</p>
+<h2 id="robot-interface">Robot Interface</h2>
+<p>The primary developer interface to  Stretch_Body is the <a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/robot.py">Robot class</a>.  </p>
+<p>As an example, the Python script below prints all Robot sensor and state data to the console every 250ms. </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">stretch_body.robot</span>
+
+<span class="n">robot</span><span class="o">=</span><span class="n">stretch_body</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">Robot</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">startup</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">pretty_print</span><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div>
+<p>Looking at this in detail:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">stretch_body.robot</span>
+</code></pre></div>
+<p>The package stretch_body includes the Python module for Robot as well as other Devices such as Lift and Arm.</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">=</span><span class="n">stretch_body</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">Robot</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">startup</span><span class="p">()</span>
+</code></pre></div>
+<p>Here we instantiate an instance of our Robot. The call to startup( ) opens the serial ports to the various devices, loads the Robot YAML parameters, and launches a few helper threads.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">pretty_print</span><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+</code></pre></div>
+<p>The call to pretty_print( ) prints to console all of the robot's sensor and state data. </p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div>
+<p>Finally, the stop( ) method shuts down the Robot threads and cleanly closes the open serial ports.</p>
+<h3 id="units">Units</h3>
+<p>The Robot API uses SI units of:</p>
+<ul>
+<li>meters</li>
+<li>radians</li>
+<li>seconds</li>
+<li>Newtons</li>
+<li>Amps</li>
+<li>Volts</li>
+</ul>
+<p>Parameters may be named with a suffix to help describe the unit type. For example:</p>
+<ul>
+<li>pos_m : meters</li>
+<li>pos_r: radians</li>
+</ul>
+<h3 id="the-robot-status">The Robot Status</h3>
+<p>The Robot derives from the <a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/device.py">Device class</a>. It also encapsulates a number of other Devices:</p>
+<ul>
+<li><a href=".https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/head.py">robot.head</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/arm.py">robot.arm</a></li>
+<li><a href=".https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/lift.py">robot.lift</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/base.py">robot.base</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/wacc.py">robot.wacc</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/pimu.py">robot.pimu</a></li>
+<li><a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/end_of_arm.py">robot.end_of_arm</a></li>
+</ul>
+<p>All devices contain a Status dictionary. The Status contains the most recent sensor and state data of that device. For example, looking at the Arm class we see:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Arm</span><span class="p">(</span><span class="n">Device</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="o">...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;pos&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;vel&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;force&#39;</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span> \
+                       <span class="s1">&#39;motor&#39;</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">status</span><span class="p">,</span><span class="s1">&#39;timestamp_pc&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+</code></pre></div>
+<p>The Status dictionaries are  automatically updated by a background thread of the Robot at 25Hz. The Status data can be accessed via the Robot. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mf">0.25</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;Arm extension greater than 0.25m&#39;</span>
+</code></pre></div>
+<p>If an instantaneous snapshot of the entire Robot Status is needed, the get_status() method can be used instead:</p>
+<div class="highlight"><pre><span></span><code><span class="n">status</span><span class="o">=</span><span class="n">robot</span><span class="o">.</span><span class="n">get_status</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">status</span><span class="p">[</span><span class="s1">&#39;arm&#39;</span><span class="p">][</span><span class="s1">&#39;pos&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mf">0.25</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;Arm extension greater than 0.25m&#39;</span>
+</code></pre></div>
+<h3 id="the-robot-command">The Robot Command</h3>
+<p>In contrast to the Robot Status which pulls data from the Devices, the Robot Command pushes data to the Devices.</p>
+<p>Consider the following example which extends and then retracts the arm by 0.1 meters:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">stretch_body.robot</span>
+
+<span class="n">robot</span><span class="o">=</span><span class="n">stretch_body</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">Robot</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">startup</span><span class="p">()</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> 
+
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div>
+<p>A few important things are going on:</p>
+<div class="highlight"><pre><span></span><code>robot.arm.move_by(0.1)
+</code></pre></div>
+<p>The move_by( ) method queues up an RPC command to the stepper motor controller. However, the command does not yet execute.</p>
+<div class="highlight"><pre><span></span><code>robot.push_command()
+</code></pre></div>
+<p>The push_command( ) causes all queued up RPC commands to be executed at once.  In this example we call sleep( ) to allow time for the motion to complete before initiating a new motion.</p>
+<p><strong>NOTE</strong>: The Dynamixel servos do not use the Hello Robot RPC protocol. As such, the head, wrist, and gripper will move immediately upon issuing a motion command. </p>
+<p>The stepper actuators support a synchronous mode, allowing the base, arm, and lift to synchronously track trajectories.  Thus, the following code will cause the base, arm, and lift to initiate motion simultaneously:</p>
+<div class="highlight"><pre><span></span><code>robot.arm.move_by(0.1)
+robot.lift.move_by(0.1)
+robot.base.translate_by(0.1)
+robot.push_command()
+</code></pre></div>
+<p>Commanding robot motion through the Stretch_Body interface is covered in more detail in the Robot Motion section.</p>
+<h3 id="stowing-and-homing">Stowing and Homing</h3>
+<p>After power up the robot requires homing in order for its joint encoders to find their zero position. The homing procedure will run the robot through a series of moves to find these zeros. It can be done programatically:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span> <span class="n">robot</span><span class="o">.</span><span class="n">is_calibrated</span><span class="p">():</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="c1">#blocking</span>
+</code></pre></div>
+<p>Or it can be done manually after boot using the command line tool:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;$ stretch_robot_home.py 
+</code></pre></div>
+<p>Likewise, stowing is a robot procedure that will cause it to move its arm and tool safely within the footprint of the base. </p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">stow</span><span class="p">()</span> <span class="c1">#blocking</span>
+</code></pre></div>
+<p>Or it can be done manually from the command line when needed:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;$ stretch_robot_stow.py 
+</code></pre></div>
+<h2 id="scripting-the-robot">Scripting the Robot</h2>
+<p>A simplified design pattern to script the Robot is as follows</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">stretch_body.robot</span>
+<span class="kn">from</span> <span class="nn">stretch_body.hello_utils</span> <span class="kn">import</span> <span class="n">ThreadServiceExit</span>
+
+<span class="n">robot</span><span class="o">=</span><span class="n">stretch_body</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">Robot</span><span class="p">()</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">startup</span><span class="p">()</span>
+
+<span class="n">x_move_base</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x_move_arm</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x_move_lift</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x_move_head_pan</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x_move_head_tilt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x_move_wrist_yaw</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x_move_gripper</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">update_my_behavior</span><span class="p">(</span><span class="n">status</span><span class="p">):</span>
+    <span class="c1">#Update the joint commands based on the status data</span>
+    <span class="k">pass</span> 
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1">#Get a snapshot of the robot status data</span>
+        <span class="n">status</span><span class="o">=</span><span class="n">robot</span><span class="o">.</span><span class="n">get_status</span><span class="p">()</span>
+
+        <span class="c1">#Compute new position targets based on sensor data </span>
+        <span class="n">update_my_behavior</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+
+        <span class="c1">#Queue new targets to devices</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">translate_by</span><span class="p">(</span><span class="n">x_move_base</span><span class="p">)</span> <span class="c1">#or robot.base.rotate_by()</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="n">x_move_arm</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">lift</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="n">x_move_lift</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="s1">&#39;head_pan&#39;</span><span class="p">,</span> <span class="n">x_move_head_pan</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="s1">&#39;head_tilt&#39;</span><span class="p">,</span> <span class="n">x_move_head_tilt</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">end_of_arm</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="s1">&#39;wrist_yaw&#39;</span><span class="p">,</span> <span class="n">x_move_wrist_yaw</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">end_of_arm</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="s1">&#39;stretch_gripper&#39;</span><span class="p">,</span> <span class="n">x_move_gripper</span><span class="p">)</span>
+
+        <span class="c1">#Synchronized send of new position targets </span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+
+        <span class="c1">#Wait for next control cycle</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="k">except</span> <span class="p">(</span><span class="ne">KeyboardInterrupt</span><span class="p">,</span> <span class="ne">SystemExit</span><span class="p">,</span><span class="n">ThreadServiceExit</span><span class="p">)</span>
+    <span class="k">pass</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="command-line-tools">Command Line Tools</h2>
+<p>The Stretch_Body package comes with a suite of command line tools that allow direct interaction with hardware subsystems. These can be useful when developing and debugging applications. They also serve as code examples when developing applications for Stretch_Body.</p>
+<p>These tools can be found by tab completion of  'stretch_' from a terminal.</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;$ stretch_
+
+
+stretch_about.py                   
+stretch_gripper_home.py            
+stretch_lift_jog.py                
+stretch_robot_dynamixel_reboot.py  
+stretch_robot_stow.py              
+stretch_wacc_scope.py              
+stretch_arm_home.py                
+stretch_gripper_jog.py             
+stretch_pimu_jog.py                
+stretch_robot_home.py              
+stretch_robot_system_check.py      
+stretch_wrist_yaw_home.py          
+stretch_arm_jog.py                 
+stretch_hardware_echo.py           
+stretch_pimu_scope.py              
+stretch_robot_jog.py               
+stretch_rp_lidar_jog.py            
+stretch_wrist_yaw_jog.py           
+stretch_audio_test.py              
+stretch_head_jog.py                
+stretch_respeaker_test.py          
+stretch_robot_keyboard_teleop.py   
+stretch_urdf_show.py               
+stretch_xbox_controller_teleop.py  
+stretch_base_jog.py                
+stretch_lift_home.py               
+stretch_robot_battery_check.py     
+stretch_robot_monitor.py           
+stretch_wacc_jog.py 
+</code></pre></div>
+<p>All tools accept '--help' as a command line argument to learn its function. For example:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;$ stretch_wacc_scope.py --help
+usage: stretch_wacc_scope.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--ax<span class="o">]</span> <span class="o">[</span>--ay<span class="o">]</span> <span class="o">[</span>--az<span class="o">]</span> <span class="o">[</span>--a0<span class="o">]</span> <span class="o">[</span>--d0<span class="o">]</span> <span class="o">[</span>--d1<span class="o">]</span>
+                             <span class="o">[</span>--tap<span class="o">]</span>
+
+Visualize Wacc <span class="o">(</span>Wrist+Accel<span class="o">)</span> board data with an oscilloscope
+
+optional arguments:
+  -h, --help  show this <span class="nb">help</span> message and <span class="nb">exit</span>
+  --ax        Scope accelerometer AX
+  --ay        Scope accelerometer AY
+  --az        Scope accelerometer AZ
+  --a0        Scope analog-in-0
+  --d0        Scope digital-in-0
+  --d1        Scope digital-in-1
+  --tap       Scope single tap
+</code></pre></div>
+<h3 id="commonly-used-tools">Commonly Used Tools</h3>
+<p>These are the tools a typical user will want to become familiar with.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tool</strong></th>
+<th><strong>Utility</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>stretch_robot_home.py</strong></td>
+<td>Commonly run after booting up the robot in-order to calibrate the joints</td>
+</tr>
+<tr>
+<td><strong>stretch_robot_system_check.py</strong></td>
+<td>Scans for all hardware devices and ensure they are present on the bus and reporting valid values. Useful to verify that the robot is in good working order prior to commanding motion. It will report all success in green, failures in red.</td>
+</tr>
+<tr>
+<td><strong>stretch_robot_stow.py</strong></td>
+<td>Useful to return the robot arm and tool to a safe position within the base footprint. It can also be useful if a program fails to exit cleanly and the robot joints are not backdriveable. It will restore them to their 'Safety' state.</td>
+</tr>
+<tr>
+<td><strong>stretch_robot_battery_check.py</strong></td>
+<td>Quick way to check the battery voltage / current consumption</td>
+</tr>
+<tr>
+<td><strong>stretch_xbox_controller_teleop.py</strong></td>
+<td>Useful to quickly test if a robot can achieve a task by manually teleoperating the robot</td>
+</tr>
+<tr>
+<td><strong>stretch_robot_dynamixel_reboot.py</strong></td>
+<td>This will reset all Dynamixels in the robot, which may be needed if a servo overheats during high use and enters an error state.</td>
+</tr>
+</tbody>
+</table>
+<p>The other tools are fairly self explanatory. They allow the user to quickly read a sensor value or control an individual hardware subsystem.</p>
+<h2 id="robot-motion">Robot Motion</h2>
+<p>Controlling the motion of the robot's actuators is typically done through the ROS interfaces. However it is also possible to control the robot directly through the  stretch_body interfaces. </p>
+<p>Actuators are  commanded by either a <strong>move_by</strong> or <strong>move_to</strong> command (the former being incremental, the latter being absolute). For example, a relative move using the default motion parameters of the arm looks like:</p>
+<div class="highlight"><pre><span></span><code>import stretch_body.robot
+robot=stretch_body.robot.Robot()
+robot.startup()
+
+robot.arm.move_by(0.1)
+robot.push_command()
+time.sleep(2.0)
+
+robot.stop()
+</code></pre></div>
+<h3 id="motion-profiles">Motion Profiles</h3>
+<p>All joints support trapezoidal based motion generation. Other types of controllers are available (PID, velocity, etc) but they are not covered here . The trapezoidal motion controllers require three values:</p>
+<ul>
+<li>x: target position of joint</li>
+<li>v: maximum velocity of motion</li>
+<li>a: acceleration of motion</li>
+</ul>
+<p>We provide 'default' settings for the velocity and acceleration settings, as well as 'fast', and 'slow' settings. These values have been tuned to be appropriate for safe motion of the robot. These values can be seen in the 'stretch_re1_factory_params.yaml'. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">arm</span><span class="p">:</span>
+  <span class="nt">motion</span><span class="p">:</span>
+    <span class="nt">fast</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt">accel_m</span><span class="p">:</span> <span class="nv">0.2</span><span class="p p-Indicator">,</span><span class="nt"> vel_m</span><span class="p">:</span> <span class="nv">0.2</span><span class="p p-Indicator">}</span>
+    <span class="nt">default</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt">accel_m</span><span class="p">:</span> <span class="nv">0.14</span><span class="p p-Indicator">,</span><span class="nt"> vel_m</span><span class="p">:</span> <span class="nv">0.14</span><span class="p p-Indicator">}</span>
+    <span class="nt">max</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt">accel_m</span><span class="p">:</span> <span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="nt"> vel_m</span><span class="p">:</span> <span class="nv">1.0</span><span class="p p-Indicator">}</span>
+    <span class="nt">slow</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt">accel_m</span><span class="p">:</span> <span class="nv">0.07</span><span class="p p-Indicator">,</span><span class="nt"> vel_m</span><span class="p">:</span> <span class="nv">0.06</span><span class="p p-Indicator">}</span>
+</code></pre></div>
+<p>To move the arm quickly instead:</p>
+<div class="highlight"><pre><span></span><code><span class="n">vel_fast_m</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;motion&#39;</span><span class="p">][</span><span class="s1">&#39;fast&#39;</span><span class="p">][</span><span class="s1">&#39;vel_m&#39;</span><span class="p">]</span>
+<span class="n">accel_fast_m</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;motion&#39;</span><span class="p">][</span><span class="s1">&#39;fast&#39;</span><span class="p">][</span><span class="s1">&#39;accel_m&#39;</span><span class="p">]</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="n">x_m</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">v_m</span><span class="o">=</span><span class="n">vel_fast_m</span><span class="p">,</span> <span class="n">a_m</span><span class="o">=</span><span class="n">accel_fast_m</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+</code></pre></div>
+<p>The motion will fall back to the 'default' settings found in the YAML if no parameters are provided.</p>
+<h3 id="range-of-motion">Range of Motion</h3>
+<p>All joints obey motion limits which are specified in the factory YAML. These limits have been set at the factory to prevent damage to the hardware. It is not recommended to set them to be greater than the factory specified values. However, they can be further limited if desired. </p>
+<p>For example. to prevent the lift from descending within 100mm of the base, one can override the factory setting in stretch_re1_user_params.yaml</p>
+<div class="highlight"><pre><span></span><code><span class="nt">lift</span><span class="p">:</span>
+  <span class="nt">range_m</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0.1</span><span class="p p-Indicator">,</span> <span class="nv">1.095</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<h3 id="control-modes">Control Modes</h3>
+<p>Each joint has a default safety mode and default control mode.  These are:</p>
+<table>
+<thead>
+<tr>
+<th>Joint</th>
+<th>Default Safety Mode</th>
+<th>Default Control Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left_wheel</td>
+<td>Freewheel</td>
+<td>Trapezoidal position control</td>
+</tr>
+<tr>
+<td>right_wheel</td>
+<td>Freewheel</td>
+<td>Trapezoidal position control</td>
+</tr>
+<tr>
+<td>lift</td>
+<td>Gravity compensated 'float'</td>
+<td>Trapezoidal position control</td>
+</tr>
+<tr>
+<td>arm</td>
+<td>Freewheel</td>
+<td>Trapezoidal position control</td>
+</tr>
+<tr>
+<td>head_pan</td>
+<td>Torque disabled</td>
+<td>Trapezoidal position control</td>
+</tr>
+<tr>
+<td>head_tilt</td>
+<td>Torque disabled</td>
+<td>Trapezoidal position control</td>
+</tr>
+<tr>
+<td>wrist_yaw</td>
+<td>Torque disabled</td>
+<td>Trapezoidal position control</td>
+</tr>
+<tr>
+<td>stretch_gripper</td>
+<td>Torque disabled</td>
+<td>Trapezoidal position control</td>
+</tr>
+</tbody>
+</table>
+<p>The actuator remains in Safety Mode when no program is running. When the device.startup( ) function is called it transitions to its Control Mode. It is placed back in Safety Mode when device.stop() is called.</p>
+<p>In addition, the Base supports a velocity control mode. The Base controllers will automatically switch between velocity and position based control.  For example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">translate_by</span><span class="p">(</span><span class="n">x_m</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">4.0</span><span class="p">)</span> <span class="c1">#wait</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">set_rotational_velocity</span><span class="p">(</span><span class="n">v_r</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1">#switch to velocity controller</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">4.0</span><span class="p">)</span> <span class="c1">#wait</span>
+
+<span class="n">robot</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">set_rotational_velocity</span><span class="p">(</span><span class="n">v_r</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span> <span class="c1">#stop motion</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+</code></pre></div>
+<p>As shown, care should be taken to reduce commanded velocities to zero to avoid runaway.</p>
+<h3 id="runstop">Runstop</h3>
+<p>Runstop activation will cause  the Base, Arm, and Lift to switch to Safety Mode and for motion commands will be ignored. The motion commands will resume smoothly  when the runstop is deactivated.  This is usually done via the runstop button. However, it can also be done via the Pimu interface:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">pimu</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;runstop_event&#39;</span><span class="p">]:</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">pimu</span><span class="o">.</span><span class="n">runstop_event_reset</span><span class="p">()</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="guarded-motion">Guarded Motion</h3>
+<p>The Arm, Lift, and Base support a guarded motion function.  It will automatically transition the actuator from Control mode to Safety mode when the exerted motor torque exceeds a threshold. </p>
+<p>This functionality is most useful for the Lift and the Arm. It allows these joints to safely stop upon contact. It can be used to:</p>
+<ul>
+<li>Safely stop when contacting an actuator hardstop</li>
+<li>Safely stop when making unexpected contact with the environment or a person</li>
+<li>Make a guarded motion where the robot reaches to a surface and then stops</li>
+</ul>
+<p>Each of these tasks have different force characteristics and may require different threshold settings. The factory defaults are set so as to allow freespace motion without a payload (without triggering a false positive stop). These thresholds are set in the factory YAML. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">arm</span><span class="p">:</span>
+  <span class="nt">contact_thresh_N</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">-50</span><span class="p p-Indicator">,</span> <span class="nv">50</span><span class="p p-Indicator">]</span>
+  <span class="nt">contact_thresh_max_N</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">-80</span><span class="p p-Indicator">,</span> <span class="nv">80</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<p>A user can dynamically set the contact thresholds depending on the task requirements. For example, to make the arm extension motion more sensitive:</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">move_by</span><span class="p">(</span><span class="n">x_m</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">contact_thresh_pos_N</span><span class="o">=</span><span class="mf">30.0</span><span class="p">)</span>
+</code></pre></div>
+<p>If too sensitive, the joint may trigger false positives (e.g., stop without contact), and different thresholds may be needed in different portions of the workspace.</p>
+<p>When a guarded motion event has occurred it is reported in the Status:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;in_guarded_event&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span> <span class="s1">&#39;Arm has made contact&#39;</span>
+</code></pre></div>
+<p>The guarded event can be reset and motion resumed by simply sending a new motion command to the joint (that is not identical to the previous command). Here is a simple example of moving to contact, then moving back:</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">move_to</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1">#Reach all the way out</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;in_guarded_event&#39;</span><span class="p">]:</span>
+        <span class="nb">print</span> <span class="s1">&#39;Contact made at&#39;</span><span class="p">,</span> <span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">]</span>
+        <span class="k">break</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="s1">&#39;Retracting...&#39;</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">move_to</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">(</span> <span class="p">)</span>
+</code></pre></div>
+<p><strong>Note: The units of Newtons are approximations only and may not be accurate to real world contact forces.</strong></p>
+<h3 id="synchronized-motion">Synchronized Motion</h3>
+<p>The Arm, Lift, and Base actuators have a hardware synchronization mechanism. This allows for controller commands to be time synchronized across joints. By default these are turned out in the factory YAML:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">hello-motor-arm</span><span class="p">:</span>
+  <span class="nt">gains</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt">enable_sync_mode</span><span class="p">:</span> <span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">...</span><span class="p p-Indicator">}</span>
+</code></pre></div>
+<h3 id="motion-status">Motion Status</h3>
+<p>It can be useful to poll the status of a joint during motion in order to modify the robot behavior, etc. The useful status values include:</p>
+<div class="highlight"><pre><span></span><code><span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">]</span>                     <span class="c1">#Joint position</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;vel&#39;</span><span class="p">]</span>                     <span class="c1">#Joint velocity</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;force&#39;</span><span class="p">]</span>                   <span class="c1">#Joint force (derived from motor current)   </span>
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;near_pos_setpoint&#39;</span><span class="p">]</span> <span class="c1">#Is sensed position near commanded position</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;near_vel_setpoint&#39;</span><span class="p">]</span> <span class="c1">#Is sensed velocity near commanded velocity</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;is_moving&#39;</span><span class="p">]</span>         <span class="c1">#Is the joint in motion</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;in_guarded_event&#39;</span><span class="p">]</span>  <span class="c1">#Has a guarded event occured</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;in_safety_event&#39;</span><span class="p">]</span>   <span class="c1">#Has a safety event occured</span>
+</code></pre></div>
+<h3 id="update-rates">Update Rates</h3>
+<p>The following update rates apply to Stretch:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Rate</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status data for Arm, Lift, Base, Wacc, and Pimu</td>
+<td>25Hz</td>
+<td>Polled automatically by Robot thread</td>
+</tr>
+<tr>
+<td>Status data for End of Arm and Head servos</td>
+<td>15Hz</td>
+<td>Polled automatically by Robot thread</td>
+</tr>
+<tr>
+<td>Command data for Arm, Lift, Base, Wacc, Pimu</td>
+<td>N/A</td>
+<td>Commands are queued and executed upon calling robot.push_command( )</td>
+</tr>
+<tr>
+<td>Command data for End of Arm and Head servos</td>
+<td>N/A</td>
+<td>Commands execute immediately</td>
+</tr>
+</tbody>
+</table>
+<p>Motion commands are non-blocking and it is the responsibility of the user code to poll the Robot Status to determine when and if a motion target has been achieved.</p>
+<p>The Stretch_Body interface is not designed to support high bandwidth control applications. The natural dynamics of the robot actuators do not support high bandwidth contorl, and the USB based interface limits high rate communication.</p>
+<p>In practice, a Python based control loop that calls push_command( ) at 1Hz to 10Hz is sufficiently matched to the robot natural dynamics. </p>
+<h2 id="sensors">Sensors</h2>
+<h3 id="base-imu">Base IMU</h3>
+<p>Coming soon.</p>
+<h3 id="wrist-accelerometer">Wrist Accelerometer</h3>
+<p>Coming soon.</p>
+<h3 id="cliff-sensors">Cliff Sensors</h3>
+<p>Stretch has <a href="https://docs.hello-robot.com/hardware_user_guide/#base">four IR cliff sensors</a> pointed towards the floor. These report the distance to the floor, allowing for detection of thresholds, stair edges, etc. </p>
+<p>Relevant parameters in the factory YAML are</p>
+<div class="highlight"><pre><span></span><code><span class="nt">pimu</span><span class="p">:</span>
+  <span class="nt">config</span><span class="p">:</span>
+    <span class="nt">cliff_LPF</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10.0</span>
+    <span class="nt">cliff_thresh</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-50</span>
+    <span class="nt">cliff_zero</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">523.7940936279297</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">508.10246490478517</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">496.55742706298827</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">525.149652709961</span>
+    <span class="nt">stop_at_cliff</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</code></pre></div>
+<p>The  <code>stop_at_cliff</code> field causes the robot to execute a Runstop when the cliff sensor readings are out of bounds. </p>
+<p><strong>Note: As configured at the factory,  <code>stop_at_cliff</code> is set to zero and Stretch does not stop its motion based on the cliff sensor readings. Hello Robot makes no guarantees as to the reliability of Stretch's ability to avoid driving over ledges and stairs when this flag is enabled.</strong></p>
+<p>The sensors are calibrated such that a zero value indicates the sensor is at the correct height from the floor surface. A negative value indicates a drop off such as a stair ledge while a positive value indicates an obstacle like a threshold or high pile carpet.</p>
+<p>The calibrated range values from the sensors can be read from the <code>robot.pimu.status</code> message. Relevant fields are:</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">robot</span><span class="o">.</span><span class="n">pimu</span><span class="o">.</span><span class="n">pretty_print</span><span class="p">()</span>
+<span class="o">------</span> <span class="n">Pimu</span> <span class="o">-----</span>
+<span class="o">...</span>
+<span class="n">At</span> <span class="n">Cliff</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">Cliff</span> <span class="n">Range</span> <span class="p">[</span><span class="mf">2.043212890625</span><span class="p">,</span> <span class="mf">3.710906982421875</span><span class="p">,</span> <span class="mf">1.6026611328125</span><span class="p">,</span> <span class="mf">1.95098876953125</span><span class="p">]</span>
+<span class="n">Cliff</span> <span class="n">Event</span> <span class="kc">False</span>
+<span class="o">...</span>
+</code></pre></div>
+<p>A Cliff Event flag is set when any of the four sensor readings exceed <code>cliff_thresh</code> and <code>stop_at_cliff</code> is enabled. In the event of a Cliff Event, it must be reset by <code>robot.pimu.cliff_event_reset()</code>in order to reset the generated Runstop.</p>
+<p>The cliff detection logic can be found in the <a href="https://github.com/hello-robot/stretch_firmware/blob/master/arduino/hello_pimu/Pimu.cpp">Pimu firmware</a>.</p>
+<h2 id="robot-parameters">Robot Parameters</h2>
+<p>All robot data is stored in the stretch_user directory.  The location of this directory can be found by:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;$ <span class="nb">echo</span> <span class="nv">$HELLO_FLEET_PATH</span>
+/home/hello-robot/stretch_user
+</code></pre></div>
+<p>The robot data stored here is identified by the robot ID (eg, stretch-re1-1002)</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$HELLO_FLEET_PATH</span>/<span class="nv">$HELLO_FLEET_ID</span>
+&gt;&gt;$ ls
+calibration_base_imu  
+calibration_guarded_contact  
+calibration_steppers    
+calibration_D435i     
+calibration_ros
+export_urdf
+udev
+stretch_re1_factory_params.yaml  
+stretch_re1_user_params.yaml
+stretch_re1_tool_params.yaml
+</code></pre></div>
+<p>A factory image of this data (as shipped), is stored read-only under /etc/hello-robot . This is only for backup and to support cloning the user environment for new users.</p>
+<h3 id="calibration-data">Calibration Data</h3>
+<p>The raw calibration data that was used in production for the robot is also stored for reference within the stretch_user directory. It isn't generally required for development.</p>
+<h3 id="urdf-data">URDF Data</h3>
+<p>A calibrated URDF, and associated mesh files, are provided in the 'export_urdf' directory. This is provided for users who don't wish to use ROS yet still want an accurate model of the robot. The stretch_urdf_view.py tool demonstrates how to visualize the URDF from Python.</p>
+<h3 id="yaml-data">YAML Data</h3>
+<p>Stretch_Body relies upon the following three primary YAML files:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stretch_re1_factory_params.yaml</td>
+<td>Factory settings for controller gains, calibrations, and system configuration. <strong><em>Read only </em></strong></td>
+</tr>
+<tr>
+<td>stretch_re1_user_params.yaml</td>
+<td>User parameters that override the factory parameters</td>
+</tr>
+<tr>
+<td>stretch_re1_tool_params.yaml</td>
+<td>Settings and configuration data for optional 3rd party end-of-arm tools.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="factory-parameters">Factory Parameters</h3>
+<p>This stretch_re1_factory_params.yaml file contains the robot's 'factory' settings. This includes things such as PID parameters for motor controllers, calibration constants, and default joint velocities and accelerations. </p>
+<p>The user should not edit this file. Hello Robot retains an 'as shipped' version of this file should it ever get corrupted. It can be instructive to review this file when getting to know the Stretch_Body code base.</p>
+<h3 id="user-parameters">User Parameters</h3>
+<p>The factory settings should suffice for most use cases. However, the user is allowed to override the factory settings. This is done by using same YAML structure and name as is used in the stretch_re1_user_params.yaml file as in the factory file.</p>
+<p>For example, heres the  stretch_re1_user_params.yaml  file is overriding the factory default contact thresholds and  motion speeds.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">factory_params</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stretch_re1_factory_params.yaml</span>
+<span class="nt">tool_params</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stretch_re1_tool_params.yaml</span>
+
+<span class="nt">lift</span><span class="p">:</span>
+  <span class="nt">contact_thresh_N</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">-60</span><span class="p p-Indicator">,</span> <span class="nv">60</span><span class="p p-Indicator">]</span>
+  <span class="nt">motion</span><span class="p">:</span>
+    <span class="nt">default</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt">accel_m</span><span class="p">:</span> <span class="nv">0.15</span><span class="p p-Indicator">,</span><span class="nt"> vel_m</span><span class="p">:</span> <span class="nv">0.095</span><span class="p p-Indicator">}</span>
+<span class="nt">arm</span><span class="p">:</span>
+  <span class="nt">contact_thresh_N</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">-80</span><span class="p p-Indicator">,</span> <span class="nv">80</span><span class="p p-Indicator">]</span>
+  <span class="nt">motion</span><span class="p">:</span>
+    <span class="nt">default</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt">accel_m</span><span class="p">:</span> <span class="nv">0.14</span><span class="p p-Indicator">,</span><span class="nt"> vel_m</span><span class="p">:</span> <span class="nv">0.14</span><span class="p p-Indicator">}</span>
+<span class="nt">base</span><span class="p">:</span>
+  <span class="nt">motion</span><span class="p">:</span>
+    <span class="nt">default</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt">accel_m</span><span class="p">:</span> <span class="nv">0.1</span><span class="p p-Indicator">,</span><span class="nt"> vel_m</span><span class="p">:</span> <span class="nv">0.15</span><span class="p p-Indicator">}</span>
+</code></pre></div>
+<h3 id="end-of-arm-tool-parameters">End of Arm Tool Parameters</h3>
+<p>The stretch_re1_tool_params.yaml file stores configuration parameters specific to the user's custom end-of-arm-tools. It is read by the Robot class and the parameter data is made accessible to the user's end-of-arm-tool class. </p>
+<p>More information on integrating custom hardware on the End of Arm Dynamixel bus can be found at the <a href="https://github.com/hello-robot/stretch_body/tree/master/tutorial/extending_wrist_dof">Extending Wrist DOF Tutorial</a></p>
+<h2 id="safe-operation-features">Safe Operation Features</h2>
+<p>Stretch includes a number of built-in functions that help it maintain safe operating conditions. These functions can be disabled and enabled via the robot YAML parameters.</p>
+<h3 id="logging">Logging</h3>
+<p>Upon instantiation, the Robot class opens a new log file for warning and informational messages to be written to. These timestamped logs are found under $HELLO_FLEET_DIRECTORY/log.</p>
+<p>The logging messages can be echoed to the console by setting:</p>
+<div class="highlight"><pre><span></span><code>robot:
+  log_to_console: 1
+</code></pre></div>
+<h3 id="runstop-functions">Runstop Functions</h3>
+<table>
+<thead>
+<tr>
+<th>YAML</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stop_at_low_voltage</td>
+<td>Trigger runstop / beep when voltage too low</td>
+</tr>
+<tr>
+<td>stop_at_high_current</td>
+<td>Trigger runstop when bus current too high</td>
+</tr>
+<tr>
+<td>stop_at_cliff</td>
+<td>Trigger runstop when a cliff sensor is outside of range</td>
+</tr>
+<tr>
+<td>stop_at_runstop</td>
+<td>Allow runstop to disable motors</td>
+</tr>
+<tr>
+<td>stop_at_tilt</td>
+<td>Trigger runstop when robot tilts too far</td>
+</tr>
+</tbody>
+</table>
+<h3 id="robot-monitor">Robot Monitor</h3>
+<p>The <a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot_monitor.py">Robot Monitor</a> is a thread that monitors the Robot Status data for significant events. For example, it can monitor the error flags from the Dynamixel servos and notify when a thermal overload occurs. The Robot Monitor logs warnings to a log file by default. </p>
+<table>
+<thead>
+<tr>
+<th>YAML</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>monitor_base_bump_event</td>
+<td>Report when the accelerometer detects a bump event</td>
+</tr>
+<tr>
+<td>monitor_base_cliff_event</td>
+<td>Report when a cliff sensor event occurs</td>
+</tr>
+<tr>
+<td>monitor_current</td>
+<td>Report when the battery current exceeds desired range</td>
+</tr>
+<tr>
+<td>monitor_dynamixel_flags</td>
+<td>Report when a Dynamixel servo enters an error state</td>
+</tr>
+<tr>
+<td>monitor_guarded_contact</td>
+<td>Report when a guarded contact event occurs</td>
+</tr>
+<tr>
+<td>monitor_over_tilt_alert</td>
+<td>Report when an over-tilt event occurs</td>
+</tr>
+<tr>
+<td>monitor_runstop</td>
+<td>Report when the runstop is activated / deactivated</td>
+</tr>
+<tr>
+<td>monitor_voltage</td>
+<td>Report when the battery voltage is out of range</td>
+</tr>
+<tr>
+<td>monitor_wrist_single_tap</td>
+<td>Report when the wrist accelerometer reports a single tap event</td>
+</tr>
+</tbody>
+</table>
+<p>The YAML below illustrates the types of events that are can be configured.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">robot</span><span class="p">:</span>
+  <span class="nt">log_to_console</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+  <span class="nt">use_monitor</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">use_sentry</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="nt">robot_monitor</span><span class="p">:</span>
+  <span class="nt">monitor_base_bump_event</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">monitor_base_cliff_event</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">monitor_current</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">monitor_dynamixel_flags</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">monitor_guarded_contact</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">monitor_over_tilt_alert</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">monitor_runstop</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">monitor_voltage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">monitor_wrist_single_tap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="nt">robot_sentry</span><span class="p">:</span>
+  <span class="nt">base_fan_control</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">base_max_velocity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">stretch_gripper_overload</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">wrist_yaw_overload</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div>
+<h3 id="robot-sentry">Robot Sentry</h3>
+<p>The <a href="https://github.com/hello-robot/stretch_body/blob/master/python/stretch_body/robot_sentry.py">Robot Sentry</a> is a thread that can override and also generate commands to the robot hardware. It's purpose is to keep the robot operating within a safe regime. For example, the Robot Sentry monitors the position of the Lift and Arm and limits the maximum base velocity and acceleration (in order to reduce the chance of toppling). The Robot Sentry reports events to the log file as well. </p>
+<table>
+<thead>
+<tr>
+<th>YAML</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>base_fan_control</td>
+<td>Turn the fan on when CPU temp exceeds range</td>
+</tr>
+<tr>
+<td>base_max_velocity</td>
+<td>Limit the base velocity when robot CG is high</td>
+</tr>
+<tr>
+<td>stretch_gripper_overload</td>
+<td>Reset commanded position to prevent thermal overload during grasp</td>
+</tr>
+<tr>
+<td>wrist_yaw_overload</td>
+<td>Reset commanded position to prevent thermal overload during pushing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>.<div align="center"> All materials are Copyright 2020 by Hello Robot Inc. The Stretch RE1 robot has patents pending</div></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../../tutorials/tool_change_tutorial/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Changing Tools" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Changing Tools
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../dynamixel_tutorial/" class="md-footer__link md-footer__link--next" aria-label="Next: Working With Dynamixel Servos" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Working With Dynamixel Servos
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Hello Robot Inc
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/HelloRobotInc" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>

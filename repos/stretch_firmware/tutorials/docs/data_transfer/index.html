@@ -1,0 +1,1613 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hello Robot User Documentation">
+      
+      
+      
+      
+        <link rel="canonical" href="https://docs.hello-robot.com/repos/stretch_firmware/tutorials/docs/data_transfer/">
+      
+      <link rel="icon" href="../../../../../images/hello_robot_favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Integrating Custom Data - Hello Robot  Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="hello-robot-light" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#integrating-custom-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Hello Robot  Documentation" class="md-header__button md-logo" aria-label="Hello Robot  Documentation" data-md-component="logo">
+      
+  <img src="../../../../../images/hello_robot_logo_light.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hello Robot  Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Integrating Custom Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="hello-robot-light" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="hello-robot-dark" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Hello Robot  Documentation" class="md-nav__button md-logo" aria-label="Hello Robot  Documentation" data-md-component="logo">
+      
+  <img src="../../../../../images/hello_robot_logo_light.png" alt="logo">
+
+    </a>
+    Hello Robot  Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forum.hello-robot.com/" class="md-nav__link">
+        Stretch Forum
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/hello-robot" class="md-nav__link">
+        Stretch GitHub
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://youtube.com/c/HelloRobot" class="md-nav__link">
+        Stretch Videos
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Code Overview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Code Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Code Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_body/" class="md-nav__link">
+        Stretch Body
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_ros/" class="md-nav__link">
+        Stretch ROS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        Stretch Firmware
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_tool_share/" class="md-nav__link">
+        Stretch Tool Share
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_factory/" class="md-nav__link">
+        Stretch Factory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_web_interface/" class="md-nav__link">
+        Stretch Web Interface
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        User Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          User Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/quick_start_guide/" class="md-nav__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/robot_safety_guide/" class="md-nav__link">
+        Robot Safety
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/battery_maintenance_guide/" class="md-nav__link">
+        Battery Maintenance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/hardware_user_guide/" class="md-nav__link">
+        Stretch RE1 Hardware
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/dex_wrist_user_guide/" class="md-nav__link">
+        Stretch RE1 DexWrist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/troubleshooting_guide/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1">
+        Fundamentals
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Fundamentals" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tutorials/updating_software/" class="md-nav__link">
+        Updating the Software
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tutorials/untethered_operation/" class="md-nav__link">
+        Untethered Operation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tutorials/tool_change_tutorial/" class="md-nav__link">
+        Changing Tools
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
+        Stretch Body
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Stretch Body" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Stretch Body
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_body/docs/stretch_body_guide/" class="md-nav__link">
+        Working With Stretch Body
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_body/docs/dynamixel_tutorial/" class="md-nav__link">
+        Working With Dynamixel Servos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_body/docs/parameters_tutorial/" class="md-nav__link">
+        Working With Parameters
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_body/docs/extending_wrist_dof/" class="md-nav__link">
+        Extending the Wrist DOF
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      <label class="md-nav__link" for="__nav_5_3">
+        Stretch ROS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Stretch ROS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Stretch ROS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_ros/stretch_calibration/" class="md-nav__link">
+        URDF Calibration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_ros/stretch_deep_perception/" class="md-nav__link">
+        Deep Perception Demos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_ros/stretch_demos/" class="md-nav__link">
+        Autonomy Demos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_ros/stretch_description/" class="md-nav__link">
+        Working with the URDF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_ros/stretch_funmap/" class="md-nav__link">
+        Fast Unified Navigation, Manipulation And Planning (FUNMAP)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_ros/stretch_gazebo/" class="md-nav__link">
+        ROS Gazebo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_ros/stretch_moveit_config/" class="md-nav__link">
+        ROS MoveIt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../stretch_ros/stretch_navigation/" class="md-nav__link">
+        ROS Navigation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      <label class="md-nav__link" for="__nav_5_4">
+        Stretch Firmware
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Stretch Firmware" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Stretch Firmware
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updating_firmware/" class="md-nav__link">
+        Updating the Firmware
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Integrating Custom Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Integrating Custom Data
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-data-transfer-happens-in-stretch-body" class="md-nav__link">
+    How Data Transfer Happens in Stretch Body
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculator-example" class="md-nav__link">
+    Calculator Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculator Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arduino" class="md-nav__link">
+    Arduino
+  </a>
+  
+    <nav class="md-nav" aria-label="Arduino">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-data-structures" class="md-nav__link">
+    Define data structures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-calculator-function" class="md-nav__link">
+    Define calculator function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-calculator-into-the-control-loop" class="md-nav__link">
+    Integrate calculator into the control loop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bump-protocol-versions" class="md-nav__link">
+    Bump protocol versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-calculator-ipython" class="md-nav__link">
+    Test the Calculator - iPython
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-calculator-script" class="md-nav__link">
+    Test the Calculator - Script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-yaml-parameters" class="md-nav__link">
+    Adding YAML Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-steps" class="md-nav__link">
+    Final Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Integrating Custom Hardware
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Jupyter
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Jupyter" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Jupyter
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../foo.md" class="md-nav__link">
+        Coming Soon
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../api-docs-stretch_body" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../foo.md" class="md-nav__link">
+        Coming Soon
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Command Line Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Command Line Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../foo.md" class="md-nav__link">
+        Coming Soon
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-data-transfer-happens-in-stretch-body" class="md-nav__link">
+    How Data Transfer Happens in Stretch Body
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculator-example" class="md-nav__link">
+    Calculator Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculator Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arduino" class="md-nav__link">
+    Arduino
+  </a>
+  
+    <nav class="md-nav" aria-label="Arduino">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-data-structures" class="md-nav__link">
+    Define data structures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-calculator-function" class="md-nav__link">
+    Define calculator function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-calculator-into-the-control-loop" class="md-nav__link">
+    Integrate calculator into the control loop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bump-protocol-versions" class="md-nav__link">
+    Bump protocol versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-calculator-ipython" class="md-nav__link">
+    Test the Calculator - iPython
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-the-calculator-script" class="md-nav__link">
+    Test the Calculator - Script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-yaml-parameters" class="md-nav__link">
+    Adding YAML Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-steps" class="md-nav__link">
+    Final Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><img alt="" src="../../images/banner.png" /></p>
+<h1 id="integrating-custom-data">Integrating Custom Data</h1>
+<p>In this tutorial we explore how to plumb custom data to and from the Arduino based Stretch Wacc (Wrist + Accelerometer) board. This enables users to integrate custom sensors and actuators on to the <a href="https://docs.hello-robot.com/docs/guides/hardware_user_guide/#wrist">Wrist Expansion header</a>. </p>
+<h2 id="how-data-transfer-happens-in-stretch-body">How Data Transfer Happens in Stretch Body</h2>
+<p>Data is transferred between Stretch Body Python and the Arduino based firmware using USB based serial. </p>
+<p>As an example, consider the transfer of a <code>Status</code> data message from the Wacc to Stretch Body. This involves:</p>
+<ul>
+<li>Stretch Body requests new Status data via <code>wacc.pull_status()</code></li>
+<li>This generates an RPC call to the Wacc board</li>
+<li>The <code>status</code> data on the Wacc board gets 'packed' and transmitted back to Stretch Body</li>
+<li>Stretch Body unpacks the data into the <code>status</code> dictionary of the <a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/wacc.py">Wacc Python class</a>.</li>
+</ul>
+<p>Similarly, data can go the other direction (e.g., <code>Command</code> messages ).</p>
+<p><img alt="" src="../../images/data_pipeline.png" /></p>
+<p>Fortunately, the data transfer is managed automatically for the developer. In order to integrate your custom data you will:</p>
+<ul>
+<li>Extend the firmware  <code>Status</code> and <code>Command</code> structs to include your data</li>
+<li>Derive your own class from the Stretch Body <code>Wacc</code> class that packs and unpacks your custom data</li>
+</ul>
+<h2 id="calculator-example">Calculator Example</h2>
+<p>As a simple example we will extend the Wacc to be an embedded calculator. The implementation is found in the <a href="../arduino/hello_wacc_calc">Wacc_Calc Arduino sketch</a> and the corresponding <a href="../python/wacc_calc.py">WaccCalc Python class</a>.</p>
+<h3 id="arduino">Arduino</h3>
+<h4 id="define-data-structures">Define data structures</h4>
+<p>First, we define the data to be sent back and forth in <a href="../arduino/hello_wacc_calc/Common.h">Common.h</a> of the firmware.</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">__attribute__</span> <span class="p">((</span><span class="n">packed</span><span class="p">))</span> <span class="n">Calc_Command</span><span class="p">{</span>
+  <span class="kt">float</span> <span class="n">var1</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">var2</span><span class="p">;</span>
+  <span class="kt">uint8_t</span> <span class="n">op</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">struct</span> <span class="nc">__attribute__</span> <span class="p">((</span><span class="n">packed</span><span class="p">))</span> <span class="n">Calc_Status</span><span class="p">{</span>
+  <span class="kt">float</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Our calculator will perform the computation: <code>result=op(var1,var2)</code>.</p>
+<p>Now add these structs to the  <code>Status</code> and  <code>Command</code> structs in  <a href="../arduino/hello_wacc_calc/Common.h">Common.h</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">__attribute__</span> <span class="p">((</span><span class="n">packed</span><span class="p">))</span> <span class="n">Wacc_Command</span><span class="p">{</span>
+  <span class="n">Calc_Command</span> <span class="n">calc</span><span class="p">;</span>
+  <span class="p">...</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="nc">__attribute__</span> <span class="p">((</span><span class="n">packed</span><span class="p">))</span> <span class="n">Wacc_Status</span><span class="p">{</span>
+  <span class="n">Calc_Status</span> <span class="n">calc</span><span class="p">;</span>
+  <span class="p">...</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>The ordering of the data is important.  Your custom data should be at the start of the struct as the Python class will unpack this data first.</p>
+<h4 id="define-calculator-function">Define calculator function</h4>
+<p>Next we add the calculator function to  <a href="../arduino/hello_wacc_calc/Wacc.cpp">Wacc.cpp</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span> <span class="nf">my_calc</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">op</span><span class="p">,</span> <span class="kt">float</span> <span class="n">var1</span><span class="p">,</span> <span class="kt">float</span> <span class="n">var2</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">op</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">var1</span><span class="o">+</span><span class="n">var2</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">op</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">var1</span><span class="o">*</span><span class="n">var2</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">op</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">var1</span><span class="o">/</span><span class="n">var2</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="integrate-calculator-into-the-control-loop">Integrate calculator into the control loop</h4>
+<p>Finally, we integrate our calculator into the embedded control loop in <a href="../arduino/hello_wacc_calc/Wacc.cpp">Wacc.cpp</a>. </p>
+<p>The function <code>stepWaccController()</code> in  <a href="../arduino/hello_wacc_calc/Wacc.cpp">Wacc.cpp</a> is called by Timer5 at 700Hz. The calculator is fairly lightweight so its computation time should not interfere with the existing Wacc timing. Heavier computation would require careful integration with an eye to loop timing.</p>
+<p>Add the call to <code>stepWaccController()</code>  -- just prior to the <code>Status</code> data being copied out for transmittal back. </p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">stepWaccController</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="p">...</span>
+<span class="n">stat</span><span class="p">.</span><span class="n">calc</span><span class="p">.</span><span class="n">result</span><span class="o">=</span><span class="n">my_calc</span><span class="p">(</span><span class="n">cmd</span><span class="p">.</span><span class="n">calc</span><span class="p">.</span><span class="n">op</span><span class="p">,</span><span class="n">cmd</span><span class="p">.</span><span class="n">calc</span><span class="p">.</span><span class="n">var1</span><span class="p">,</span> <span class="n">cmd</span><span class="p">.</span><span class="n">calc</span><span class="p">.</span><span class="n">var2</span><span class="p">);</span>
+<span class="n">memcpy</span><span class="p">((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">stat_out</span><span class="p">),(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">stat</span><span class="p">),</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Wacc_Status</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The variable <code>cmd</code>, which contains the command to the calculator, is automatically updated with fresh data via the RPC mechanism.</p>
+<h4 id="bump-protocol-versions">Bump protocol versions</h4>
+<p>The packet definition of data exchanged between Python and the Arduino is tagged with a protocol version. This allows the Python Device to ensure it is exchanging compatible data. </p>
+<p>The mainline release of Stretch Firmware starts with protocol version <code>0</code> and increments with each new protocol release. To avoid conflicts, for this tutorial we pick an arbitrary large number (99). </p>
+<p>In <a href="../arduino/hello_wacc_calc/Common.h">Common.h</a> , we bump from Protocol '0' </p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define FIRMWARE_VERSION &quot;Wacc.v0.0.1p0&quot;</span>
+</code></pre></div>
+<p>to Protocol '99'</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define FIRMWARE_VERSION &quot;Wacc.v0.0.1p99&quot;</span>
+</code></pre></div>
+<h3 id="python">Python</h3>
+<p>Now we will implement <a href="../python/wacc_calc.py">WaccCalc</a> which  derives from the <a href="https://github.com/hello-robot/stretch_body/blob/master/body/stretch_body/wacc.py">Wacc Python class</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">stretch_body.wacc</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">stretch_body.transport</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">class</span> <span class="nc">WaccCalc</span><span class="p">(</span><span class="n">Wacc</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class demonstrates how to extend the Wacc class with custom data</span>
+<span class="sd">    See the corresponding tutorial for more information.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">Wacc</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span>
+                      <span class="n">ext_status_cb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ext_unpack_status</span><span class="p">,</span> <span class="c1">#Set callback to unpack status</span>
+                      <span class="n">ext_command_cb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ext_pack_command</span><span class="p">)</span> <span class="c1">#Set callback to pack command</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;op&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;var1&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;var2&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span> <span class="c1">#Extend command dictionary with custom fields</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">]</span> <span class="o">=</span><span class="mf">0.0</span>                         <span class="c1">#Extend status dictionary with custom fields</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valid_firmware_protocol</span> <span class="o">=</span> <span class="s1">&#39;pMyCalc&#39;</span>
+
+    <span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">op</span><span class="p">,</span><span class="n">var1</span><span class="p">,</span><span class="n">var2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        0: addition</span>
+<span class="sd">        1: multiplication</span>
+<span class="sd">        2: division</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;op&#39;</span><span class="p">]</span> <span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;var1&#39;</span><span class="p">]</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">var1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;var2&#39;</span><span class="p">]</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">var2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_command</span><span class="o">=</span><span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">pretty_print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Wacc</span><span class="o">.</span><span class="n">pretty_print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="s1">&#39;Calc:&#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">ext_unpack_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        s: byte array to unpack</span>
+<span class="sd">        return: number of bytes unpacked</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sidx</span><span class="o">=</span><span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack_float_t</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">sidx</span><span class="p">:])</span>
+        <span class="k">return</span> <span class="mi">4</span>
+
+    <span class="k">def</span> <span class="nf">ext_pack_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">sidx</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        s: byte array to pack in to</span>
+<span class="sd">        sidx: index to start packing at</span>
+<span class="sd">        return: new sidx</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pack_float_t</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sidx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;var1&#39;</span><span class="p">])</span>
+        <span class="n">sidx</span> <span class="o">+=</span> <span class="mi">4</span>
+        <span class="n">pack_float_t</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sidx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;var2&#39;</span><span class="p">])</span>
+        <span class="n">sidx</span> <span class="o">+=</span> <span class="mi">4</span>
+        <span class="n">pack_uint8_t</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sidx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;op&#39;</span><span class="p">])</span>
+        <span class="n">sidx</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">sidx</span>
+</code></pre></div>
+<p>The class registers two callbacks for packing <code>Command</code> data and unpacking <code>Status</code> data.  They are fairly self-explanatory and can be easily extended to match your custom data.  Looking at the unpacking code:
+<div class="highlight"><pre><span></span><code>  <span class="k">def</span> <span class="nf">ext_unpack_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">s</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        s: byte array to unpack</span>
+<span class="sd">        return: number of bytes unpacked</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sidx</span><span class="o">=</span><span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack_float_t</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">sidx</span><span class="p">:])</span>
+        <span class="k">return</span> <span class="mi">4</span>
+</code></pre></div></p>
+<p>, we see the use of <code>unpack_float_t</code>. This, and other functions to unpack data, are found in <code>stretch_body.transport</code>. </p>
+<p>It is important that the data types and order match exactly those declared in the firmware. For example in  <a href="../arduino/hello_wacc_calc/Common.h">Common.h</a> we have:</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">__attribute__</span> <span class="p">((</span><span class="n">packed</span><span class="p">))</span> <span class="n">Calc_Command</span><span class="p">{</span>
+  <span class="kt">float</span> <span class="n">var1</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">var2</span><span class="p">;</span>
+  <span class="kt">uint8_t</span> <span class="n">op</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>, and on the Python side we have</p>
+<div class="highlight"><pre><span></span><code><span class="n">pack_float_t</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sidx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;var1&#39;</span><span class="p">])</span>
+<span class="n">sidx</span> <span class="o">+=</span> <span class="mi">4</span>
+<span class="n">pack_float_t</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sidx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;var2&#39;</span><span class="p">])</span>
+<span class="n">sidx</span> <span class="o">+=</span> <span class="mi">4</span>
+<span class="n">pack_uint8_t</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">sidx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;op&#39;</span><span class="p">])</span>
+<span class="n">sidx</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>
+<h2 id="test-the-calculator-ipython">Test the Calculator - iPython</h2>
+<p>We're ready to try out our calculator. First,</p>
+<ul>
+<li>Install and setup the Arduino IDE if it isn't already as described in the <a href="../updating_firmware/">Updating Firmware tutorial</a>.</li>
+<li>Open the <a href="../arduino/hello_wacc_calc">Wacc_Calc Arduino sketch</a> in the Arduino IDE.  </li>
+<li>Select the <code>hello_wacc</code> board, the  <code>ttyACMx</code> port that maps to the Wacc board. Then burn the firmware as described in the the <a href="../updating_firmware/">Updating Firmware tutorial</a>.</li>
+</ul>
+<p>Now, lets try it out:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;$ <span class="nb">cd</span> ~/repos/stretch_firmware/tutorial/python/
+&gt;&gt;$ ipython
+</code></pre></div>
+<p>And from iPython</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">wacc_calc</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">w</span><span class="o">=</span><span class="n">wacc_calc</span><span class="o">.</span><span class="n">WaccCalc</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">startup</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">op</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">var1</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span><span class="n">var2</span><span class="o">=</span><span class="mf">200.0</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">pull_status</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="nb">print</span> <span class="s1">&#39;Result is&#39;</span><span class="p">,</span><span class="n">w</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">]</span>
+<span class="n">Result</span> <span class="ow">is</span> <span class="mf">300.0</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">op</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">var1</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span><span class="n">var2</span><span class="o">=</span><span class="mf">200.0</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">pull_status</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="nb">print</span> <span class="s1">&#39;Result is&#39;</span><span class="p">,</span><span class="n">w</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">]</span>
+<span class="n">Result</span> <span class="ow">is</span> <span class="mf">20000.0</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">op</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">var1</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span><span class="n">var2</span><span class="o">=</span><span class="mf">200.0</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="n">w</span><span class="o">.</span><span class="n">pull_status</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="nb">print</span> <span class="s1">&#39;Result is&#39;</span><span class="p">,</span><span class="n">w</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">]</span>
+<span class="n">Result</span> <span class="ow">is</span> <span class="mf">0.5</span>
+</code></pre></div>
+<h2 id="test-the-calculator-script">Test the Calculator - Script</h2>
+<p>Alternatively you can use the provided tool, <a href="../python/stretch_wacc_calc_jog.py">stretch_wacc_calc_jog.py</a>. Here you can use the calculator through the menu.</p>
+<div class="highlight"><pre><span></span><code>hello-robot@stretch-re1-100x:~$ <span class="nb">cd</span> repos/stretch_firmware/tutorial/python/
+hello-robot@stretch-re1-100x:~/repos/stretch_firmware/tutorial/python$ ./stretch_wacc_calc_jog.py 
+------ MENU -------
+m: menu
+r: reset board
+a: <span class="nb">set</span> D2 on
+b: <span class="nb">set</span> D2 off
+c: <span class="nb">set</span> D3 on
+d: <span class="nb">set</span> D3 off
+X: <span class="k">do</span> calculation
+-------------------
+X
+---Calculate Op<span class="o">(</span>Var1,Var2<span class="o">)</span> ---
+<span class="nv">Op</span><span class="o">=</span><span class="m">0</span>: Add
+<span class="nv">Op</span><span class="o">=</span><span class="m">1</span>: Mult
+<span class="nv">Op</span><span class="o">=</span><span class="m">2</span>: Div
+Enter Op
+<span class="m">1</span>
+Enter Var1
+<span class="m">12</span>
+Enter Var2
+<span class="m">13</span>
+</code></pre></div>
+<h2 id="_1"></h2>
+<h2 id="adding-yaml-parameters">Adding YAML Parameters</h2>
+<p>The <code>WaccCalc</code> class can use the Stretch Body YAML files as well. For example, add to your <code>stretch_re1_user_params.yaml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">wacc</span><span class="p">:</span>
+  <span class="nt">calc_scalar</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2.0</span>
+</code></pre></div>
+<p>Now let's scale the commands to the Arduino according to this YAML parameter. In <code>WaccCalc</code>:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">op</span><span class="p">,</span><span class="n">var1</span><span class="p">,</span><span class="n">var2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        0: addition</span>
+<span class="sd">        1: multiplication</span>
+<span class="sd">        2: division</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;op&#39;</span><span class="p">]</span> <span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;var1&#39;</span><span class="p">]</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;calc_scalar&#39;</span><span class="p">]</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">var1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">][</span><span class="s1">&#39;var2&#39;</span><span class="p">]</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;calc_scalar&#39;</span><span class="p">]</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">var2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirty_command</span><span class="o">=</span><span class="kc">True</span>
+</code></pre></div>
+<p>Run the iPython as above and you'll see the values multiplied by the YAML scalar.</p>
+<h2 id="final-steps">Final Steps</h2>
+<p>We want the Stretch Body Robot to use <code>WaccCalc</code> and not <code>Wacc</code>. To do this, add the following to your <code>stretch_re1_user_params.yaml</code>:</p>
+<div class="highlight"><pre><span></span><code>robot:
+  custom_wacc:
+    py_class_name: WaccCalc
+    py_module_name: wacc_calc
+</code></pre></div>
+<p>This tells Robot which module and class to create its <code>Wacc</code> instance from. </p>
+<p>Now, test that it works from iPython</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">stretch_body.robot</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">robot</span><span class="o">=</span><span class="n">stretch_body</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">Robot</span><span class="p">()</span>
+<span class="n">Starting</span> <span class="n">TransportConnection</span> <span class="n">on</span><span class="p">:</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">hello</span><span class="o">-</span><span class="n">wacc</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">robot</span><span class="o">.</span><span class="n">startup</span><span class="p">()</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">robot</span><span class="o">.</span><span class="n">wacc</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">op</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">var1</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span><span class="n">var2</span><span class="o">=</span><span class="mf">200.0</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">robot</span><span class="o">.</span><span class="n">push_command</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="nb">print</span> <span class="s1">&#39;Result&#39;</span><span class="p">,</span><span class="n">robot</span><span class="o">.</span><span class="n">wacc</span><span class="o">.</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;calc&#39;</span><span class="p">]</span>
+<span class="n">Result</span> <span class="mf">300.0</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">robot</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../updating_firmware/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Updating the Firmware" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Updating the Firmware
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--next" aria-label="Next: Integrating Custom Hardware" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Integrating Custom Hardware
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Hello Robot Inc
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/HelloRobotInc" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>
