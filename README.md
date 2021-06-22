@@ -4,6 +4,12 @@ Welcome Stretch users!
 
 If you're new to Stretch we strongly recommend reviewing the links below to get started. 
 
+# CLI Reference
+
+This page provides documentation for our command line tools.
+
+::: stretch_body.robot_params.RobotParams
+
 ## Safety
 **WARNING**: The Stretch RE1 is a potentially dangerous robot. All users should carefully read the [Stretch Safety Guide](robot_safety_guide.md) prior to using the robot.
 

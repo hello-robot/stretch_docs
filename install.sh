@@ -1,18 +1,7 @@
 #!/bin/bash
 
 # NOTES
-#Requires Py3.7: https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/
-#Update to 3.7 as default for python3
-#python -m pip install --upgrade pip
-#pip3 install git+https://github.com/DataDog/mkdocs-click.git
-#pip3 install mktheapidocs
 
-# To publish a branch of stretch_docs during dev.
-# set
-# site_url: https://docs.hello-robot.com/stretch_docs in the yaml
-# then from hello-robot.github.io:
-# python3 -m mkdocs gh-deploy --config-file ../stretch_docs/mkdocs.yml --remote-branch feature/<branch name>
-#will publish to https://docs.hello-robot.com/stretch_docs/
 
 pip3 install mkdocs
 pip3 install mkdocs-material

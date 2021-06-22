@@ -8,13 +8,15 @@ site_url: https://docs.hello-robot.com
 site_description: "Hello Robot User Documentation"
 #repo_name: "github.com/hello-robot"
 #repo_url: https://github.com/hello-robot
-
 use_directory_urls: True
 copyright: 'Copyright &copy; 2021 Hello Robot Inc'
+site_author: Hello Robot Inc
 
 theme:
-
  name: material
+ features:
+   - navigation.instant
+
  palette:
   - scheme: default
     primary: hello-robot-light
@@ -32,11 +34,14 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.inlinehilite
+  - mkdocs-click
+
 
 extra_css:
   - extra.css
 plugins:
   - search
+  - mkdocstrings
   - simple:
       merge_docs_dir: true
       include_extensions: [".css", ".png"]
@@ -48,31 +53,37 @@ extra:
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/HelloRobotInc
-
+    - icon: material/home
+      link: 'https://www.hello-robot.com'
+    - icon: material/linkedin
+      link: 'https://www.linkedin.com/company/hello-robot-inc'
+    - icon: material/github
+      link: 'https://github.com/hello-robot'
 
 edit_uri: ''
 
 # ##########################################################
 nav:
   - Home: README.md
-  - Resources:
-    - Stretch Forum: "https://forum.hello-robot.com/"
-    - Stretch GitHub: "https://github.com/hello-robot"
-    - Stretch Videos: "https://youtube.com/c/HelloRobot"
-  - Code Overview:
-    - Stretch Body: repos/stretch_body/README.md
-    - Stretch ROS: repos/stretch_ros/README.md
-    - Stretch Firmware: repos/stretch_firmware/README.md
-    - Stretch Tool Share: repos/stretch_tool_share/README.md
-    - Stretch Factory: repos/stretch_factory/README.md
-    - Stretch Web Interface: repos/stretch_web_interface/README.md
   - User Guides:
-    - Quick Start: guides/quick_start_guide.md
-    - Robot Safety: guides/robot_safety_guide.md
-    - Battery Maintenance: guides/battery_maintenance_guide.md
-    - Stretch RE1 Hardware: guides/hardware_user_guide.md
-    - Stretch RE1 DexWrist: guides/dex_wrist_user_guide.md
-    - Troubleshooting: guides/troubleshooting_guide.md
+      - Quick Start: guides/quick_start_guide.md
+      - Robot Safety: guides/robot_safety_guide.md
+      - Battery Maintenance: guides/battery_maintenance_guide.md
+      - Stretch RE1 Hardware: guides/hardware_user_guide.md
+      - Stretch RE1 DexWrist: guides/dex_wrist_user_guide.md
+      - Troubleshooting: guides/troubleshooting_guide.md
+  - Software:
+    - Code Overview:
+      - Stretch Body: repos/stretch_body/README.md
+      - Stretch ROS: repos/stretch_ros/README.md
+      - Stretch Firmware: repos/stretch_firmware/README.md
+      - Stretch Tool Share: repos/stretch_tool_share/README.md
+      - Stretch Factory: repos/stretch_factory/README.md
+      - Stretch Web Interface: repos/stretch_web_interface/README.md
+    - API:
+        - Coming Soon: foo.md
+    - Command Line Tools:
+        - Coming Soon: foo.md
   - Tutorials:
     - Fundamentals:
       - Updating the Software: tutorials/updating_software.md
@@ -96,11 +107,9 @@ nav:
       - Updating the Firmware: repos/stretch_firmware/tutorials/docs/updating_firmware.md
       - Integrating Custom Data: repos/stretch_firmware/tutorials/docs/data_transfer.md
       - Integrating Custom Hardware: repos/stretch_firmware/tutorials/docs/README.md
-
-  - Jupyter:
-      - Coming Soon: foo.md
-  - api-docs-stretch_body
-  - API:
-      - Coming Soon: foo.md
-  - Command Line Tools:
-      - Coming Soon: foo.md
+    - Jupyter:
+        - Coming Soon: foo.md
+  - Resources:
+    - Stretch Forum: "https://forum.hello-robot.com/"
+    - Stretch GitHub: "https://github.com/hello-robot"
+    - Stretch Videos: "https://youtube.com/c/HelloRobot"
