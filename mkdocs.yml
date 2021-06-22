@@ -72,7 +72,7 @@ nav:
       - Stretch RE1 Hardware: guides/hardware_user_guide.md
       - Stretch RE1 DexWrist: guides/dex_wrist_user_guide.md
       - Troubleshooting: guides/troubleshooting_guide.md
-  - Software:
+  - Code:
     - Code Overview:
       - Stretch Body: repos/stretch_body/README.md
       - Stretch ROS: repos/stretch_ros/README.md
